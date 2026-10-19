@@ -62,6 +62,27 @@ Start-Process .\experiments\exp001_pyronear_baseline\visualization.html
 
 可视化页面展示已提交的首次实验结果，不会自动加载新生成的 `outputs/whittier.json`。复跑输出单独保存，避免覆盖历史结果。GPU内存不足时可用 `--device cpu` 先验证接口。
 
+## 第二次实验：候选与逐步输入诊断
+
+- [实验说明与结果](experiments/exp002_detector_diagnostics/README.md)
+- [逐步结果汇总](experiments/exp002_detector_diagnostics/summary.csv)
+- [检测框与项目机制](experiments/exp002_detector_diagnostics/当前初始项目机制.md)
+
+本样例在原版设置下，第1～4张未输出候选，第5张首次有框，第6张形成保留轨迹，第7张首次报警（首次可见烟羽后6分钟，不含计算和通信时间）。尚未进行阈值、分辨率或无火对照实验。
+
+安装环境和下载模型后，从仓库根目录运行：
+
+```powershell
+& .\.venv\Scripts\python.exe .\diagnose_sequence.py `
+    --sequence .\data\figlib_whittier_smoke_10 `
+    --model .\models\v0.6.0\model.zip `
+    --output-dir .\outputs\exp002_rerun `
+    --device cuda
+Start-Process .\outputs\exp002_rerun\visualization.html
+```
+
+也可使用现有环境解释器和模型的完整路径。脚本拒绝写入非空目录，重跑时请指定新的输出目录。查看已提交结果时，用浏览器打开 `experiments/exp002_detector_diagnostics/visualization.html`。每个前缀只使用当时已有图片重建轨迹和裁剪；不足6张时仍保留官方重复帧填充，重复帧不代表独立观测。
+
 ## 实验记录约定
 
 每次实验在 `experiments/expNNN_描述/` 新建目录，保留简短README、实际预测JSON以及需要时生成的可视化。README写明目的、代码提交号、模型与数据、参数变化、运行命令、结果和局限。代码与依赖历史由Git管理，不重复复制环境和脚本。
