@@ -1,0 +1,17 @@
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.cache/
+.config/
+.tmp/
+models/
+*.pt
+*.pth
+*.ckpt
+*.onnx
+.env
+.env.*
+!.env.example
+runs/
+outputs/

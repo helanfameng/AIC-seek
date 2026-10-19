@@ -1,0 +1,122 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><title>烟雾检测结果查看</title><style>body{font-family:Arial,"Microsoft YaHei",sans-serif;background:#101822;color:#eef3f9;margin:24px auto;max-width:1250px;padding:0 16px}h1{font-size:26px}.note{color:#b8c9da;line-height:1.7}.bar{display:flex;gap:16px;align-items:center;flex-wrap:wrap;margin:20px 0}button{padding:9px 16px;cursor:pointer}input[type=range]{flex:1;min-width:200px}svg{width:100%;background:#000;border-radius:8px}.score{font-size:20px;color:#6fffc1}#detail{line-height:1.8}.legend{color:#ffde59}</style><h1>Whittier 火灾 · 10帧烟雾检测结果</h1><div class="score">整段序列判断：有烟 · 时序概率 0.993754 · 阈值 0.720750</div><p class="note">黄色框：结果JSON中保留轨迹的单帧检测框。分数为YOLO检测分数，不是逐帧时序概率。前4帧无该轨迹框记录；首次报警时刻尚未计算。此页面展示已有结果，不重新运行模型。</p><div class="bar"><button id="prev">上一张</button><input id="slider" type="range" min="0" max="9" value="9"><button id="next">下一张</button><label><input id="boxes" type="checkbox" checked>显示检测框</label></div><div id="detail"></div><svg id="scene" viewBox="0 0 3072 2048"><image id="photo" width="3072" height="2048"/><g id="overlay"></g></svg><p class="note">查看方法：先看黄色框是否落在湖前方的真实烟柱上，再拖动滑块检查烟雾何时出现、模型何时开始给框。框可以只覆盖烟雾的一部分；本样例不提供准确率结论。原始数据：HPWREN / UCSD FIgLib，图片间隔60秒。</p><script>
+const data={
+  "sequence": "data/figlib_whittier_smoke_10",
+  "frame_names": [
+    "1499546263_+00000.jpg",
+    "1499546323_+00060.jpg",
+    "1499546383_+00120.jpg",
+    "1499546443_+00180.jpg",
+    "1499546503_+00240.jpg",
+    "1499546563_+00300.jpg",
+    "1499546623_+00360.jpg",
+    "1499546683_+00420.jpg",
+    "1499546743_+00480.jpg",
+    "1499546803_+00540.jpg"
+  ],
+  "is_smoke": true,
+  "max_kept_probability": 0.9937540430233742,
+  "kept_tube_count": 1,
+  "details": {
+    "preprocessing": {
+      "num_frames_input": 10,
+      "num_truncated": 0,
+      "padded_frame_indices": []
+    },
+    "tubes": {
+      "num_candidates": 1,
+      "num_outside_roi": 0,
+      "kept": [
+        {
+          "tube_id": 0,
+          "start_frame": 4,
+          "end_frame": 9,
+          "logit": 10.757533073425293,
+          "probability": 0.9937540430233742,
+          "first_crossing_frame": null,
+          "entries": [
+            {
+              "frame_idx": 4,
+              "bbox": [
+                0.5075026750564575,
+                0.5033993124961853,
+                0.031871676445007324,
+                0.022628992795944214
+              ],
+              "is_gap": false,
+              "confidence": 0.11852188408374786
+            },
+            {
+              "frame_idx": 5,
+              "bbox": [
+                0.5031471252441406,
+                0.5068823099136353,
+                0.019269704818725586,
+                0.01773175597190857
+              ],
+              "is_gap": false,
+              "confidence": 0.2774980366230011
+            },
+            {
+              "frame_idx": 6,
+              "bbox": [
+                0.5069024562835693,
+                0.5017076134681702,
+                0.028655212372541428,
+                0.029644519090652466
+              ],
+              "is_gap": false,
+              "confidence": 0.3260211944580078
+            },
+            {
+              "frame_idx": 7,
+              "bbox": [
+                0.5171672701835632,
+                0.49498412013053894,
+                0.055853962898254395,
+                0.041182100772857666
+              ],
+              "is_gap": false,
+              "confidence": 0.3171560764312744
+            },
+            {
+              "frame_idx": 8,
+              "bbox": [
+                0.5120489597320557,
+                0.4906238913536072,
+                0.04473754018545151,
+                0.048576027154922485
+              ],
+              "is_gap": false,
+              "confidence": 0.33452340960502625
+            },
+            {
+              "frame_idx": 9,
+              "bbox": [
+                0.5084776878356934,
+                0.494418740272522,
+                0.03641657158732414,
+                0.045350462198257446
+              ],
+              "is_gap": false,
+              "confidence": 0.4680805802345276
+            }
+          ],
+          "stabilized_window": [
+            0.5171672701835632,
+            0.4917149245738983,
+            0.055853962898254395,
+            0.05075809359550476
+          ]
+        }
+      ]
+    },
+    "decision": {
+      "aggregation": "logistic",
+      "threshold": 0.7207499167831384,
+      "trigger_tube_id": null
+    }
+  }
+};
+const slider=document.getElementById('slider'),boxes=document.getElementById('boxes');
+function draw(){const i=Number(slider.value),entries=data.details.tubes.kept.flatMap(t=>t.entries.filter(e=>e.frame_idx===i));document.getElementById('photo').setAttribute('href','../../data/figlib_whittier_smoke_10/'+encodeURIComponent(data.frame_names[i]));document.getElementById('detail').textContent=`第 ${i+1} / 10 张 · 相对首次可见烟雾 ${i} 分钟 · ${entries.length?'YOLO分数：'+entries.map(e=>e.confidence.toFixed(3)).join(', '):'无保留轨迹检测框记录'} · ${data.frame_names[i]}`;document.getElementById('overlay').innerHTML=boxes.checked?entries.map(e=>{const [cx,cy,w,h]=e.bbox;return `<rect x="${(cx-w/2)*3072}" y="${(cy-h/2)*2048}" width="${w*3072}" height="${h*2048}" fill="none" stroke="#ffde59" stroke-width="5"/><text x="${(cx-w/2)*3072}" y="${(cy-h/2)*2048-15}" fill="#ffde59" stroke="#111" stroke-width="1" font-size="30">YOLO ${e.confidence.toFixed(3)}</text>`}).join(''):'';}
+slider.oninput=draw;boxes.onchange=draw;document.getElementById('prev').onclick=()=>{slider.value=Math.max(0,Number(slider.value)-1);draw()};document.getElementById('next').onclick=()=>{slider.value=Math.min(9,Number(slider.value)+1);draw()};draw();</script></html>
