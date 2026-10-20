@@ -1,0 +1,821 @@
+{
+  "event": "20180706_West_lp-n-mobo-c",
+  "index_url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180706_West_lp-n-mobo-c/index.html",
+  "downloaded_at_utc": "2026-10-20T12:02:20.441739+00:00",
+  "source_credit": "HPWREN / University of California San Diego",
+  "count": 81,
+  "interval_seconds": 60,
+  "source_index_sha256": "ef5375676dc189a9cced20a551f5f2a9cf8ef4657fd302066e13402347a44291",
+  "files": [
+    {
+      "filename": "1530899281_-02400.jpg",
+      "timestamp": 1530899281,
+      "offset_seconds": -2400,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180706_West_lp-n-mobo-c/1530899281_-02400.jpg",
+      "bytes": 962140,
+      "sha256": "dfcbd1ffc5229faeac874f262c4c2433a8f8c80d45c15a716f33900c779a4472",
+      "width": 3072,
+      "height": 2048
+    },
+    {
+      "filename": "1530899341_-02340.jpg",
+      "timestamp": 1530899341,
+      "offset_seconds": -2340,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180706_West_lp-n-mobo-c/1530899341_-02340.jpg",
+      "bytes": 960482,
+      "sha256": "0eeb64fcd9184b5270e06b1a0b4835799427c2a3d7d0d03c5ae3a7e2c8776e57",
+      "width": 3072,
+      "height": 2048
+    },
+    {
+      "filename": "1530899401_-02280.jpg",
+      "timestamp": 1530899401,
+      "offset_seconds": -2280,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180706_West_lp-n-mobo-c/1530899401_-02280.jpg",
+      "bytes": 956148,
+      "sha256": "b6a28a8b86b45227f48b8a1cf29da3ded787acead6e107ad29521204cc190536",
+      "width": 3072,
+      "height": 2048
+    },
+    {
+      "filename": "1530899461_-02220.jpg",
+      "timestamp": 1530899461,
+      "offset_seconds": -2220,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180706_West_lp-n-mobo-c/1530899461_-02220.jpg",
+      "bytes": 958456,
+      "sha256": "c2ce1d1659e32b45e71e27b69ca742561aa75100432a6c1e7b915c5a30428e3a",
+      "width": 3072,
+      "height": 2048
+    },
+    {
+      "filename": "1530899521_-02160.jpg",
+      "timestamp": 1530899521,
+      "offset_seconds": -2160,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180706_West_lp-n-mobo-c/1530899521_-02160.jpg",
+      "bytes": 955972,
+      "sha256": "6f69e34b767af819492b581b8f991931656e5f1313152ef0cfa9cbf67523d813",
+      "width": 3072,
+      "height": 2048
+    },
+    {
+      "filename": "1530899581_-02100.jpg",
+      "timestamp": 1530899581,
+      "offset_seconds": -2100,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180706_West_lp-n-mobo-c/1530899581_-02100.jpg",
+      "bytes": 953951,
+      "sha256": "f57662ab4c737d6b75fe672857cc85b0913883dfbde865ca1b2d140e18b27abc",
+      "width": 3072,
+      "height": 2048
+    },
+    {
+      "filename": "1530899641_-02040.jpg",
+      "timestamp": 1530899641,
+      "offset_seconds": -2040,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180706_West_lp-n-mobo-c/1530899641_-02040.jpg",
+      "bytes": 950985,
+      "sha256": "f505bcca6a40fc79c1554892895e8452764778e7086b6f093030b3553445e2d9",
+      "width": 3072,
+      "height": 2048
+    },
+    {
+      "filename": "1530899701_-01980.jpg",
+      "timestamp": 1530899701,
+      "offset_seconds": -1980,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180706_West_lp-n-mobo-c/1530899701_-01980.jpg",
+      "bytes": 957030,
+      "sha256": "2d64cfe766fe74e3603a8f22ddd311ebb7211d2e0be8cb546aa441b842ab9205",
+      "width": 3072,
+      "height": 2048
+    },
+    {
+      "filename": "1530899761_-01920.jpg",
+      "timestamp": 1530899761,
+      "offset_seconds": -1920,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180706_West_lp-n-mobo-c/1530899761_-01920.jpg",
+      "bytes": 959658,
+      "sha256": "ceb1e7d2d7c57326227a24ee09f02e9db254797dc9ae55d3f2568afc3c7a1535",
+      "width": 3072,
+      "height": 2048
+    },
+    {
+      "filename": "1530899821_-01860.jpg",
+      "timestamp": 1530899821,
+      "offset_seconds": -1860,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180706_West_lp-n-mobo-c/1530899821_-01860.jpg",
+      "bytes": 927157,
+      "sha256": "848dcabcb314a266f1cf8f4bf7d302ba325ec7cd1811ea486ee5c35cb07c937c",
+      "width": 3072,
+      "height": 2048
+    },
+    {
+      "filename": "1530899881_-01800.jpg",
+      "timestamp": 1530899881,
+      "offset_seconds": -1800,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180706_West_lp-n-mobo-c/1530899881_-01800.jpg",
+      "bytes": 929656,
+      "sha256": "60e264bdeb0ec33c99dba857ff191046feb68b0b9c367d7d42ca8fd7a80e92d7",
+      "width": 3072,
+      "height": 2048
+    },
+    {
+      "filename": "1530899941_-01740.jpg",
+      "timestamp": 1530899941,
+      "offset_seconds": -1740,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180706_West_lp-n-mobo-c/1530899941_-01740.jpg",
+      "bytes": 929319,
+      "sha256": "40adaebaa56758d977ab2ef10e97573bea38e3a59adbd6eb995bc5fe1919ed3f",
+      "width": 3072,
+      "height": 2048
+    },
+    {
+      "filename": "1530900001_-01680.jpg",
+      "timestamp": 1530900001,
+      "offset_seconds": -1680,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180706_West_lp-n-mobo-c/1530900001_-01680.jpg",
+      "bytes": 928973,
+      "sha256": "34794ff5e9803aaf94d8d2d90ff700c3363f274a435b86bd3cafcf5cb469e901",
+      "width": 3072,
+      "height": 2048
+    },
+    {
+      "filename": "1530900061_-01620.jpg",
+      "timestamp": 1530900061,
+      "offset_seconds": -1620,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180706_West_lp-n-mobo-c/1530900061_-01620.jpg",
+      "bytes": 940649,
+      "sha256": "a6f3a47f6ec948dbf8c9d6ae1fb0bc291f8e0df507cf3ff75cee40659ae2b0ad",
+      "width": 3072,
+      "height": 2048
+    },
+    {
+      "filename": "1530900121_-01560.jpg",
+      "timestamp": 1530900121,
+      "offset_seconds": -1560,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180706_West_lp-n-mobo-c/1530900121_-01560.jpg",
+      "bytes": 951956,
+      "sha256": "30737eda5a1dd593d27e52c878381e16050210d41ee1188e3b21a9b9164d8d01",
+      "width": 3072,
+      "height": 2048
+    },
+    {
+      "filename": "1530900181_-01500.jpg",
+      "timestamp": 1530900181,
+      "offset_seconds": -1500,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180706_West_lp-n-mobo-c/1530900181_-01500.jpg",
+      "bytes": 944041,
+      "sha256": "1dd1344f86dc3da679863cc021269214c17995873219d59cfbba28a884b64853",
+      "width": 3072,
+      "height": 2048
+    },
+    {
+      "filename": "1530900241_-01440.jpg",
+      "timestamp": 1530900241,
+      "offset_seconds": -1440,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180706_West_lp-n-mobo-c/1530900241_-01440.jpg",
+      "bytes": 933742,
+      "sha256": "a34c50b27fa479eb7ce70da66a414c170d70ccab6aeda19b3dc3921cec1ba306",
+      "width": 3072,
+      "height": 2048
+    },
+    {
+      "filename": "1530900301_-01380.jpg",
+      "timestamp": 1530900301,
+      "offset_seconds": -1380,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180706_West_lp-n-mobo-c/1530900301_-01380.jpg",
+      "bytes": 933471,
+      "sha256": "74824dafeead9d6c9b6572e216c52c5911d9af648a5d6aea9446f9cad1f48d0e",
+      "width": 3072,
+      "height": 2048
+    },
+    {
+      "filename": "1530900361_-01320.jpg",
+      "timestamp": 1530900361,
+      "offset_seconds": -1320,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180706_West_lp-n-mobo-c/1530900361_-01320.jpg",
+      "bytes": 940260,
+      "sha256": "2b7789d6d6660b89e41c38b5d0299f32a9902158097a23ecdd4b5c61194e3538",
+      "width": 3072,
+      "height": 2048
+    },
+    {
+      "filename": "1530900421_-01260.jpg",
+      "timestamp": 1530900421,
+      "offset_seconds": -1260,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180706_West_lp-n-mobo-c/1530900421_-01260.jpg",
+      "bytes": 948657,
+      "sha256": "b85a684f9942af64eca93c012d64f2f83113f252bb806630248766d9a7dae967",
+      "width": 3072,
+      "height": 2048
+    },
+    {
+      "filename": "1530900481_-01200.jpg",
+      "timestamp": 1530900481,
+      "offset_seconds": -1200,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180706_West_lp-n-mobo-c/1530900481_-01200.jpg",
+      "bytes": 961874,
+      "sha256": "181c946b10173971af8de98592378f205923d957e5720a16a950b88651cccf93",
+      "width": 3072,
+      "height": 2048
+    },
+    {
+      "filename": "1530900541_-01140.jpg",
+      "timestamp": 1530900541,
+      "offset_seconds": -1140,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180706_West_lp-n-mobo-c/1530900541_-01140.jpg",
+      "bytes": 984437,
+      "sha256": "b46b2ce3f18ea6ae8a25353abbb734ca9cc1bf99dc6d359486fa1298e92d69d5",
+      "width": 3072,
+      "height": 2048
+    },
+    {
+      "filename": "1530900601_-01080.jpg",
+      "timestamp": 1530900601,
+      "offset_seconds": -1080,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180706_West_lp-n-mobo-c/1530900601_-01080.jpg",
+      "bytes": 992332,
+      "sha256": "bbc23049e3f3e419c39f8ab4b5744fbc5f868df54fc46b03b088275f2f78d118",
+      "width": 3072,
+      "height": 2048
+    },
+    {
+      "filename": "1530900661_-01020.jpg",
+      "timestamp": 1530900661,
+      "offset_seconds": -1020,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180706_West_lp-n-mobo-c/1530900661_-01020.jpg",
+      "bytes": 955548,
+      "sha256": "c9f0d8516d9c21425e72a5a811b37f0065f00add2e54a1c2a35b8f0fbc6d4e75",
+      "width": 3072,
+      "height": 2048
+    },
+    {
+      "filename": "1530900721_-00960.jpg",
+      "timestamp": 1530900721,
+      "offset_seconds": -960,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180706_West_lp-n-mobo-c/1530900721_-00960.jpg",
+      "bytes": 957445,
+      "sha256": "8bc3f9e0c6a7e9844070445819ed8b51a50b25c3cada74096a136c7f49e8e784",
+      "width": 3072,
+      "height": 2048
+    },
+    {
+      "filename": "1530900781_-00900.jpg",
+      "timestamp": 1530900781,
+      "offset_seconds": -900,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180706_West_lp-n-mobo-c/1530900781_-00900.jpg",
+      "bytes": 955984,
+      "sha256": "07435c3255ebc69e6ae11a8b761be7d5c95654f06d18db7f7fd89177aa9936cb",
+      "width": 3072,
+      "height": 2048
+    },
+    {
+      "filename": "1530900841_-00840.jpg",
+      "timestamp": 1530900841,
+      "offset_seconds": -840,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180706_West_lp-n-mobo-c/1530900841_-00840.jpg",
+      "bytes": 953156,
+      "sha256": "66c5ddc4dc22cc83af3a27ecc22738b05e64741efc7bdac1c3aea837622c4c77",
+      "width": 3072,
+      "height": 2048
+    },
+    {
+      "filename": "1530900901_-00780.jpg",
+      "timestamp": 1530900901,
+      "offset_seconds": -780,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180706_West_lp-n-mobo-c/1530900901_-00780.jpg",
+      "bytes": 954243,
+      "sha256": "5539bede0d36d6c38c26be9d4b69abe2dd17ed2f4f435c8d0490f4384ef42f6b",
+      "width": 3072,
+      "height": 2048
+    },
+    {
+      "filename": "1530900961_-00720.jpg",
+      "timestamp": 1530900961,
+      "offset_seconds": -720,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180706_West_lp-n-mobo-c/1530900961_-00720.jpg",
+      "bytes": 955377,
+      "sha256": "53234ebc9717337b05de984f47ad926e1fb0c473688b2567a656f19843abb026",
+      "width": 3072,
+      "height": 2048
+    },
+    {
+      "filename": "1530901021_-00660.jpg",
+      "timestamp": 1530901021,
+      "offset_seconds": -660,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180706_West_lp-n-mobo-c/1530901021_-00660.jpg",
+      "bytes": 961625,
+      "sha256": "cff79db9117d3138a1829c41435709eb168857ac69d9cb03f003f26b795d548d",
+      "width": 3072,
+      "height": 2048
+    },
+    {
+      "filename": "1530901081_-00600.jpg",
+      "timestamp": 1530901081,
+      "offset_seconds": -600,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180706_West_lp-n-mobo-c/1530901081_-00600.jpg",
+      "bytes": 966545,
+      "sha256": "acb4e8dbc9558c190d0a951889fa0418536ea8262fa029b87580219b46bc0ed5",
+      "width": 3072,
+      "height": 2048
+    },
+    {
+      "filename": "1530901141_-00540.jpg",
+      "timestamp": 1530901141,
+      "offset_seconds": -540,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180706_West_lp-n-mobo-c/1530901141_-00540.jpg",
+      "bytes": 973735,
+      "sha256": "c3a19f3292a403f2e469602e90bbb297b56d14220e72b1b61031d5edd9e1d62c",
+      "width": 3072,
+      "height": 2048
+    },
+    {
+      "filename": "1530901201_-00480.jpg",
+      "timestamp": 1530901201,
+      "offset_seconds": -480,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180706_West_lp-n-mobo-c/1530901201_-00480.jpg",
+      "bytes": 976742,
+      "sha256": "64830a394693eddf10350e303c4392b2ecb0c22fc74cd2adbd0728950cdc9004",
+      "width": 3072,
+      "height": 2048
+    },
+    {
+      "filename": "1530901261_-00420.jpg",
+      "timestamp": 1530901261,
+      "offset_seconds": -420,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180706_West_lp-n-mobo-c/1530901261_-00420.jpg",
+      "bytes": 972624,
+      "sha256": "03861817aa2410f709c2dedafafe681af58f0a9e66066b19f6c18cbb965789af",
+      "width": 3072,
+      "height": 2048
+    },
+    {
+      "filename": "1530901321_-00360.jpg",
+      "timestamp": 1530901321,
+      "offset_seconds": -360,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180706_West_lp-n-mobo-c/1530901321_-00360.jpg",
+      "bytes": 973673,
+      "sha256": "e7f1a4bfca7f6fef15d25b204c211c6ef1e3e269ccf0af63e9084a39239e283e",
+      "width": 3072,
+      "height": 2048
+    },
+    {
+      "filename": "1530901381_-00300.jpg",
+      "timestamp": 1530901381,
+      "offset_seconds": -300,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180706_West_lp-n-mobo-c/1530901381_-00300.jpg",
+      "bytes": 970860,
+      "sha256": "a6c6c15a692535ccb2fc320c472704c5e7b7adc4667bc753ed30f3df9d933318",
+      "width": 3072,
+      "height": 2048
+    },
+    {
+      "filename": "1530901441_-00240.jpg",
+      "timestamp": 1530901441,
+      "offset_seconds": -240,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180706_West_lp-n-mobo-c/1530901441_-00240.jpg",
+      "bytes": 970815,
+      "sha256": "c66f807ced579eeba2ea0fe6d33ff7637326e8a00eb1a3fb935a71901b4e6a9b",
+      "width": 3072,
+      "height": 2048
+    },
+    {
+      "filename": "1530901501_-00180.jpg",
+      "timestamp": 1530901501,
+      "offset_seconds": -180,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180706_West_lp-n-mobo-c/1530901501_-00180.jpg",
+      "bytes": 974972,
+      "sha256": "658994b54b78f38cbc1166a84e0e0bcbff99c5d124b634d55fd2a663d79c9aab",
+      "width": 3072,
+      "height": 2048
+    },
+    {
+      "filename": "1530901561_-00120.jpg",
+      "timestamp": 1530901561,
+      "offset_seconds": -120,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180706_West_lp-n-mobo-c/1530901561_-00120.jpg",
+      "bytes": 980347,
+      "sha256": "73b02ddbe6f38bba145afaf8e109249aabeb70c5249c766d3cf82c21c6672faa",
+      "width": 3072,
+      "height": 2048
+    },
+    {
+      "filename": "1530901621_-00060.jpg",
+      "timestamp": 1530901621,
+      "offset_seconds": -60,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180706_West_lp-n-mobo-c/1530901621_-00060.jpg",
+      "bytes": 986034,
+      "sha256": "ebf0aa08740aa2125b738c789bd0e914222b51a70ad6c24c5bc8ac22e499ad55",
+      "width": 3072,
+      "height": 2048
+    },
+    {
+      "filename": "1530901681_+00000.jpg",
+      "timestamp": 1530901681,
+      "offset_seconds": 0,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180706_West_lp-n-mobo-c/1530901681_%2B00000.jpg",
+      "bytes": 991856,
+      "sha256": "2177c3586537852470d8e67fbfc74a6ed1adf9af057e786c679405d459b7a6a3",
+      "width": 3072,
+      "height": 2048
+    },
+    {
+      "filename": "1530901741_+00060.jpg",
+      "timestamp": 1530901741,
+      "offset_seconds": 60,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180706_West_lp-n-mobo-c/1530901741_%2B00060.jpg",
+      "bytes": 987369,
+      "sha256": "6b669c485d3b776b2f897776f7449c3712960a4eca4f353f5b7075875141e3f6",
+      "width": 3072,
+      "height": 2048
+    },
+    {
+      "filename": "1530901801_+00120.jpg",
+      "timestamp": 1530901801,
+      "offset_seconds": 120,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180706_West_lp-n-mobo-c/1530901801_%2B00120.jpg",
+      "bytes": 984554,
+      "sha256": "39f52e0981727bd97b621ad73c24f52f50a0f98624011afcadef0ca84b2f55f7",
+      "width": 3072,
+      "height": 2048
+    },
+    {
+      "filename": "1530901861_+00180.jpg",
+      "timestamp": 1530901861,
+      "offset_seconds": 180,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180706_West_lp-n-mobo-c/1530901861_%2B00180.jpg",
+      "bytes": 984712,
+      "sha256": "47d95893615fe550de2787d609416a0abc7bf126ad6a41a7b10b67e5dc24e667",
+      "width": 3072,
+      "height": 2048
+    },
+    {
+      "filename": "1530901921_+00240.jpg",
+      "timestamp": 1530901921,
+      "offset_seconds": 240,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180706_West_lp-n-mobo-c/1530901921_%2B00240.jpg",
+      "bytes": 983457,
+      "sha256": "d7f9ea0f0e25584a06256a31a43c720c2160d0c41d8a0e17fb3b09bc478734fb",
+      "width": 3072,
+      "height": 2048
+    },
+    {
+      "filename": "1530901981_+00300.jpg",
+      "timestamp": 1530901981,
+      "offset_seconds": 300,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180706_West_lp-n-mobo-c/1530901981_%2B00300.jpg",
+      "bytes": 943353,
+      "sha256": "e7e24778e25b478b139dcfa3f9f19c15b3e81078a4ae696038e0e08058523d28",
+      "width": 3072,
+      "height": 2048
+    },
+    {
+      "filename": "1530902041_+00360.jpg",
+      "timestamp": 1530902041,
+      "offset_seconds": 360,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180706_West_lp-n-mobo-c/1530902041_%2B00360.jpg",
+      "bytes": 941351,
+      "sha256": "be7821ff5b9fd36e87290a80199a484c4383603b4f88be6311a4ddbed32931fd",
+      "width": 3072,
+      "height": 2048
+    },
+    {
+      "filename": "1530902101_+00420.jpg",
+      "timestamp": 1530902101,
+      "offset_seconds": 420,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180706_West_lp-n-mobo-c/1530902101_%2B00420.jpg",
+      "bytes": 949387,
+      "sha256": "b632f20c459bc7c157622c3d081462f2281807ea2171dd96691e11bf4233a9bf",
+      "width": 3072,
+      "height": 2048
+    },
+    {
+      "filename": "1530902161_+00480.jpg",
+      "timestamp": 1530902161,
+      "offset_seconds": 480,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180706_West_lp-n-mobo-c/1530902161_%2B00480.jpg",
+      "bytes": 911019,
+      "sha256": "2728654ceccc7846c07e57dec7f2a875cfefe07c5b9b8341a0a399a51aa8569d",
+      "width": 3072,
+      "height": 2048
+    },
+    {
+      "filename": "1530902221_+00540.jpg",
+      "timestamp": 1530902221,
+      "offset_seconds": 540,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180706_West_lp-n-mobo-c/1530902221_%2B00540.jpg",
+      "bytes": 928397,
+      "sha256": "5e49fa0f95f4e87fce506fd2f091982399f3c6334fdea78e7d39f8eb4be0c10d",
+      "width": 3072,
+      "height": 2048
+    },
+    {
+      "filename": "1530902281_+00600.jpg",
+      "timestamp": 1530902281,
+      "offset_seconds": 600,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180706_West_lp-n-mobo-c/1530902281_%2B00600.jpg",
+      "bytes": 918188,
+      "sha256": "966dcbf6e089f7a3e4615f7d3d4a47ff950d4e759815ab39b950ade4f508b8fe",
+      "width": 3072,
+      "height": 2048
+    },
+    {
+      "filename": "1530902341_+00660.jpg",
+      "timestamp": 1530902341,
+      "offset_seconds": 660,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180706_West_lp-n-mobo-c/1530902341_%2B00660.jpg",
+      "bytes": 897574,
+      "sha256": "e6be332bc7b0c56c56c51b4e1881d1b656cc921f2cfb24126bc198324fed46c0",
+      "width": 3072,
+      "height": 2048
+    },
+    {
+      "filename": "1530902401_+00720.jpg",
+      "timestamp": 1530902401,
+      "offset_seconds": 720,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180706_West_lp-n-mobo-c/1530902401_%2B00720.jpg",
+      "bytes": 861115,
+      "sha256": "29667f38032dfea00f47b57903e5c08f56cc3ac4ce163709698b75c9d20d2050",
+      "width": 3072,
+      "height": 2048
+    },
+    {
+      "filename": "1530902461_+00780.jpg",
+      "timestamp": 1530902461,
+      "offset_seconds": 780,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180706_West_lp-n-mobo-c/1530902461_%2B00780.jpg",
+      "bytes": 853729,
+      "sha256": "22650e16f9a30bc5ad6d3f40c6d3757fb74ed94fdf85f3be1e60180eeaf15ab4",
+      "width": 3072,
+      "height": 2048
+    },
+    {
+      "filename": "1530902521_+00840.jpg",
+      "timestamp": 1530902521,
+      "offset_seconds": 840,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180706_West_lp-n-mobo-c/1530902521_%2B00840.jpg",
+      "bytes": 854817,
+      "sha256": "831ad215c89fe86b9f24db7bdaeab1f1c38c0543467d76b7199b421ba75bbd3b",
+      "width": 3072,
+      "height": 2048
+    },
+    {
+      "filename": "1530902581_+00900.jpg",
+      "timestamp": 1530902581,
+      "offset_seconds": 900,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180706_West_lp-n-mobo-c/1530902581_%2B00900.jpg",
+      "bytes": 856924,
+      "sha256": "20504e508bbdec5854ba9e61d0f6bd12547e744d4c3d273801027c3a5d0ed43a",
+      "width": 3072,
+      "height": 2048
+    },
+    {
+      "filename": "1530902641_+00960.jpg",
+      "timestamp": 1530902641,
+      "offset_seconds": 960,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180706_West_lp-n-mobo-c/1530902641_%2B00960.jpg",
+      "bytes": 806219,
+      "sha256": "6b9e46be03d3d93cfc17edc4d031a2e9a45265f62a07774320664b53625068e1",
+      "width": 3072,
+      "height": 2048
+    },
+    {
+      "filename": "1530902701_+01020.jpg",
+      "timestamp": 1530902701,
+      "offset_seconds": 1020,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180706_West_lp-n-mobo-c/1530902701_%2B01020.jpg",
+      "bytes": 855073,
+      "sha256": "392faeabdee2debf7be20880846a5df02f085501674d18e0326d2d19af5df482",
+      "width": 3072,
+      "height": 2048
+    },
+    {
+      "filename": "1530902761_+01080.jpg",
+      "timestamp": 1530902761,
+      "offset_seconds": 1080,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180706_West_lp-n-mobo-c/1530902761_%2B01080.jpg",
+      "bytes": 866169,
+      "sha256": "835d01fbf5b8253b3ca8d4d475a9be228d60a313120da7c39fe6842dd948100a",
+      "width": 3072,
+      "height": 2048
+    },
+    {
+      "filename": "1530902821_+01140.jpg",
+      "timestamp": 1530902821,
+      "offset_seconds": 1140,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180706_West_lp-n-mobo-c/1530902821_%2B01140.jpg",
+      "bytes": 883670,
+      "sha256": "09c58e01f8e579d2fcfbe17fa2e37f7f6ee98d13522e22050f09738c9b65b899",
+      "width": 3072,
+      "height": 2048
+    },
+    {
+      "filename": "1530902881_+01200.jpg",
+      "timestamp": 1530902881,
+      "offset_seconds": 1200,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180706_West_lp-n-mobo-c/1530902881_%2B01200.jpg",
+      "bytes": 832356,
+      "sha256": "5f4110d3399f9b9ded5a19a3a9a021019838b0bf51763e6db225f26e7ff0328f",
+      "width": 3072,
+      "height": 2048
+    },
+    {
+      "filename": "1530902941_+01260.jpg",
+      "timestamp": 1530902941,
+      "offset_seconds": 1260,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180706_West_lp-n-mobo-c/1530902941_%2B01260.jpg",
+      "bytes": 825096,
+      "sha256": "0955a0e66d4875014d77b8a6e9dfa8661cf90c6ea8387447468309b3d0c77210",
+      "width": 3072,
+      "height": 2048
+    },
+    {
+      "filename": "1530903001_+01320.jpg",
+      "timestamp": 1530903001,
+      "offset_seconds": 1320,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180706_West_lp-n-mobo-c/1530903001_%2B01320.jpg",
+      "bytes": 852290,
+      "sha256": "6847cc1c54935c75765623054bd4a9542a628b3927d919c45a6a3c6af49fbb18",
+      "width": 3072,
+      "height": 2048
+    },
+    {
+      "filename": "1530903061_+01380.jpg",
+      "timestamp": 1530903061,
+      "offset_seconds": 1380,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180706_West_lp-n-mobo-c/1530903061_%2B01380.jpg",
+      "bytes": 880011,
+      "sha256": "9c22785859e3f480f6846ea849b8ce6968b904113ead758273aea967b3db31df",
+      "width": 3072,
+      "height": 2048
+    },
+    {
+      "filename": "1530903121_+01440.jpg",
+      "timestamp": 1530903121,
+      "offset_seconds": 1440,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180706_West_lp-n-mobo-c/1530903121_%2B01440.jpg",
+      "bytes": 838017,
+      "sha256": "a8a877d0a7a1443e28f30b1b19f4d1a19dd5c1d8d1947f3cbda9d0cfe156a6aa",
+      "width": 3072,
+      "height": 2048
+    },
+    {
+      "filename": "1530903181_+01500.jpg",
+      "timestamp": 1530903181,
+      "offset_seconds": 1500,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180706_West_lp-n-mobo-c/1530903181_%2B01500.jpg",
+      "bytes": 853030,
+      "sha256": "909970f627ef0dcf5bdab08b78548709ed735422954e82a62d4688b7cb1339f4",
+      "width": 3072,
+      "height": 2048
+    },
+    {
+      "filename": "1530903241_+01560.jpg",
+      "timestamp": 1530903241,
+      "offset_seconds": 1560,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180706_West_lp-n-mobo-c/1530903241_%2B01560.jpg",
+      "bytes": 835138,
+      "sha256": "abc684d89759f5ed03a039271aea3c23b4ac0a5203646ffbcbe9422b77747a9e",
+      "width": 3072,
+      "height": 2048
+    },
+    {
+      "filename": "1530903301_+01620.jpg",
+      "timestamp": 1530903301,
+      "offset_seconds": 1620,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180706_West_lp-n-mobo-c/1530903301_%2B01620.jpg",
+      "bytes": 839393,
+      "sha256": "f02a20e39e5360f225f425e8ac8073606a1321b8a3e4d8e0143809d9f54bbf80",
+      "width": 3072,
+      "height": 2048
+    },
+    {
+      "filename": "1530903361_+01680.jpg",
+      "timestamp": 1530903361,
+      "offset_seconds": 1680,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180706_West_lp-n-mobo-c/1530903361_%2B01680.jpg",
+      "bytes": 799526,
+      "sha256": "644792f526be3ec1cdf88df8953b1ee9de20c65240066dabefa9150796106eb2",
+      "width": 3072,
+      "height": 2048
+    },
+    {
+      "filename": "1530903421_+01740.jpg",
+      "timestamp": 1530903421,
+      "offset_seconds": 1740,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180706_West_lp-n-mobo-c/1530903421_%2B01740.jpg",
+      "bytes": 718893,
+      "sha256": "ba4bd4136dcdbac0b02546aa0767fd5815c8c4f0b62ce09575a44a6cb7b91b0e",
+      "width": 3072,
+      "height": 2048
+    },
+    {
+      "filename": "1530903481_+01800.jpg",
+      "timestamp": 1530903481,
+      "offset_seconds": 1800,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180706_West_lp-n-mobo-c/1530903481_%2B01800.jpg",
+      "bytes": 744605,
+      "sha256": "ad3f4a1d0abcf3b0911f2df7945c07dbb2388e1a74581bdf486819d909267446",
+      "width": 3072,
+      "height": 2048
+    },
+    {
+      "filename": "1530903541_+01860.jpg",
+      "timestamp": 1530903541,
+      "offset_seconds": 1860,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180706_West_lp-n-mobo-c/1530903541_%2B01860.jpg",
+      "bytes": 738672,
+      "sha256": "78cd4925f2c28977d5fc99be67ebc94228decab3a83d7894bd10a6230d9b6c29",
+      "width": 3072,
+      "height": 2048
+    },
+    {
+      "filename": "1530903601_+01920.jpg",
+      "timestamp": 1530903601,
+      "offset_seconds": 1920,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180706_West_lp-n-mobo-c/1530903601_%2B01920.jpg",
+      "bytes": 733764,
+      "sha256": "c66336714363e7e2f27210878797a6c13d13d833ba469409bdca3f81edc7b68b",
+      "width": 3072,
+      "height": 2048
+    },
+    {
+      "filename": "1530903661_+01980.jpg",
+      "timestamp": 1530903661,
+      "offset_seconds": 1980,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180706_West_lp-n-mobo-c/1530903661_%2B01980.jpg",
+      "bytes": 722193,
+      "sha256": "0cd69f9705b041c83e842ebf6552b871eda150f3d3cdb77e8b3b42e86818defa",
+      "width": 3072,
+      "height": 2048
+    },
+    {
+      "filename": "1530903721_+02040.jpg",
+      "timestamp": 1530903721,
+      "offset_seconds": 2040,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180706_West_lp-n-mobo-c/1530903721_%2B02040.jpg",
+      "bytes": 726406,
+      "sha256": "f109ce15346f0ed2edfc0ad98508a94171dcdf20b9310e38740b0d8865250644",
+      "width": 3072,
+      "height": 2048
+    },
+    {
+      "filename": "1530903781_+02100.jpg",
+      "timestamp": 1530903781,
+      "offset_seconds": 2100,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180706_West_lp-n-mobo-c/1530903781_%2B02100.jpg",
+      "bytes": 753058,
+      "sha256": "b8fcaf9088c8925e251a4e7fc5f55f12e364f852370ba9c59f98d4da44e0bbc0",
+      "width": 3072,
+      "height": 2048
+    },
+    {
+      "filename": "1530903841_+02160.jpg",
+      "timestamp": 1530903841,
+      "offset_seconds": 2160,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180706_West_lp-n-mobo-c/1530903841_%2B02160.jpg",
+      "bytes": 731926,
+      "sha256": "e85ffbb7e86792879f95f9428a3f54a6ed9a2ad9eb066ae2a403142a8e57b4ce",
+      "width": 3072,
+      "height": 2048
+    },
+    {
+      "filename": "1530903901_+02220.jpg",
+      "timestamp": 1530903901,
+      "offset_seconds": 2220,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180706_West_lp-n-mobo-c/1530903901_%2B02220.jpg",
+      "bytes": 731348,
+      "sha256": "b51ae1abd5f739de8d20dbd427afa11a7767a9180b8c191824b1cd3d97ba9629",
+      "width": 3072,
+      "height": 2048
+    },
+    {
+      "filename": "1530903961_+02280.jpg",
+      "timestamp": 1530903961,
+      "offset_seconds": 2280,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180706_West_lp-n-mobo-c/1530903961_%2B02280.jpg",
+      "bytes": 733186,
+      "sha256": "10f8bd45fec9e387afb76c9cd14ea77d5108b2824f211ccc1e9e31a1e1bf5d30",
+      "width": 3072,
+      "height": 2048
+    },
+    {
+      "filename": "1530904021_+02340.jpg",
+      "timestamp": 1530904021,
+      "offset_seconds": 2340,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180706_West_lp-n-mobo-c/1530904021_%2B02340.jpg",
+      "bytes": 732854,
+      "sha256": "a7756b21fd2c179fcc050d6d03f3b40935d24fdf208c55a853f940f745ffacb5",
+      "width": 3072,
+      "height": 2048
+    },
+    {
+      "filename": "1530904081_+02400.jpg",
+      "timestamp": 1530904081,
+      "offset_seconds": 2400,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180706_West_lp-n-mobo-c/1530904081_%2B02400.jpg",
+      "bytes": 728198,
+      "sha256": "ef1e52bb643959d98ad74cee2196433cddd218ba5bbb10b27280eb8c90f3c634",
+      "width": 3072,
+      "height": 2048
+    }
+  ]
+}

@@ -1,0 +1,861 @@
+{
+  "status": "completed",
+  "started_at_utc": "2026-10-20T12:31:09.470168+00:00",
+  "plan": {
+    "sequence": "D:\\AIC\\AIC-seek\\data\\figlib_exp004_three_events\\20180706_West_lp-n-mobo-c",
+    "selected_images": 81,
+    "first": "1530899281_-02400.jpg",
+    "last": "1530904081_+02400.jpg",
+    "offset_seconds": [
+      -2400,
+      2400
+    ],
+    "window_max_real_frames": 20,
+    "detection_mode": "per-frame-cache",
+    "confidence_override": 0.05,
+    "image_size_override": 1024,
+    "model_sha256": "6a328bbc933b4d92855cbcbde06a6aac165a386d08b09e9de59f7448046d455e",
+    "uses_future_frames": false,
+    "input_hashes_checked": true
+  },
+  "command": [
+    "D:\\AIC\\AIC-seek\\experiments\\exp003_whittier_full_replay\\scripts\\replay_sequence.py",
+    "--sequence",
+    "D:\\AIC\\AIC-seek\\data\\figlib_exp004_three_events\\20180706_West_lp-n-mobo-c",
+    "--model",
+    "D:\\AIC\\pyronear_lab\\models\\v0.6.0\\model.zip",
+    "--output-dir",
+    "D:\\AIC\\AIC-seek\\experiments\\exp004_figlib_multi_event\\outputs\\exp004_20261020_201923\\west\\low_threshold",
+    "--device",
+    "cuda",
+    "--window",
+    "20",
+    "--confidence",
+    "0.05",
+    "--image-size",
+    "1024",
+    "--detection-mode",
+    "per-frame-cache",
+    "--warmup",
+    "1",
+    "--expected-model-sha256",
+    "6a328bbc933b4d92855cbcbde06a6aac165a386d08b09e9de59f7448046d455e"
+  ],
+  "script_sha256": "ea9185b12e09af6670a0c2d014525f090d959e8dce97972d123c2f9b6f269c86",
+  "code_commit": "a22588ecbc3265b7d0c70a479a07ce6ab62e60b3",
+  "code_status": "M EXPERIMENTS.md\n?? data/figlib_exp004_three_events/\n?? experiments/exp004_figlib_multi_event/",
+  "python": "3.12.4 (tags/v3.12.4:8e8a4ba, Jun  6 2024, 19:30:16) [MSC v.1940 64 bit (AMD64)]",
+  "torch": "2.7.1+cu118",
+  "cuda_runtime": "11.8",
+  "device": "cuda",
+  "gpu_name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+  "selected_inputs": [
+    {
+      "filename": "1530899281_-02400.jpg",
+      "timestamp": 1530899281,
+      "offset_seconds": -2400,
+      "source_frame_1based": 1,
+      "sha256": "dfcbd1ffc5229faeac874f262c4c2433a8f8c80d45c15a716f33900c779a4472"
+    },
+    {
+      "filename": "1530899341_-02340.jpg",
+      "timestamp": 1530899341,
+      "offset_seconds": -2340,
+      "source_frame_1based": 2,
+      "sha256": "0eeb64fcd9184b5270e06b1a0b4835799427c2a3d7d0d03c5ae3a7e2c8776e57"
+    },
+    {
+      "filename": "1530899401_-02280.jpg",
+      "timestamp": 1530899401,
+      "offset_seconds": -2280,
+      "source_frame_1based": 3,
+      "sha256": "b6a28a8b86b45227f48b8a1cf29da3ded787acead6e107ad29521204cc190536"
+    },
+    {
+      "filename": "1530899461_-02220.jpg",
+      "timestamp": 1530899461,
+      "offset_seconds": -2220,
+      "source_frame_1based": 4,
+      "sha256": "c2ce1d1659e32b45e71e27b69ca742561aa75100432a6c1e7b915c5a30428e3a"
+    },
+    {
+      "filename": "1530899521_-02160.jpg",
+      "timestamp": 1530899521,
+      "offset_seconds": -2160,
+      "source_frame_1based": 5,
+      "sha256": "6f69e34b767af819492b581b8f991931656e5f1313152ef0cfa9cbf67523d813"
+    },
+    {
+      "filename": "1530899581_-02100.jpg",
+      "timestamp": 1530899581,
+      "offset_seconds": -2100,
+      "source_frame_1based": 6,
+      "sha256": "f57662ab4c737d6b75fe672857cc85b0913883dfbde865ca1b2d140e18b27abc"
+    },
+    {
+      "filename": "1530899641_-02040.jpg",
+      "timestamp": 1530899641,
+      "offset_seconds": -2040,
+      "source_frame_1based": 7,
+      "sha256": "f505bcca6a40fc79c1554892895e8452764778e7086b6f093030b3553445e2d9"
+    },
+    {
+      "filename": "1530899701_-01980.jpg",
+      "timestamp": 1530899701,
+      "offset_seconds": -1980,
+      "source_frame_1based": 8,
+      "sha256": "2d64cfe766fe74e3603a8f22ddd311ebb7211d2e0be8cb546aa441b842ab9205"
+    },
+    {
+      "filename": "1530899761_-01920.jpg",
+      "timestamp": 1530899761,
+      "offset_seconds": -1920,
+      "source_frame_1based": 9,
+      "sha256": "ceb1e7d2d7c57326227a24ee09f02e9db254797dc9ae55d3f2568afc3c7a1535"
+    },
+    {
+      "filename": "1530899821_-01860.jpg",
+      "timestamp": 1530899821,
+      "offset_seconds": -1860,
+      "source_frame_1based": 10,
+      "sha256": "848dcabcb314a266f1cf8f4bf7d302ba325ec7cd1811ea486ee5c35cb07c937c"
+    },
+    {
+      "filename": "1530899881_-01800.jpg",
+      "timestamp": 1530899881,
+      "offset_seconds": -1800,
+      "source_frame_1based": 11,
+      "sha256": "60e264bdeb0ec33c99dba857ff191046feb68b0b9c367d7d42ca8fd7a80e92d7"
+    },
+    {
+      "filename": "1530899941_-01740.jpg",
+      "timestamp": 1530899941,
+      "offset_seconds": -1740,
+      "source_frame_1based": 12,
+      "sha256": "40adaebaa56758d977ab2ef10e97573bea38e3a59adbd6eb995bc5fe1919ed3f"
+    },
+    {
+      "filename": "1530900001_-01680.jpg",
+      "timestamp": 1530900001,
+      "offset_seconds": -1680,
+      "source_frame_1based": 13,
+      "sha256": "34794ff5e9803aaf94d8d2d90ff700c3363f274a435b86bd3cafcf5cb469e901"
+    },
+    {
+      "filename": "1530900061_-01620.jpg",
+      "timestamp": 1530900061,
+      "offset_seconds": -1620,
+      "source_frame_1based": 14,
+      "sha256": "a6f3a47f6ec948dbf8c9d6ae1fb0bc291f8e0df507cf3ff75cee40659ae2b0ad"
+    },
+    {
+      "filename": "1530900121_-01560.jpg",
+      "timestamp": 1530900121,
+      "offset_seconds": -1560,
+      "source_frame_1based": 15,
+      "sha256": "30737eda5a1dd593d27e52c878381e16050210d41ee1188e3b21a9b9164d8d01"
+    },
+    {
+      "filename": "1530900181_-01500.jpg",
+      "timestamp": 1530900181,
+      "offset_seconds": -1500,
+      "source_frame_1based": 16,
+      "sha256": "1dd1344f86dc3da679863cc021269214c17995873219d59cfbba28a884b64853"
+    },
+    {
+      "filename": "1530900241_-01440.jpg",
+      "timestamp": 1530900241,
+      "offset_seconds": -1440,
+      "source_frame_1based": 17,
+      "sha256": "a34c50b27fa479eb7ce70da66a414c170d70ccab6aeda19b3dc3921cec1ba306"
+    },
+    {
+      "filename": "1530900301_-01380.jpg",
+      "timestamp": 1530900301,
+      "offset_seconds": -1380,
+      "source_frame_1based": 18,
+      "sha256": "74824dafeead9d6c9b6572e216c52c5911d9af648a5d6aea9446f9cad1f48d0e"
+    },
+    {
+      "filename": "1530900361_-01320.jpg",
+      "timestamp": 1530900361,
+      "offset_seconds": -1320,
+      "source_frame_1based": 19,
+      "sha256": "2b7789d6d6660b89e41c38b5d0299f32a9902158097a23ecdd4b5c61194e3538"
+    },
+    {
+      "filename": "1530900421_-01260.jpg",
+      "timestamp": 1530900421,
+      "offset_seconds": -1260,
+      "source_frame_1based": 20,
+      "sha256": "b85a684f9942af64eca93c012d64f2f83113f252bb806630248766d9a7dae967"
+    },
+    {
+      "filename": "1530900481_-01200.jpg",
+      "timestamp": 1530900481,
+      "offset_seconds": -1200,
+      "source_frame_1based": 21,
+      "sha256": "181c946b10173971af8de98592378f205923d957e5720a16a950b88651cccf93"
+    },
+    {
+      "filename": "1530900541_-01140.jpg",
+      "timestamp": 1530900541,
+      "offset_seconds": -1140,
+      "source_frame_1based": 22,
+      "sha256": "b46b2ce3f18ea6ae8a25353abbb734ca9cc1bf99dc6d359486fa1298e92d69d5"
+    },
+    {
+      "filename": "1530900601_-01080.jpg",
+      "timestamp": 1530900601,
+      "offset_seconds": -1080,
+      "source_frame_1based": 23,
+      "sha256": "bbc23049e3f3e419c39f8ab4b5744fbc5f868df54fc46b03b088275f2f78d118"
+    },
+    {
+      "filename": "1530900661_-01020.jpg",
+      "timestamp": 1530900661,
+      "offset_seconds": -1020,
+      "source_frame_1based": 24,
+      "sha256": "c9f0d8516d9c21425e72a5a811b37f0065f00add2e54a1c2a35b8f0fbc6d4e75"
+    },
+    {
+      "filename": "1530900721_-00960.jpg",
+      "timestamp": 1530900721,
+      "offset_seconds": -960,
+      "source_frame_1based": 25,
+      "sha256": "8bc3f9e0c6a7e9844070445819ed8b51a50b25c3cada74096a136c7f49e8e784"
+    },
+    {
+      "filename": "1530900781_-00900.jpg",
+      "timestamp": 1530900781,
+      "offset_seconds": -900,
+      "source_frame_1based": 26,
+      "sha256": "07435c3255ebc69e6ae11a8b761be7d5c95654f06d18db7f7fd89177aa9936cb"
+    },
+    {
+      "filename": "1530900841_-00840.jpg",
+      "timestamp": 1530900841,
+      "offset_seconds": -840,
+      "source_frame_1based": 27,
+      "sha256": "66c5ddc4dc22cc83af3a27ecc22738b05e64741efc7bdac1c3aea837622c4c77"
+    },
+    {
+      "filename": "1530900901_-00780.jpg",
+      "timestamp": 1530900901,
+      "offset_seconds": -780,
+      "source_frame_1based": 28,
+      "sha256": "5539bede0d36d6c38c26be9d4b69abe2dd17ed2f4f435c8d0490f4384ef42f6b"
+    },
+    {
+      "filename": "1530900961_-00720.jpg",
+      "timestamp": 1530900961,
+      "offset_seconds": -720,
+      "source_frame_1based": 29,
+      "sha256": "53234ebc9717337b05de984f47ad926e1fb0c473688b2567a656f19843abb026"
+    },
+    {
+      "filename": "1530901021_-00660.jpg",
+      "timestamp": 1530901021,
+      "offset_seconds": -660,
+      "source_frame_1based": 30,
+      "sha256": "cff79db9117d3138a1829c41435709eb168857ac69d9cb03f003f26b795d548d"
+    },
+    {
+      "filename": "1530901081_-00600.jpg",
+      "timestamp": 1530901081,
+      "offset_seconds": -600,
+      "source_frame_1based": 31,
+      "sha256": "acb4e8dbc9558c190d0a951889fa0418536ea8262fa029b87580219b46bc0ed5"
+    },
+    {
+      "filename": "1530901141_-00540.jpg",
+      "timestamp": 1530901141,
+      "offset_seconds": -540,
+      "source_frame_1based": 32,
+      "sha256": "c3a19f3292a403f2e469602e90bbb297b56d14220e72b1b61031d5edd9e1d62c"
+    },
+    {
+      "filename": "1530901201_-00480.jpg",
+      "timestamp": 1530901201,
+      "offset_seconds": -480,
+      "source_frame_1based": 33,
+      "sha256": "64830a394693eddf10350e303c4392b2ecb0c22fc74cd2adbd0728950cdc9004"
+    },
+    {
+      "filename": "1530901261_-00420.jpg",
+      "timestamp": 1530901261,
+      "offset_seconds": -420,
+      "source_frame_1based": 34,
+      "sha256": "03861817aa2410f709c2dedafafe681af58f0a9e66066b19f6c18cbb965789af"
+    },
+    {
+      "filename": "1530901321_-00360.jpg",
+      "timestamp": 1530901321,
+      "offset_seconds": -360,
+      "source_frame_1based": 35,
+      "sha256": "e7f1a4bfca7f6fef15d25b204c211c6ef1e3e269ccf0af63e9084a39239e283e"
+    },
+    {
+      "filename": "1530901381_-00300.jpg",
+      "timestamp": 1530901381,
+      "offset_seconds": -300,
+      "source_frame_1based": 36,
+      "sha256": "a6c6c15a692535ccb2fc320c472704c5e7b7adc4667bc753ed30f3df9d933318"
+    },
+    {
+      "filename": "1530901441_-00240.jpg",
+      "timestamp": 1530901441,
+      "offset_seconds": -240,
+      "source_frame_1based": 37,
+      "sha256": "c66f807ced579eeba2ea0fe6d33ff7637326e8a00eb1a3fb935a71901b4e6a9b"
+    },
+    {
+      "filename": "1530901501_-00180.jpg",
+      "timestamp": 1530901501,
+      "offset_seconds": -180,
+      "source_frame_1based": 38,
+      "sha256": "658994b54b78f38cbc1166a84e0e0bcbff99c5d124b634d55fd2a663d79c9aab"
+    },
+    {
+      "filename": "1530901561_-00120.jpg",
+      "timestamp": 1530901561,
+      "offset_seconds": -120,
+      "source_frame_1based": 39,
+      "sha256": "73b02ddbe6f38bba145afaf8e109249aabeb70c5249c766d3cf82c21c6672faa"
+    },
+    {
+      "filename": "1530901621_-00060.jpg",
+      "timestamp": 1530901621,
+      "offset_seconds": -60,
+      "source_frame_1based": 40,
+      "sha256": "ebf0aa08740aa2125b738c789bd0e914222b51a70ad6c24c5bc8ac22e499ad55"
+    },
+    {
+      "filename": "1530901681_+00000.jpg",
+      "timestamp": 1530901681,
+      "offset_seconds": 0,
+      "source_frame_1based": 41,
+      "sha256": "2177c3586537852470d8e67fbfc74a6ed1adf9af057e786c679405d459b7a6a3"
+    },
+    {
+      "filename": "1530901741_+00060.jpg",
+      "timestamp": 1530901741,
+      "offset_seconds": 60,
+      "source_frame_1based": 42,
+      "sha256": "6b669c485d3b776b2f897776f7449c3712960a4eca4f353f5b7075875141e3f6"
+    },
+    {
+      "filename": "1530901801_+00120.jpg",
+      "timestamp": 1530901801,
+      "offset_seconds": 120,
+      "source_frame_1based": 43,
+      "sha256": "39f52e0981727bd97b621ad73c24f52f50a0f98624011afcadef0ca84b2f55f7"
+    },
+    {
+      "filename": "1530901861_+00180.jpg",
+      "timestamp": 1530901861,
+      "offset_seconds": 180,
+      "source_frame_1based": 44,
+      "sha256": "47d95893615fe550de2787d609416a0abc7bf126ad6a41a7b10b67e5dc24e667"
+    },
+    {
+      "filename": "1530901921_+00240.jpg",
+      "timestamp": 1530901921,
+      "offset_seconds": 240,
+      "source_frame_1based": 45,
+      "sha256": "d7f9ea0f0e25584a06256a31a43c720c2160d0c41d8a0e17fb3b09bc478734fb"
+    },
+    {
+      "filename": "1530901981_+00300.jpg",
+      "timestamp": 1530901981,
+      "offset_seconds": 300,
+      "source_frame_1based": 46,
+      "sha256": "e7e24778e25b478b139dcfa3f9f19c15b3e81078a4ae696038e0e08058523d28"
+    },
+    {
+      "filename": "1530902041_+00360.jpg",
+      "timestamp": 1530902041,
+      "offset_seconds": 360,
+      "source_frame_1based": 47,
+      "sha256": "be7821ff5b9fd36e87290a80199a484c4383603b4f88be6311a4ddbed32931fd"
+    },
+    {
+      "filename": "1530902101_+00420.jpg",
+      "timestamp": 1530902101,
+      "offset_seconds": 420,
+      "source_frame_1based": 48,
+      "sha256": "b632f20c459bc7c157622c3d081462f2281807ea2171dd96691e11bf4233a9bf"
+    },
+    {
+      "filename": "1530902161_+00480.jpg",
+      "timestamp": 1530902161,
+      "offset_seconds": 480,
+      "source_frame_1based": 49,
+      "sha256": "2728654ceccc7846c07e57dec7f2a875cfefe07c5b9b8341a0a399a51aa8569d"
+    },
+    {
+      "filename": "1530902221_+00540.jpg",
+      "timestamp": 1530902221,
+      "offset_seconds": 540,
+      "source_frame_1based": 50,
+      "sha256": "5e49fa0f95f4e87fce506fd2f091982399f3c6334fdea78e7d39f8eb4be0c10d"
+    },
+    {
+      "filename": "1530902281_+00600.jpg",
+      "timestamp": 1530902281,
+      "offset_seconds": 600,
+      "source_frame_1based": 51,
+      "sha256": "966dcbf6e089f7a3e4615f7d3d4a47ff950d4e759815ab39b950ade4f508b8fe"
+    },
+    {
+      "filename": "1530902341_+00660.jpg",
+      "timestamp": 1530902341,
+      "offset_seconds": 660,
+      "source_frame_1based": 52,
+      "sha256": "e6be332bc7b0c56c56c51b4e1881d1b656cc921f2cfb24126bc198324fed46c0"
+    },
+    {
+      "filename": "1530902401_+00720.jpg",
+      "timestamp": 1530902401,
+      "offset_seconds": 720,
+      "source_frame_1based": 53,
+      "sha256": "29667f38032dfea00f47b57903e5c08f56cc3ac4ce163709698b75c9d20d2050"
+    },
+    {
+      "filename": "1530902461_+00780.jpg",
+      "timestamp": 1530902461,
+      "offset_seconds": 780,
+      "source_frame_1based": 54,
+      "sha256": "22650e16f9a30bc5ad6d3f40c6d3757fb74ed94fdf85f3be1e60180eeaf15ab4"
+    },
+    {
+      "filename": "1530902521_+00840.jpg",
+      "timestamp": 1530902521,
+      "offset_seconds": 840,
+      "source_frame_1based": 55,
+      "sha256": "831ad215c89fe86b9f24db7bdaeab1f1c38c0543467d76b7199b421ba75bbd3b"
+    },
+    {
+      "filename": "1530902581_+00900.jpg",
+      "timestamp": 1530902581,
+      "offset_seconds": 900,
+      "source_frame_1based": 56,
+      "sha256": "20504e508bbdec5854ba9e61d0f6bd12547e744d4c3d273801027c3a5d0ed43a"
+    },
+    {
+      "filename": "1530902641_+00960.jpg",
+      "timestamp": 1530902641,
+      "offset_seconds": 960,
+      "source_frame_1based": 57,
+      "sha256": "6b9e46be03d3d93cfc17edc4d031a2e9a45265f62a07774320664b53625068e1"
+    },
+    {
+      "filename": "1530902701_+01020.jpg",
+      "timestamp": 1530902701,
+      "offset_seconds": 1020,
+      "source_frame_1based": 58,
+      "sha256": "392faeabdee2debf7be20880846a5df02f085501674d18e0326d2d19af5df482"
+    },
+    {
+      "filename": "1530902761_+01080.jpg",
+      "timestamp": 1530902761,
+      "offset_seconds": 1080,
+      "source_frame_1based": 59,
+      "sha256": "835d01fbf5b8253b3ca8d4d475a9be228d60a313120da7c39fe6842dd948100a"
+    },
+    {
+      "filename": "1530902821_+01140.jpg",
+      "timestamp": 1530902821,
+      "offset_seconds": 1140,
+      "source_frame_1based": 60,
+      "sha256": "09c58e01f8e579d2fcfbe17fa2e37f7f6ee98d13522e22050f09738c9b65b899"
+    },
+    {
+      "filename": "1530902881_+01200.jpg",
+      "timestamp": 1530902881,
+      "offset_seconds": 1200,
+      "source_frame_1based": 61,
+      "sha256": "5f4110d3399f9b9ded5a19a3a9a021019838b0bf51763e6db225f26e7ff0328f"
+    },
+    {
+      "filename": "1530902941_+01260.jpg",
+      "timestamp": 1530902941,
+      "offset_seconds": 1260,
+      "source_frame_1based": 62,
+      "sha256": "0955a0e66d4875014d77b8a6e9dfa8661cf90c6ea8387447468309b3d0c77210"
+    },
+    {
+      "filename": "1530903001_+01320.jpg",
+      "timestamp": 1530903001,
+      "offset_seconds": 1320,
+      "source_frame_1based": 63,
+      "sha256": "6847cc1c54935c75765623054bd4a9542a628b3927d919c45a6a3c6af49fbb18"
+    },
+    {
+      "filename": "1530903061_+01380.jpg",
+      "timestamp": 1530903061,
+      "offset_seconds": 1380,
+      "source_frame_1based": 64,
+      "sha256": "9c22785859e3f480f6846ea849b8ce6968b904113ead758273aea967b3db31df"
+    },
+    {
+      "filename": "1530903121_+01440.jpg",
+      "timestamp": 1530903121,
+      "offset_seconds": 1440,
+      "source_frame_1based": 65,
+      "sha256": "a8a877d0a7a1443e28f30b1b19f4d1a19dd5c1d8d1947f3cbda9d0cfe156a6aa"
+    },
+    {
+      "filename": "1530903181_+01500.jpg",
+      "timestamp": 1530903181,
+      "offset_seconds": 1500,
+      "source_frame_1based": 66,
+      "sha256": "909970f627ef0dcf5bdab08b78548709ed735422954e82a62d4688b7cb1339f4"
+    },
+    {
+      "filename": "1530903241_+01560.jpg",
+      "timestamp": 1530903241,
+      "offset_seconds": 1560,
+      "source_frame_1based": 67,
+      "sha256": "abc684d89759f5ed03a039271aea3c23b4ac0a5203646ffbcbe9422b77747a9e"
+    },
+    {
+      "filename": "1530903301_+01620.jpg",
+      "timestamp": 1530903301,
+      "offset_seconds": 1620,
+      "source_frame_1based": 68,
+      "sha256": "f02a20e39e5360f225f425e8ac8073606a1321b8a3e4d8e0143809d9f54bbf80"
+    },
+    {
+      "filename": "1530903361_+01680.jpg",
+      "timestamp": 1530903361,
+      "offset_seconds": 1680,
+      "source_frame_1based": 69,
+      "sha256": "644792f526be3ec1cdf88df8953b1ee9de20c65240066dabefa9150796106eb2"
+    },
+    {
+      "filename": "1530903421_+01740.jpg",
+      "timestamp": 1530903421,
+      "offset_seconds": 1740,
+      "source_frame_1based": 70,
+      "sha256": "ba4bd4136dcdbac0b02546aa0767fd5815c8c4f0b62ce09575a44a6cb7b91b0e"
+    },
+    {
+      "filename": "1530903481_+01800.jpg",
+      "timestamp": 1530903481,
+      "offset_seconds": 1800,
+      "source_frame_1based": 71,
+      "sha256": "ad3f4a1d0abcf3b0911f2df7945c07dbb2388e1a74581bdf486819d909267446"
+    },
+    {
+      "filename": "1530903541_+01860.jpg",
+      "timestamp": 1530903541,
+      "offset_seconds": 1860,
+      "source_frame_1based": 72,
+      "sha256": "78cd4925f2c28977d5fc99be67ebc94228decab3a83d7894bd10a6230d9b6c29"
+    },
+    {
+      "filename": "1530903601_+01920.jpg",
+      "timestamp": 1530903601,
+      "offset_seconds": 1920,
+      "source_frame_1based": 73,
+      "sha256": "c66336714363e7e2f27210878797a6c13d13d833ba469409bdca3f81edc7b68b"
+    },
+    {
+      "filename": "1530903661_+01980.jpg",
+      "timestamp": 1530903661,
+      "offset_seconds": 1980,
+      "source_frame_1based": 74,
+      "sha256": "0cd69f9705b041c83e842ebf6552b871eda150f3d3cdb77e8b3b42e86818defa"
+    },
+    {
+      "filename": "1530903721_+02040.jpg",
+      "timestamp": 1530903721,
+      "offset_seconds": 2040,
+      "source_frame_1based": 75,
+      "sha256": "f109ce15346f0ed2edfc0ad98508a94171dcdf20b9310e38740b0d8865250644"
+    },
+    {
+      "filename": "1530903781_+02100.jpg",
+      "timestamp": 1530903781,
+      "offset_seconds": 2100,
+      "source_frame_1based": 76,
+      "sha256": "b8fcaf9088c8925e251a4e7fc5f55f12e364f852370ba9c59f98d4da44e0bbc0"
+    },
+    {
+      "filename": "1530903841_+02160.jpg",
+      "timestamp": 1530903841,
+      "offset_seconds": 2160,
+      "source_frame_1based": 77,
+      "sha256": "e85ffbb7e86792879f95f9428a3f54a6ed9a2ad9eb066ae2a403142a8e57b4ce"
+    },
+    {
+      "filename": "1530903901_+02220.jpg",
+      "timestamp": 1530903901,
+      "offset_seconds": 2220,
+      "source_frame_1based": 78,
+      "sha256": "b51ae1abd5f739de8d20dbd427afa11a7767a9180b8c191824b1cd3d97ba9629"
+    },
+    {
+      "filename": "1530903961_+02280.jpg",
+      "timestamp": 1530903961,
+      "offset_seconds": 2280,
+      "source_frame_1based": 79,
+      "sha256": "10f8bd45fec9e387afb76c9cd14ea77d5108b2824f211ccc1e9e31a1e1bf5d30"
+    },
+    {
+      "filename": "1530904021_+02340.jpg",
+      "timestamp": 1530904021,
+      "offset_seconds": 2340,
+      "source_frame_1based": 80,
+      "sha256": "a7756b21fd2c179fcc050d6d03f3b40935d24fdf208c55a853f940f745ffacb5"
+    },
+    {
+      "filename": "1530904081_+02400.jpg",
+      "timestamp": 1530904081,
+      "offset_seconds": 2400,
+      "source_frame_1based": 81,
+      "sha256": "ef1e52bb643959d98ad74cee2196433cddd218ba5bbb10b27280eb8c90f3c634"
+    }
+  ],
+  "timing_scope": "Detector plus predict() wall time, CUDA synchronized; excludes package loading, warmup, diagnostic postprocessing, JSON/CSV/HTML writes and communication. Stage profiling itself adds synchronization overhead.",
+  "notes": [
+    "Preserves packaged repeated-frame padding.",
+    "Only current/past images are detected; tracks and crops are rebuilt per window.",
+    "Positive windows are not manually confirmed target alarms; historical-only tubes can keep a window positive."
+  ],
+  "runtime_core": {
+    "model_module": "D:\\AIC\\pyronear_lab\\temporal-model\\core\\src\\temporal_model\\core\\model.py",
+    "python_source_sha256": {
+      "__init__.py": "8fa264e6d49ef7214b3315dd713e1689e4edef85b2b9ba26ee1d25dc5a336d82",
+      "crop.py": "b7cd2741c6dc3837e069427c70e22a81fc5cf79fd06708df2dcdbcdf56b99f56",
+      "details_schema.py": "59a8a5cb158aa40900d94590e93f92682f15b6958c91f8312e58ab71eb6e5985",
+      "detector.py": "c165d43f132b9fdf2c110f9f698729eef943b69afe272126957892aed7d393c2",
+      "export_onnx.py": "610e0377a50076326ad3b33168a243919a085b3345ae82088954d4a3ce1caa3f",
+      "fetch_detector.py": "98e49f01eb741da1effaf5eec6d0b5d21ccb4e63ca120b63b5e103c879f09c14",
+      "inference.py": "4580749cdc85fe2d5d689f06028adaaf51155de635dfa12b35720fe4e335f5b8",
+      "labels.py": "11228eebebfe809ed150b2e5ca7fba5fb57e9016fe1ae76b8b9939ee05377e10",
+      "logistic_calibrator.py": "e2598f0322a71d2bf89bfd1863df630cff5df5f17f0e444afb0368914a14eb64",
+      "model.py": "18aeed5e72e458039bb8a46140f7dfd22acb304957a1e60797f157ed8317135c",
+      "onnx_model.py": "799202f5be01421c7edc9cde4ebba4811385bb552adf623da82cb00432b18269",
+      "package.py": "d8416312596b0c2a6a72cd2f475525b5527988b5de4b007c81c9586948bee440",
+      "pipeline.py": "019aac1089680dae0f5579ff79332bcf599692b76e4ed45c2a22dfb728d76fea",
+      "protocol.py": "5e54274c6b3e51bceed7a0c330f32cf021bd994d9678cbd072acdc2d3a856344",
+      "sequences.py": "d956e143f7d84d6f124694e13f322ed1adcad64b794690c1692cf457f17dea8a",
+      "stabilize.py": "da302a16f3571356c54bef56a47cc6015ac6bbfce118abf213b9ea7b70cfa86e",
+      "stage_timer.py": "f4a35682dfa83ce41e669b3d3c898374b25bff6af8be6fe78705c2c8bad2d2c7",
+      "temporal_classifier.py": "a4ca6023de094e2eb1b61a4e573e77ebab545794c6fda955694487aeee1d49e9",
+      "tubes.py": "55fa1b3dde32ae3273e3f085be7afcf4752690a75222a59493759eaf06250c1f",
+      "types.py": "bfd2f65e893770e1088da2d4d77c1870fa2c2544f86fb6756ca9231940e856a4"
+    }
+  },
+  "package_config": {
+    "classifier": {
+      "backbone": "vit_small_patch14_dinov2.lvd142m",
+      "finetune": true,
+      "finetune_last_n_blocks": 1,
+      "global_pool": "token",
+      "img_size": 224,
+      "max_frames": 20,
+      "pretrained": false,
+      "transformer_dropout": 0.1,
+      "transformer_ffn_dim": 1536,
+      "transformer_num_heads": 6,
+      "transformer_num_layers": 2
+    },
+    "decision": {
+      "aggregation": "logistic",
+      "logistic_threshold": 0.7207499167831384,
+      "target_recall": 0.95,
+      "threshold": 0.8729889988899231,
+      "trigger_rule": "end_of_winner"
+    },
+    "infer": {
+      "confidence_threshold": 0.1,
+      "image_size": 1024,
+      "iou_nms": 0.2,
+      "pad_strategy": "symmetric",
+      "pad_to_min_frames": 6
+    },
+    "model_input": {
+      "context_factor": 1.5,
+      "normalization": {
+        "mean": [
+          0.485,
+          0.456,
+          0.406
+        ],
+        "std": [
+          0.229,
+          0.224,
+          0.225
+        ]
+      },
+      "patch_size": 224,
+      "stabilize": true
+    },
+    "tubes": {
+      "infer_min_tube_length": 2,
+      "interpolate_gaps": true,
+      "iou_threshold": 0.2,
+      "max_misses": 2,
+      "merge_iomin": 0.3,
+      "merge_max_gap": 10,
+      "merge_prox_factor": 1.0,
+      "min_detected_entries": 2,
+      "min_tube_length": 4
+    }
+  },
+  "effective_config": {
+    "classifier": {
+      "backbone": "vit_small_patch14_dinov2.lvd142m",
+      "finetune": true,
+      "finetune_last_n_blocks": 1,
+      "global_pool": "token",
+      "img_size": 224,
+      "max_frames": 20,
+      "pretrained": false,
+      "transformer_dropout": 0.1,
+      "transformer_ffn_dim": 1536,
+      "transformer_num_heads": 6,
+      "transformer_num_layers": 2
+    },
+    "decision": {
+      "aggregation": "logistic",
+      "logistic_threshold": 0.7207499167831384,
+      "target_recall": 0.95,
+      "threshold": 0.8729889988899231,
+      "trigger_rule": "end_of_winner"
+    },
+    "infer": {
+      "confidence_threshold": 0.05,
+      "image_size": 1024,
+      "iou_nms": 0.2,
+      "pad_strategy": "symmetric",
+      "pad_to_min_frames": 6
+    },
+    "model_input": {
+      "context_factor": 1.5,
+      "normalization": {
+        "mean": [
+          0.485,
+          0.456,
+          0.406
+        ],
+        "std": [
+          0.229,
+          0.224,
+          0.225
+        ]
+      },
+      "patch_size": 224,
+      "stabilize": true
+    },
+    "tubes": {
+      "infer_min_tube_length": 2,
+      "interpolate_gaps": true,
+      "iou_threshold": 0.2,
+      "max_misses": 2,
+      "merge_iomin": 0.3,
+      "merge_max_gap": 10,
+      "merge_prox_factor": 1.0,
+      "min_detected_entries": 2,
+      "min_tube_length": 4
+    }
+  },
+  "calibrator": {
+    "features": [
+      "logit",
+      "log_len",
+      "mean_conf",
+      "n_tubes"
+    ],
+    "coefficients": [
+      0.6058361824062284,
+      2.1562298048766317,
+      3.791871985413993,
+      -0.5972490381162873
+    ],
+    "intercept": -6.210306878910163,
+    "sanity_checks": [
+      {
+        "features": [
+          -9.998100280761719,
+          1.0986122886681096,
+          0.10576200857758522,
+          1.0
+        ],
+        "prob": 4.128911904320863e-05
+      },
+      {
+        "features": [
+          1.6630451679229736,
+          1.3862943611198906,
+          0.7507414817810059,
+          1.0
+        ],
+        "prob": 0.508964497149763
+      },
+      {
+        "features": [
+          13.102334976196289,
+          3.044522437723423,
+          0.7690818965435028,
+          1.0
+        ],
+        "prob": 0.9999753636470105
+      }
+    ]
+  },
+  "warmup_first_frame_repeats": 1,
+  "completed_at_utc": "2026-10-20T12:36:32.021824+00:00",
+  "result": {
+    "completed_steps": 81,
+    "first_any_candidate": {
+      "source_frame_1based": 1,
+      "filename": "1530899281_-02400.jpg",
+      "offset_seconds": -2400,
+      "max_probability": 0.301923848048019
+    },
+    "first_kept_window": {
+      "source_frame_1based": 1,
+      "filename": "1530899281_-02400.jpg",
+      "offset_seconds": -2400,
+      "max_probability": 0.301923848048019
+    },
+    "first_positive_window": {
+      "source_frame_1based": 6,
+      "filename": "1530899581_-02100.jpg",
+      "offset_seconds": -2100,
+      "max_probability": 0.807993158582688
+    },
+    "first_postappearance_candidate": {
+      "source_frame_1based": 42,
+      "filename": "1530901741_+00060.jpg",
+      "offset_seconds": 60,
+      "max_probability": 0.9831215280735967
+    },
+    "first_postappearance_kept_window": {
+      "source_frame_1based": 41,
+      "filename": "1530901681_+00000.jpg",
+      "offset_seconds": 0,
+      "max_probability": 0.9830986088454496
+    },
+    "first_postappearance_positive_window": {
+      "source_frame_1based": 41,
+      "filename": "1530901681_+00000.jpg",
+      "offset_seconds": 0,
+      "max_probability": 0.9830986088454496
+    },
+    "preappearance_positive_windows": 35,
+    "postappearance_positive_windows": 41,
+    "positive_window_runs": [
+      {
+        "start_offset_seconds": -2100,
+        "end_offset_seconds": 2400,
+        "positive_windows": 76
+      }
+    ],
+    "interpretation": "All candidate/alarm times are automatic window outputs, not manually verified correct detections. Preappearance positives are not automatically false alarms. Consecutive positive windows are not independent alarm events."
+  }
+}

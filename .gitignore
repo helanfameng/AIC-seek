@@ -21,6 +21,11 @@ outputs/
 experiments/exp003_whittier_full_replay/outputs/*
 !experiments/exp003_whittier_full_replay/outputs/exp003_20261019_224724/
 
+# 仅归档已经完成并核验的第四次实验批次。
+!experiments/exp004_figlib_multi_event/outputs/
+experiments/exp004_figlib_multi_event/outputs/*
+!experiments/exp004_figlib_multi_event/outputs/exp004_20261020_201923/
+
 # 分析目录仅发布结果报告；拼图、派生数据及对话展示材料保留本地。
 experiments/exp003_whittier_full_replay/analysis_20261020/*
 !experiments/exp003_whittier_full_replay/analysis_20261020/RESULTS.md

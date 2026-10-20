@@ -2,6 +2,8 @@
 
 研究固定相机复杂环境下的早期烟雾检测与时序复核。目前已在个人笔记本上跑通 Pyronear 官方预训练模型；尚未训练自主改进模型，也没有建立独立测试集性能结论。
 
+已完成实验记录(实验历史)见 [EXPERIMENTS.md](EXPERIMENTS.md)。已搜集的技术资料等见 [MATERIAL.md](MATERIAL.md)。
+
 ## 当前基线
 
 YOLO提出候选 → 关联轨迹 → 裁剪局部序列 → DINOv2与时序Transformer复核。
@@ -46,7 +48,7 @@ $Python = "$PWD\.venv\Scripts\python.exe"
 Get-FileHash .\models\v0.6.0\model.zip -Algorithm SHA256
 ```
 
-## 运行样例
+## 运行样例（第一次实验）
 
 仓库已包含10张原始连续图片，每分钟一张。按文件名排序，无需改名。
 
@@ -60,7 +62,9 @@ $RunId = Get-Date -Format 'yyyyMMdd_HHmmss'
     --device cuda
 ```
 
-示例按时间戳另存到第一次实验的 `outputs/<RunId>/predictions.json`。历史可视化与诊断操作见 [EXPERIMENTS.md](EXPERIMENTS.md)。GPU内存不足时可用 `--device cpu` 先验证接口。
+示例按时间戳另存到第一次实验的 `outputs/<RunId>/predictions.json`。
+
+GPU内存不足时可用 `--device cpu` 先验证接口。
 
 ## 第三方来源与许可
 

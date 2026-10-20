@@ -1,0 +1,49 @@
+{
+  "completed_steps": 81,
+  "first_any_candidate": {
+    "source_frame_1based": 4,
+    "filename": "1530899461_-02220.jpg",
+    "offset_seconds": -2220,
+    "max_probability": 0.13294799981662045
+  },
+  "first_kept_window": {
+    "source_frame_1based": 4,
+    "filename": "1530899461_-02220.jpg",
+    "offset_seconds": -2220,
+    "max_probability": 0.13294799981662045
+  },
+  "first_positive_window": {
+    "source_frame_1based": 46,
+    "filename": "1530901981_+00300.jpg",
+    "offset_seconds": 300,
+    "max_probability": 0.9451248905364754
+  },
+  "first_postappearance_candidate": {
+    "source_frame_1based": 45,
+    "filename": "1530901921_+00240.jpg",
+    "offset_seconds": 240,
+    "max_probability": null
+  },
+  "first_postappearance_kept_window": {
+    "source_frame_1based": 46,
+    "filename": "1530901981_+00300.jpg",
+    "offset_seconds": 300,
+    "max_probability": 0.9451248905364754
+  },
+  "first_postappearance_positive_window": {
+    "source_frame_1based": 46,
+    "filename": "1530901981_+00300.jpg",
+    "offset_seconds": 300,
+    "max_probability": 0.9451248905364754
+  },
+  "preappearance_positive_windows": 0,
+  "postappearance_positive_windows": 36,
+  "positive_window_runs": [
+    {
+      "start_offset_seconds": 300,
+      "end_offset_seconds": 2400,
+      "positive_windows": 36
+    }
+  ],
+  "interpretation": "All candidate/alarm times are automatic window outputs, not manually verified correct detections. Preappearance positives are not automatically false alarms. Consecutive positive windows are not independent alarm events."
+}

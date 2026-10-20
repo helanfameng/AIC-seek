@@ -56,6 +56,18 @@ Start-Process (Join-Path $RunRoot 'visualization.html')
 - 结果写入新的`experiments/exp003_whittier_full_replay/outputs/exp003_<RunId>/`，拒绝覆盖既有目录；出现前阳性和首次正确报警需人工复核。
 - 本次结果目录：`experiments/exp003_whittier_full_replay/outputs/exp003_20261019_224724`。迁移前的核算验证CSV/JSONL与配置一致、无未来帧或截断，并独立重算174条保留轨迹概率；原10帧结果精确复现，完整历史未改变原版早期判断。分析结果报告已同步当前路径，其他分析辅助文件暂留本地。
 
+## 第四次实验：三个独立FIgLib事件的完整回放
+
+状态（2026-10-20核验）：Alison、West、Cranston共12组81帧回放已全部完成，972步记录与汇总一致，834条轨迹概率已独立重算。Alison原版+39分钟、高分辨率+34分钟才出现目标轨迹阳性；Cranston均为+10分钟；West的1024两组存在出现前持续背景阳性，目标轨迹首次跨阈为原版+6、低阈值+7、高分辨率/联合+5分钟。原始自动整窗阳性不能直接当作首次正确预警。
+
+- [实验说明与完整启动命令](experiments/exp004_figlib_multi_event/README.md)
+- [实际结果与深入分析](experiments/exp004_figlib_multi_event/RESULTS.md)
+- 时间均相对官方首次可见烟羽：完整第41张为0分钟，第42张为+1分钟，第43张为+2分钟。
+- [数据来源、事件目录与核验说明](data/figlib_exp004_three_events/SOURCE.md)
+- 固定第三次的模型和因果回放代码，三个事件各比较原版、低检测阈值、高分辨率及联合设置，共12组完整回放、972个判断时刻；不再重复两组10帧实验。
+- 本次脚本、协议和检查位于`experiments/exp004_figlib_multi_event/`；结果运行时写入其`outputs/exp004_<RunId>/<事件>/<设置>/`，拒绝覆盖已有目录。
+- 用于检验Whittier的早期候选/轨迹/判定瓶颈是否重复出现；是否与预训练数据重叠尚未核实，自动输出仍需人工复核，不作为总体误报率或模型上限的结论。
+
 ## 实验记录约定
 
 每次实验在 `experiments/expNNN_描述/` 新建目录，保留简短README、实际预测JSON以及需要时生成的可视化。实验入口归入各自的 `scripts/`，新增运行结果写入各自的 `outputs/`，实验检查放入各自的 `tests/`。README写明目的、代码提交号、模型与数据、参数变化、运行命令、结果和局限。代码与依赖历史由Git管理，不重复复制环境和脚本。

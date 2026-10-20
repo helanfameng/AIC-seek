@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "dataset": "HPWREN / UCSD FIgLib",
+  "collection_index_url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/index.html",
+  "dataset_root_relative": "data/figlib_exp004_three_events",
+  "images_per_event": 81,
+  "offset_min_seconds": -2400,
+  "offset_max_seconds": 2400,
+  "interval_seconds": 60,
+  "model_sha256": "6a328bbc933b4d92855cbcbde06a6aac165a386d08b09e9de59f7448046d455e",
+  "replay_script_relative": "experiments/exp003_whittier_full_replay/scripts/replay_sequence.py",
+  "replay_sha256_lf": "ea9185b12e09af6670a0c2d014525f090d959e8dce97972d123c2f9b6f269c86",
+  "window_max_real_frames": 20,
+  "detection_mode": "per-frame-cache",
+  "warmup": 1,
+  "pretraining_overlap": "not_verified",
+  "selection_rule": "Three distinct named fires, dates and color-camera views; complete 60-second sequences; selected before model inference.",
+  "events": [
+    {"key": "alison", "name": "Alison", "date": "2018-06-02", "camera": "sp-s-mobo-c", "event_id": "20180602_Alison_sp-s-mobo-c", "origin_timestamp": 1527969990},
+    {"key": "west", "name": "West", "date": "2018-07-06", "camera": "lp-n-mobo-c", "event_id": "20180706_West_lp-n-mobo-c", "origin_timestamp": 1530901681},
+    {"key": "cranston", "name": "Cranston", "date": "2018-07-25", "camera": "hp-n-mobo-c", "event_id": "20180725_Cranston_hp-n-mobo-c", "origin_timestamp": 1532544925}
+  ],
+  "settings": [
+    {"key": "full_baseline", "confidence": 0.1, "image_size": 1024},
+    {"key": "low_threshold", "confidence": 0.05, "image_size": 1024},
+    {"key": "high_resolution", "confidence": 0.1, "image_size": 1536},
+    {"key": "combined", "confidence": 0.05, "image_size": 1536}
+  ]
+}

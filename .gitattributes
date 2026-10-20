@@ -1,0 +1,3 @@
+# Preserve original bytes used by exp004 provenance and acquisition hashes.
+data/figlib_exp004_three_events/** -text
+experiments/exp004_figlib_multi_event/** -text

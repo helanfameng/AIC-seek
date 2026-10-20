@@ -1,0 +1,821 @@
+{
+  "event": "20180725_Cranston_hp-n-mobo-c",
+  "index_url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180725_Cranston_hp-n-mobo-c/index.html",
+  "downloaded_at_utc": "2026-10-20T12:03:05.866281+00:00",
+  "source_credit": "HPWREN / University of California San Diego",
+  "count": 81,
+  "interval_seconds": 60,
+  "source_index_sha256": "ec2126551d80e76904f35c9d631d91e51d93f3cb539be7e64a2c2faa6ee9fba7",
+  "files": [
+    {
+      "filename": "1532542525_-02400.jpg",
+      "timestamp": 1532542525,
+      "offset_seconds": -2400,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180725_Cranston_hp-n-mobo-c/1532542525_-02400.jpg",
+      "bytes": 628938,
+      "sha256": "8bb40df4033f4088f76b92f7529f4164ffa28deef743a12972f970fc95e58685",
+      "width": 2048,
+      "height": 1536
+    },
+    {
+      "filename": "1532542585_-02340.jpg",
+      "timestamp": 1532542585,
+      "offset_seconds": -2340,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180725_Cranston_hp-n-mobo-c/1532542585_-02340.jpg",
+      "bytes": 633178,
+      "sha256": "d4fc12a01a85de14e639fb8c50bfab156a0f1e0a50c2611ed5db52efb95240df",
+      "width": 2048,
+      "height": 1536
+    },
+    {
+      "filename": "1532542645_-02280.jpg",
+      "timestamp": 1532542645,
+      "offset_seconds": -2280,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180725_Cranston_hp-n-mobo-c/1532542645_-02280.jpg",
+      "bytes": 630264,
+      "sha256": "ee25e640d6d239ed65053bf4eede90d656f9a6d5e1adf22a79c0cedbc0f99b79",
+      "width": 2048,
+      "height": 1536
+    },
+    {
+      "filename": "1532542705_-02220.jpg",
+      "timestamp": 1532542705,
+      "offset_seconds": -2220,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180725_Cranston_hp-n-mobo-c/1532542705_-02220.jpg",
+      "bytes": 630153,
+      "sha256": "be950d412f7cd3cf8a33c259ccf016f68a682067df24183f90ce253a33a65461",
+      "width": 2048,
+      "height": 1536
+    },
+    {
+      "filename": "1532542765_-02160.jpg",
+      "timestamp": 1532542765,
+      "offset_seconds": -2160,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180725_Cranston_hp-n-mobo-c/1532542765_-02160.jpg",
+      "bytes": 634589,
+      "sha256": "0147428bb41ea2566f99e0cd60f9cbf817b84460d6df307f80728dc0fc46cb3a",
+      "width": 2048,
+      "height": 1536
+    },
+    {
+      "filename": "1532542825_-02100.jpg",
+      "timestamp": 1532542825,
+      "offset_seconds": -2100,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180725_Cranston_hp-n-mobo-c/1532542825_-02100.jpg",
+      "bytes": 634654,
+      "sha256": "21f9a455240758925f937ad55a4e1631a3ce49095238b60566a25f1616670266",
+      "width": 2048,
+      "height": 1536
+    },
+    {
+      "filename": "1532542885_-02040.jpg",
+      "timestamp": 1532542885,
+      "offset_seconds": -2040,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180725_Cranston_hp-n-mobo-c/1532542885_-02040.jpg",
+      "bytes": 632601,
+      "sha256": "a6d594ca4d5a75b092d8d2d88ae30373e040a03df29734d4982e927c8e75deb5",
+      "width": 2048,
+      "height": 1536
+    },
+    {
+      "filename": "1532542945_-01980.jpg",
+      "timestamp": 1532542945,
+      "offset_seconds": -1980,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180725_Cranston_hp-n-mobo-c/1532542945_-01980.jpg",
+      "bytes": 635554,
+      "sha256": "06662a6e6f496640ddb77ef1352a4c08d71d8b7e7550def8142edd0d98687267",
+      "width": 2048,
+      "height": 1536
+    },
+    {
+      "filename": "1532543005_-01920.jpg",
+      "timestamp": 1532543005,
+      "offset_seconds": -1920,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180725_Cranston_hp-n-mobo-c/1532543005_-01920.jpg",
+      "bytes": 635729,
+      "sha256": "16a402224f9fc058c2c60506dd827286d5f695e0ef81e56121e2e12c526cd8f2",
+      "width": 2048,
+      "height": 1536
+    },
+    {
+      "filename": "1532543065_-01860.jpg",
+      "timestamp": 1532543065,
+      "offset_seconds": -1860,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180725_Cranston_hp-n-mobo-c/1532543065_-01860.jpg",
+      "bytes": 632515,
+      "sha256": "eb670ca7c104bacb2a315a71430e17f17ea8c25287191a37e1ac375764141370",
+      "width": 2048,
+      "height": 1536
+    },
+    {
+      "filename": "1532543125_-01800.jpg",
+      "timestamp": 1532543125,
+      "offset_seconds": -1800,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180725_Cranston_hp-n-mobo-c/1532543125_-01800.jpg",
+      "bytes": 634614,
+      "sha256": "21b5319d9d54d6c163cd6fdc77d9aa62fa51ebcc7bed85dad0e5788601485c52",
+      "width": 2048,
+      "height": 1536
+    },
+    {
+      "filename": "1532543185_-01740.jpg",
+      "timestamp": 1532543185,
+      "offset_seconds": -1740,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180725_Cranston_hp-n-mobo-c/1532543185_-01740.jpg",
+      "bytes": 646500,
+      "sha256": "79b327b65b38a32362c8d30ff92ab3e1cde7a3d7fa64576de5e12c1e50fce1a8",
+      "width": 2048,
+      "height": 1536
+    },
+    {
+      "filename": "1532543245_-01680.jpg",
+      "timestamp": 1532543245,
+      "offset_seconds": -1680,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180725_Cranston_hp-n-mobo-c/1532543245_-01680.jpg",
+      "bytes": 633974,
+      "sha256": "9ab5830542ae238c1c3e9c74058c2e711f80cd166903588531a3c5914491e86f",
+      "width": 2048,
+      "height": 1536
+    },
+    {
+      "filename": "1532543305_-01620.jpg",
+      "timestamp": 1532543305,
+      "offset_seconds": -1620,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180725_Cranston_hp-n-mobo-c/1532543305_-01620.jpg",
+      "bytes": 636198,
+      "sha256": "854dbffbc72c9c5a731c7fb5e85ffa48ed30ef5b86e925e3a04b3d26456605d8",
+      "width": 2048,
+      "height": 1536
+    },
+    {
+      "filename": "1532543365_-01560.jpg",
+      "timestamp": 1532543365,
+      "offset_seconds": -1560,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180725_Cranston_hp-n-mobo-c/1532543365_-01560.jpg",
+      "bytes": 639959,
+      "sha256": "5b171a67ff25025be07d4e4f67de8feff0cd5d45907ded18a57b22cbc9e60f3d",
+      "width": 2048,
+      "height": 1536
+    },
+    {
+      "filename": "1532543425_-01500.jpg",
+      "timestamp": 1532543425,
+      "offset_seconds": -1500,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180725_Cranston_hp-n-mobo-c/1532543425_-01500.jpg",
+      "bytes": 628831,
+      "sha256": "0c7be5cdc2dba484cf7f2d2a9a8f0aab71fa9b085490db9e7815c636069542cf",
+      "width": 2048,
+      "height": 1536
+    },
+    {
+      "filename": "1532543485_-01440.jpg",
+      "timestamp": 1532543485,
+      "offset_seconds": -1440,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180725_Cranston_hp-n-mobo-c/1532543485_-01440.jpg",
+      "bytes": 636321,
+      "sha256": "4cbbdf888d13d0379f2aa01dcc69ad5001e3b221214fb22fbe5b57edb350c726",
+      "width": 2048,
+      "height": 1536
+    },
+    {
+      "filename": "1532543545_-01380.jpg",
+      "timestamp": 1532543545,
+      "offset_seconds": -1380,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180725_Cranston_hp-n-mobo-c/1532543545_-01380.jpg",
+      "bytes": 639036,
+      "sha256": "9ce6b87f35e58a94b2e4c6ba3f6121e7f20a5787f13dd76975cb00a25dad8ba9",
+      "width": 2048,
+      "height": 1536
+    },
+    {
+      "filename": "1532543605_-01320.jpg",
+      "timestamp": 1532543605,
+      "offset_seconds": -1320,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180725_Cranston_hp-n-mobo-c/1532543605_-01320.jpg",
+      "bytes": 637354,
+      "sha256": "740784c0c4e24c5eed6783146ae983d9b8a2b8958a69453240bb005c1e4c3737",
+      "width": 2048,
+      "height": 1536
+    },
+    {
+      "filename": "1532543665_-01260.jpg",
+      "timestamp": 1532543665,
+      "offset_seconds": -1260,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180725_Cranston_hp-n-mobo-c/1532543665_-01260.jpg",
+      "bytes": 639126,
+      "sha256": "0891125f74d27b1410236f8e563cfc38e7e6bcfcf759992c22851a0e8a7c2d9b",
+      "width": 2048,
+      "height": 1536
+    },
+    {
+      "filename": "1532543725_-01200.jpg",
+      "timestamp": 1532543725,
+      "offset_seconds": -1200,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180725_Cranston_hp-n-mobo-c/1532543725_-01200.jpg",
+      "bytes": 636898,
+      "sha256": "b41322a48248ef1ba819d45db881b8fcc83d06478130a600d71b178d76d06b9c",
+      "width": 2048,
+      "height": 1536
+    },
+    {
+      "filename": "1532543785_-01140.jpg",
+      "timestamp": 1532543785,
+      "offset_seconds": -1140,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180725_Cranston_hp-n-mobo-c/1532543785_-01140.jpg",
+      "bytes": 637679,
+      "sha256": "5f01260172cf6c4f73fbbe0e84f0162fe9b6677eb82d17b4e52625817f98c76b",
+      "width": 2048,
+      "height": 1536
+    },
+    {
+      "filename": "1532543845_-01080.jpg",
+      "timestamp": 1532543845,
+      "offset_seconds": -1080,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180725_Cranston_hp-n-mobo-c/1532543845_-01080.jpg",
+      "bytes": 641567,
+      "sha256": "3c7c92680965fb7c2e721d562f7e144cb860ba8772463fb77d246ad1990e6b92",
+      "width": 2048,
+      "height": 1536
+    },
+    {
+      "filename": "1532543905_-01020.jpg",
+      "timestamp": 1532543905,
+      "offset_seconds": -1020,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180725_Cranston_hp-n-mobo-c/1532543905_-01020.jpg",
+      "bytes": 640706,
+      "sha256": "1a2dbc9dd89a51cbcebad19d88bb65827ab626c16ce6d44ae8e0e824aba6ad0c",
+      "width": 2048,
+      "height": 1536
+    },
+    {
+      "filename": "1532543965_-00960.jpg",
+      "timestamp": 1532543965,
+      "offset_seconds": -960,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180725_Cranston_hp-n-mobo-c/1532543965_-00960.jpg",
+      "bytes": 641906,
+      "sha256": "7df674547b5f3e65e32405a826f3547fcca0dcca84c6d4f06f56af3cde1682df",
+      "width": 2048,
+      "height": 1536
+    },
+    {
+      "filename": "1532544025_-00900.jpg",
+      "timestamp": 1532544025,
+      "offset_seconds": -900,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180725_Cranston_hp-n-mobo-c/1532544025_-00900.jpg",
+      "bytes": 644424,
+      "sha256": "a40bd5bf446e7c1cb09e30ade234b8ae33fe689db9eba6e6389b5cfa05986758",
+      "width": 2048,
+      "height": 1536
+    },
+    {
+      "filename": "1532544085_-00840.jpg",
+      "timestamp": 1532544085,
+      "offset_seconds": -840,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180725_Cranston_hp-n-mobo-c/1532544085_-00840.jpg",
+      "bytes": 647588,
+      "sha256": "18344b02c2571d5d215a8f923cc920d4dd4e1e7247221ef6bbb7e3dc006aa1c2",
+      "width": 2048,
+      "height": 1536
+    },
+    {
+      "filename": "1532544145_-00780.jpg",
+      "timestamp": 1532544145,
+      "offset_seconds": -780,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180725_Cranston_hp-n-mobo-c/1532544145_-00780.jpg",
+      "bytes": 648423,
+      "sha256": "cfef84eaf7ea8374c993db51f6e8d309a76bc43282e371b04749634569289b79",
+      "width": 2048,
+      "height": 1536
+    },
+    {
+      "filename": "1532544205_-00720.jpg",
+      "timestamp": 1532544205,
+      "offset_seconds": -720,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180725_Cranston_hp-n-mobo-c/1532544205_-00720.jpg",
+      "bytes": 644862,
+      "sha256": "e2f438548f63a670fdbb662bb1847a7584d2b3ddab0bce74fb22dc43dc3a0509",
+      "width": 2048,
+      "height": 1536
+    },
+    {
+      "filename": "1532544265_-00660.jpg",
+      "timestamp": 1532544265,
+      "offset_seconds": -660,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180725_Cranston_hp-n-mobo-c/1532544265_-00660.jpg",
+      "bytes": 643835,
+      "sha256": "8c5afa0a7256f2b5851cb130d43ef3b9b620329ac42439baea01f536b63023d2",
+      "width": 2048,
+      "height": 1536
+    },
+    {
+      "filename": "1532544325_-00600.jpg",
+      "timestamp": 1532544325,
+      "offset_seconds": -600,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180725_Cranston_hp-n-mobo-c/1532544325_-00600.jpg",
+      "bytes": 644306,
+      "sha256": "6b37176d6b2dc3052a61ad5b2ae8887e77e3fae44fc01be80eac86abd759f814",
+      "width": 2048,
+      "height": 1536
+    },
+    {
+      "filename": "1532544385_-00540.jpg",
+      "timestamp": 1532544385,
+      "offset_seconds": -540,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180725_Cranston_hp-n-mobo-c/1532544385_-00540.jpg",
+      "bytes": 645060,
+      "sha256": "05f96d1be6688661b7ed4f5cd4be9ad832df60eae27b8eb827d3ec840085a56d",
+      "width": 2048,
+      "height": 1536
+    },
+    {
+      "filename": "1532544445_-00480.jpg",
+      "timestamp": 1532544445,
+      "offset_seconds": -480,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180725_Cranston_hp-n-mobo-c/1532544445_-00480.jpg",
+      "bytes": 644163,
+      "sha256": "80f5c44ae4860dd5ad620b7d087ca9030c4d69cebc92c8c20411a13e303489e9",
+      "width": 2048,
+      "height": 1536
+    },
+    {
+      "filename": "1532544505_-00420.jpg",
+      "timestamp": 1532544505,
+      "offset_seconds": -420,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180725_Cranston_hp-n-mobo-c/1532544505_-00420.jpg",
+      "bytes": 643990,
+      "sha256": "1794f1e5a8aa128057061095880095d60281dd8a1f11255dc3444093632f4c7d",
+      "width": 2048,
+      "height": 1536
+    },
+    {
+      "filename": "1532544565_-00360.jpg",
+      "timestamp": 1532544565,
+      "offset_seconds": -360,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180725_Cranston_hp-n-mobo-c/1532544565_-00360.jpg",
+      "bytes": 628913,
+      "sha256": "ff6ca54cde5f772683dc8cb22390c2513ea78a85756e966f0e2a6b287e1aa020",
+      "width": 2048,
+      "height": 1536
+    },
+    {
+      "filename": "1532544625_-00300.jpg",
+      "timestamp": 1532544625,
+      "offset_seconds": -300,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180725_Cranston_hp-n-mobo-c/1532544625_-00300.jpg",
+      "bytes": 639793,
+      "sha256": "357db7056699b64da1d459a1e01b0fa54d3ffab0fdd3e9acc8dd7b8a41e01332",
+      "width": 2048,
+      "height": 1536
+    },
+    {
+      "filename": "1532544685_-00240.jpg",
+      "timestamp": 1532544685,
+      "offset_seconds": -240,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180725_Cranston_hp-n-mobo-c/1532544685_-00240.jpg",
+      "bytes": 634262,
+      "sha256": "1b64268f8dc7131cc05feedbcc042421da216951568c6aab3c4b866b9e13631d",
+      "width": 2048,
+      "height": 1536
+    },
+    {
+      "filename": "1532544745_-00180.jpg",
+      "timestamp": 1532544745,
+      "offset_seconds": -180,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180725_Cranston_hp-n-mobo-c/1532544745_-00180.jpg",
+      "bytes": 643273,
+      "sha256": "1a73f8b9b48195af5097d3169abd9c81b5e832b35ff866414ac5e531e3f239d2",
+      "width": 2048,
+      "height": 1536
+    },
+    {
+      "filename": "1532544805_-00120.jpg",
+      "timestamp": 1532544805,
+      "offset_seconds": -120,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180725_Cranston_hp-n-mobo-c/1532544805_-00120.jpg",
+      "bytes": 612552,
+      "sha256": "f14428fc29516627e6752126a4205958ec0147292f5bedadb8afbd1af0d77d8c",
+      "width": 2048,
+      "height": 1536
+    },
+    {
+      "filename": "1532544865_-00060.jpg",
+      "timestamp": 1532544865,
+      "offset_seconds": -60,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180725_Cranston_hp-n-mobo-c/1532544865_-00060.jpg",
+      "bytes": 627476,
+      "sha256": "7e15ef5df2620d6a6f4666d6c1be56966d4f1a46e74d4dc925fc756e2b1ed804",
+      "width": 2048,
+      "height": 1536
+    },
+    {
+      "filename": "1532544925_+00000.jpg",
+      "timestamp": 1532544925,
+      "offset_seconds": 0,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180725_Cranston_hp-n-mobo-c/1532544925_%2B00000.jpg",
+      "bytes": 626656,
+      "sha256": "043bdeb8232178735ce553d7c894e739a5a70da7ba5ad97f37fff4b2c613895f",
+      "width": 2048,
+      "height": 1536
+    },
+    {
+      "filename": "1532544985_+00060.jpg",
+      "timestamp": 1532544985,
+      "offset_seconds": 60,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180725_Cranston_hp-n-mobo-c/1532544985_%2B00060.jpg",
+      "bytes": 637114,
+      "sha256": "1d115aad761b03515550c887fc6b78f1357ed5a1189a48592080c9ace827a76b",
+      "width": 2048,
+      "height": 1536
+    },
+    {
+      "filename": "1532545045_+00120.jpg",
+      "timestamp": 1532545045,
+      "offset_seconds": 120,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180725_Cranston_hp-n-mobo-c/1532545045_%2B00120.jpg",
+      "bytes": 645629,
+      "sha256": "c67354fb8170c5ed8c12a8aa531f0decdfd5f453b830e534510d9af006fa6a70",
+      "width": 2048,
+      "height": 1536
+    },
+    {
+      "filename": "1532545105_+00180.jpg",
+      "timestamp": 1532545105,
+      "offset_seconds": 180,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180725_Cranston_hp-n-mobo-c/1532545105_%2B00180.jpg",
+      "bytes": 648544,
+      "sha256": "bf08fe6a02699972499a1343ff02e630ee189b5aacb4333bd05cb7f16017599d",
+      "width": 2048,
+      "height": 1536
+    },
+    {
+      "filename": "1532545165_+00240.jpg",
+      "timestamp": 1532545165,
+      "offset_seconds": 240,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180725_Cranston_hp-n-mobo-c/1532545165_%2B00240.jpg",
+      "bytes": 642352,
+      "sha256": "a5ba1f1be712aac3aa2444315ad5a8729b6ff0d8252fc6959657f208d20e8748",
+      "width": 2048,
+      "height": 1536
+    },
+    {
+      "filename": "1532545225_+00300.jpg",
+      "timestamp": 1532545225,
+      "offset_seconds": 300,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180725_Cranston_hp-n-mobo-c/1532545225_%2B00300.jpg",
+      "bytes": 647064,
+      "sha256": "ec43b7d9324036ce18e87c9a938264eb435c3f47918cf89af168ce78e18f3f6a",
+      "width": 2048,
+      "height": 1536
+    },
+    {
+      "filename": "1532545285_+00360.jpg",
+      "timestamp": 1532545285,
+      "offset_seconds": 360,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180725_Cranston_hp-n-mobo-c/1532545285_%2B00360.jpg",
+      "bytes": 658145,
+      "sha256": "772ecd9ad0106521119a47e9155f93d91f00b5d90ae88037331e942d62178a77",
+      "width": 2048,
+      "height": 1536
+    },
+    {
+      "filename": "1532545345_+00420.jpg",
+      "timestamp": 1532545345,
+      "offset_seconds": 420,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180725_Cranston_hp-n-mobo-c/1532545345_%2B00420.jpg",
+      "bytes": 659792,
+      "sha256": "5c6ac98eb0fb87ee48bd014425a241a9285eb811566ab01813e2b1c4f03e727e",
+      "width": 2048,
+      "height": 1536
+    },
+    {
+      "filename": "1532545405_+00480.jpg",
+      "timestamp": 1532545405,
+      "offset_seconds": 480,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180725_Cranston_hp-n-mobo-c/1532545405_%2B00480.jpg",
+      "bytes": 649427,
+      "sha256": "10e7db94ec03f97139536db5e4a22b1296d17021bdb85ced649019736848d420",
+      "width": 2048,
+      "height": 1536
+    },
+    {
+      "filename": "1532545465_+00540.jpg",
+      "timestamp": 1532545465,
+      "offset_seconds": 540,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180725_Cranston_hp-n-mobo-c/1532545465_%2B00540.jpg",
+      "bytes": 651618,
+      "sha256": "b287508135016ffcc4888de899d880afd6179b474e22c5761ea4fe293149a06e",
+      "width": 2048,
+      "height": 1536
+    },
+    {
+      "filename": "1532545525_+00600.jpg",
+      "timestamp": 1532545525,
+      "offset_seconds": 600,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180725_Cranston_hp-n-mobo-c/1532545525_%2B00600.jpg",
+      "bytes": 645034,
+      "sha256": "38c129efb5f8697ea47fb4fa9d01eb4c5b3012a7b28344de9d38e56b86d7339f",
+      "width": 2048,
+      "height": 1536
+    },
+    {
+      "filename": "1532545585_+00660.jpg",
+      "timestamp": 1532545585,
+      "offset_seconds": 660,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180725_Cranston_hp-n-mobo-c/1532545585_%2B00660.jpg",
+      "bytes": 631543,
+      "sha256": "14c068fb6b9e67f89c416010dd0f285a56dfde49a6adb3162f3d87f3fbc16b06",
+      "width": 2048,
+      "height": 1536
+    },
+    {
+      "filename": "1532545645_+00720.jpg",
+      "timestamp": 1532545645,
+      "offset_seconds": 720,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180725_Cranston_hp-n-mobo-c/1532545645_%2B00720.jpg",
+      "bytes": 613448,
+      "sha256": "7b504003d4487c4b82cf2f362804ac6293e8c935520f7d9ae4edfbb711c1a9d5",
+      "width": 2048,
+      "height": 1536
+    },
+    {
+      "filename": "1532545705_+00780.jpg",
+      "timestamp": 1532545705,
+      "offset_seconds": 780,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180725_Cranston_hp-n-mobo-c/1532545705_%2B00780.jpg",
+      "bytes": 595170,
+      "sha256": "957a7bf4d22d8cf4061bbe86cddc875cd83033050eac93aa46e7f02b18ebfdd8",
+      "width": 2048,
+      "height": 1536
+    },
+    {
+      "filename": "1532545765_+00840.jpg",
+      "timestamp": 1532545765,
+      "offset_seconds": 840,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180725_Cranston_hp-n-mobo-c/1532545765_%2B00840.jpg",
+      "bytes": 591903,
+      "sha256": "55175819e1c7ad1a1a2e3408294063e4c4c6c4140b7c1e271778cb4ae41f9b6b",
+      "width": 2048,
+      "height": 1536
+    },
+    {
+      "filename": "1532545825_+00900.jpg",
+      "timestamp": 1532545825,
+      "offset_seconds": 900,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180725_Cranston_hp-n-mobo-c/1532545825_%2B00900.jpg",
+      "bytes": 598199,
+      "sha256": "63f1e296057ebdd22c34d2ea107defb363ccf2c26dd5442ed37e10f17a60478f",
+      "width": 2048,
+      "height": 1536
+    },
+    {
+      "filename": "1532545885_+00960.jpg",
+      "timestamp": 1532545885,
+      "offset_seconds": 960,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180725_Cranston_hp-n-mobo-c/1532545885_%2B00960.jpg",
+      "bytes": 590154,
+      "sha256": "85f2ba8bd1f4ddb6800ad3885fa792cffbbc8e1b8df08cd4ab03bcbad158bc1a",
+      "width": 2048,
+      "height": 1536
+    },
+    {
+      "filename": "1532545945_+01020.jpg",
+      "timestamp": 1532545945,
+      "offset_seconds": 1020,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180725_Cranston_hp-n-mobo-c/1532545945_%2B01020.jpg",
+      "bytes": 653347,
+      "sha256": "d6781c0ea6275331fe4d3e6e21df1f035554d3a0f86996b087338aa19153520a",
+      "width": 2048,
+      "height": 1536
+    },
+    {
+      "filename": "1532546005_+01080.jpg",
+      "timestamp": 1532546005,
+      "offset_seconds": 1080,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180725_Cranston_hp-n-mobo-c/1532546005_%2B01080.jpg",
+      "bytes": 610946,
+      "sha256": "71154710258bb2d5938c132522b5a8a898045820cd7727f2e5d169918511bc47",
+      "width": 2048,
+      "height": 1536
+    },
+    {
+      "filename": "1532546065_+01140.jpg",
+      "timestamp": 1532546065,
+      "offset_seconds": 1140,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180725_Cranston_hp-n-mobo-c/1532546065_%2B01140.jpg",
+      "bytes": 649587,
+      "sha256": "5e8a83e2890d54c85f7bc3b2455708dd15950b516d947df36809e50f3821c06c",
+      "width": 2048,
+      "height": 1536
+    },
+    {
+      "filename": "1532546125_+01200.jpg",
+      "timestamp": 1532546125,
+      "offset_seconds": 1200,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180725_Cranston_hp-n-mobo-c/1532546125_%2B01200.jpg",
+      "bytes": 643369,
+      "sha256": "6fbbe8221a154d73133850c5aa8756f668e79dc38584a77952c04fb6160eea99",
+      "width": 2048,
+      "height": 1536
+    },
+    {
+      "filename": "1532546185_+01260.jpg",
+      "timestamp": 1532546185,
+      "offset_seconds": 1260,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180725_Cranston_hp-n-mobo-c/1532546185_%2B01260.jpg",
+      "bytes": 651556,
+      "sha256": "a62add70dead0de729b1f263873c41b497c4048b1003827b9e9eb7b57e8c82c8",
+      "width": 2048,
+      "height": 1536
+    },
+    {
+      "filename": "1532546245_+01320.jpg",
+      "timestamp": 1532546245,
+      "offset_seconds": 1320,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180725_Cranston_hp-n-mobo-c/1532546245_%2B01320.jpg",
+      "bytes": 649938,
+      "sha256": "f81ebc8e74cc5bb24ebfb6d4f513d3ede30724cba7cca3b4a68a0e76752e76f8",
+      "width": 2048,
+      "height": 1536
+    },
+    {
+      "filename": "1532546305_+01380.jpg",
+      "timestamp": 1532546305,
+      "offset_seconds": 1380,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180725_Cranston_hp-n-mobo-c/1532546305_%2B01380.jpg",
+      "bytes": 661214,
+      "sha256": "8cae4fafb8fecacbe25519a19f46db83a66c4a5580873f9b5d6a4aeba1be6e73",
+      "width": 2048,
+      "height": 1536
+    },
+    {
+      "filename": "1532546365_+01440.jpg",
+      "timestamp": 1532546365,
+      "offset_seconds": 1440,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180725_Cranston_hp-n-mobo-c/1532546365_%2B01440.jpg",
+      "bytes": 662593,
+      "sha256": "4ae9f600783c64f11b58408613bedbe4ded0bd26f93b27ce25f94ce1f01ff022",
+      "width": 2048,
+      "height": 1536
+    },
+    {
+      "filename": "1532546425_+01500.jpg",
+      "timestamp": 1532546425,
+      "offset_seconds": 1500,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180725_Cranston_hp-n-mobo-c/1532546425_%2B01500.jpg",
+      "bytes": 661198,
+      "sha256": "2e18a5d5b6c412db7054617274e099e38d0e8c0700fef055c8f060da459cab3a",
+      "width": 2048,
+      "height": 1536
+    },
+    {
+      "filename": "1532546485_+01560.jpg",
+      "timestamp": 1532546485,
+      "offset_seconds": 1560,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180725_Cranston_hp-n-mobo-c/1532546485_%2B01560.jpg",
+      "bytes": 651491,
+      "sha256": "0b794c1e55447cfd2459f9a419c19c725300ef99dd56ca15137f4d603d30e171",
+      "width": 2048,
+      "height": 1536
+    },
+    {
+      "filename": "1532546545_+01620.jpg",
+      "timestamp": 1532546545,
+      "offset_seconds": 1620,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180725_Cranston_hp-n-mobo-c/1532546545_%2B01620.jpg",
+      "bytes": 639430,
+      "sha256": "bba318544c7c417c620b96b1e5f12dd02e1ffc343c74b4c1b3496a751962598e",
+      "width": 2048,
+      "height": 1536
+    },
+    {
+      "filename": "1532546605_+01680.jpg",
+      "timestamp": 1532546605,
+      "offset_seconds": 1680,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180725_Cranston_hp-n-mobo-c/1532546605_%2B01680.jpg",
+      "bytes": 647816,
+      "sha256": "1d043e936e222aff35ed62b0acb1b53d7f954dcb937f63f5513f46bde5f8d53f",
+      "width": 2048,
+      "height": 1536
+    },
+    {
+      "filename": "1532546665_+01740.jpg",
+      "timestamp": 1532546665,
+      "offset_seconds": 1740,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180725_Cranston_hp-n-mobo-c/1532546665_%2B01740.jpg",
+      "bytes": 657425,
+      "sha256": "35dd98064efaf21b9e48ab07b749f5fa914f2ba7ef0b0568eab949fd5ec1f127",
+      "width": 2048,
+      "height": 1536
+    },
+    {
+      "filename": "1532546725_+01800.jpg",
+      "timestamp": 1532546725,
+      "offset_seconds": 1800,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180725_Cranston_hp-n-mobo-c/1532546725_%2B01800.jpg",
+      "bytes": 658509,
+      "sha256": "0a09126f1a93d28f778e4f2b7e58544d8967b961c9cf9ef6b3d5f155f0d5f22e",
+      "width": 2048,
+      "height": 1536
+    },
+    {
+      "filename": "1532546785_+01860.jpg",
+      "timestamp": 1532546785,
+      "offset_seconds": 1860,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180725_Cranston_hp-n-mobo-c/1532546785_%2B01860.jpg",
+      "bytes": 664721,
+      "sha256": "a494a47866890d5d9e20f6dbda53b589d231a94a0550d5e43c261e4f67466c74",
+      "width": 2048,
+      "height": 1536
+    },
+    {
+      "filename": "1532546845_+01920.jpg",
+      "timestamp": 1532546845,
+      "offset_seconds": 1920,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180725_Cranston_hp-n-mobo-c/1532546845_%2B01920.jpg",
+      "bytes": 660076,
+      "sha256": "944c5ec3c42b7ad97fb4330c48c755b01a907fe556c8b5d87c69e4b685423a77",
+      "width": 2048,
+      "height": 1536
+    },
+    {
+      "filename": "1532546905_+01980.jpg",
+      "timestamp": 1532546905,
+      "offset_seconds": 1980,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180725_Cranston_hp-n-mobo-c/1532546905_%2B01980.jpg",
+      "bytes": 668504,
+      "sha256": "0a176e649eeffffd500c911a481b5a1f004aa36ddd6652916d5a444da127f22d",
+      "width": 2048,
+      "height": 1536
+    },
+    {
+      "filename": "1532546965_+02040.jpg",
+      "timestamp": 1532546965,
+      "offset_seconds": 2040,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180725_Cranston_hp-n-mobo-c/1532546965_%2B02040.jpg",
+      "bytes": 669742,
+      "sha256": "e5919b7be78d05080b63d6c9aa61c536e0b930448ecb2ddafd38b6127b83ecc2",
+      "width": 2048,
+      "height": 1536
+    },
+    {
+      "filename": "1532547025_+02100.jpg",
+      "timestamp": 1532547025,
+      "offset_seconds": 2100,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180725_Cranston_hp-n-mobo-c/1532547025_%2B02100.jpg",
+      "bytes": 661044,
+      "sha256": "1b4a7781db1d6b409536fab400489152f153a5909615ab150c7b58bd607ea235",
+      "width": 2048,
+      "height": 1536
+    },
+    {
+      "filename": "1532547085_+02160.jpg",
+      "timestamp": 1532547085,
+      "offset_seconds": 2160,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180725_Cranston_hp-n-mobo-c/1532547085_%2B02160.jpg",
+      "bytes": 632303,
+      "sha256": "8ac8dfa6781652f156e15d394872b0efd2e8bdf141968a7dca2491b5fad8241b",
+      "width": 2048,
+      "height": 1536
+    },
+    {
+      "filename": "1532547145_+02220.jpg",
+      "timestamp": 1532547145,
+      "offset_seconds": 2220,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180725_Cranston_hp-n-mobo-c/1532547145_%2B02220.jpg",
+      "bytes": 651739,
+      "sha256": "84697142132f027eb3e6e4c61d47cb755388137d780ac3d1857034a35e463a74",
+      "width": 2048,
+      "height": 1536
+    },
+    {
+      "filename": "1532547205_+02280.jpg",
+      "timestamp": 1532547205,
+      "offset_seconds": 2280,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180725_Cranston_hp-n-mobo-c/1532547205_%2B02280.jpg",
+      "bytes": 655684,
+      "sha256": "2c56540f87449cff69252eac0e9c76ae597b08c655bec6378b8efa4526511e8b",
+      "width": 2048,
+      "height": 1536
+    },
+    {
+      "filename": "1532547265_+02340.jpg",
+      "timestamp": 1532547265,
+      "offset_seconds": 2340,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180725_Cranston_hp-n-mobo-c/1532547265_%2B02340.jpg",
+      "bytes": 652619,
+      "sha256": "3fb5628cc55e8be2f95df9a17eaaf9557032b1f398ccbf0765a7bfa75970186b",
+      "width": 2048,
+      "height": 1536
+    },
+    {
+      "filename": "1532547325_+02400.jpg",
+      "timestamp": 1532547325,
+      "offset_seconds": 2400,
+      "url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20180725_Cranston_hp-n-mobo-c/1532547325_%2B02400.jpg",
+      "bytes": 664193,
+      "sha256": "31a518ad72d74c3a1d52d7831163ae7def455c8344eaa27bb95b166154bc5bc1",
+      "width": 2048,
+      "height": 1536
+    }
+  ]
+}

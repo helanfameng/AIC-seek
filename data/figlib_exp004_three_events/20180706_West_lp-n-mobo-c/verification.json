@@ -1,0 +1,18 @@
+{
+  "verified_at_utc": "2026-10-20T12:02:20.441739+00:00",
+  "decoded_all_images": true,
+  "event": "west",
+  "event_id": "20180706_West_lp-n-mobo-c",
+  "verified_images": 81,
+  "total_bytes": 72909964,
+  "width": 3072,
+  "height": 2048,
+  "offset_seconds": [
+    -2400,
+    2400
+  ],
+  "interval_seconds": 60,
+  "pre_appearance_images": 40,
+  "appearance_images": 1,
+  "post_appearance_images": 40
+}
