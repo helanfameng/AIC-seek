@@ -1,0 +1,11 @@
+﻿source_frame_1based,filename,offset_seconds,current_candidate_count,is_positive,max_probability,target_smoke_visible,other_smoke_visible,candidate_target_correct,positive_target_correct,notes
+41,1499546263_+00000.jpg,0,0,False,,,,,,
+42,1499546323_+00060.jpg,60,0,False,,,,,,
+43,1499546383_+00120.jpg,120,0,False,,,,,,
+44,1499546443_+00180.jpg,180,0,False,,,,,,
+45,1499546503_+00240.jpg,240,1,False,,,,,,
+46,1499546563_+00300.jpg,300,1,False,0.6761826339459928,,,,,
+47,1499546623_+00360.jpg,360,1,True,0.8387710082027895,,,,,
+48,1499546683_+00420.jpg,420,1,True,0.9778758906468145,,,,,
+49,1499546743_+00480.jpg,480,1,True,0.9903767156436016,,,,,
+50,1499546803_+00540.jpg,540,1,True,0.9937540430233742,,,,,

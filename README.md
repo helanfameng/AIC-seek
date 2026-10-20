@@ -8,6 +8,8 @@ YOLO提出候选 → 关联轨迹 → 裁剪局部序列 → DINOv2与时序Tran
 
 实验索引、各次结果与复跑说明统一维护在 [EXPERIMENTS.md](EXPERIMENTS.md)。
 
+各实验的运行脚本位于对应实验目录的 `scripts/`，复跑结果写入对应的 `outputs/`；共享输入图片保留在根目录 `data/`。
+
 ## 环境与安装
 
 首次成功环境：Windows、Python 3.12.4、PyTorch 2.7.1+cu118、torchvision 0.22.1+cu118、CUDA运行时11.8、RTX 4060 Laptop GPU（8GB）。NumPy 1.26.4。PyTorch包自带所需运行时，驱动须兼容；无需为此另装完整CUDA Toolkit。
@@ -50,14 +52,15 @@ Get-FileHash .\models\v0.6.0\model.zip -Algorithm SHA256
 
 ```powershell
 $Python = "$PWD\.venv\Scripts\python.exe"
-& $Python .\run_sequence.py `
+$RunId = Get-Date -Format 'yyyyMMdd_HHmmss'
+& $Python .\experiments\exp001_pyronear_baseline\scripts\run_sequence.py `
     --sequence .\data\figlib_whittier_smoke_10 `
     --model .\models\v0.6.0\model.zip `
-    --output .\outputs\whittier.json `
+    --output ".\experiments\exp001_pyronear_baseline\outputs\$RunId\predictions.json" `
     --device cuda
 ```
 
-输出保存到 `outputs/whittier.json`，不覆盖历史实验。历史可视化与诊断操作见 [EXPERIMENTS.md](EXPERIMENTS.md)。GPU内存不足时可用 `--device cpu` 先验证接口。
+示例按时间戳另存到第一次实验的 `outputs/<RunId>/predictions.json`。历史可视化与诊断操作见 [EXPERIMENTS.md](EXPERIMENTS.md)。GPU内存不足时可用 `--device cpu` 先验证接口。
 
 ## 第三方来源与许可
 

@@ -16,11 +16,15 @@
 
 从仓库根目录执行；解释器和模型路径可换成已有环境位置。使用新输出目录，避免覆盖历史记录。
 
+2026-10-20将运行脚本迁入本实验的 `scripts/`。上面的工作区状态和脚本哈希仍描述原始运行；已有预测与统计文件保持不变。
+
 ```powershell
-& .\.venv\Scripts\python.exe .\diagnose_sequence.py `
+$RunId = Get-Date -Format 'yyyyMMdd_HHmmss'
+$RunRoot = Join-Path '.\experiments\exp002_detector_diagnostics\outputs' $RunId
+& .\.venv\Scripts\python.exe .\experiments\exp002_detector_diagnostics\scripts\diagnose_sequence.py `
     --sequence .\data\figlib_whittier_smoke_10 `
     --model .\models\v0.6.0\model.zip `
-    --output-dir .\outputs\exp002_rerun `
+    --output-dir $RunRoot `
     --device cuda
 ```
 

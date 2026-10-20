@@ -1,0 +1,52 @@
+{
+  "verified_at_utc": "2026-10-19T14:05:43.256164+00:00",
+  "verified_images": 81,
+  "total_bytes": 67185389,
+  "pre_appearance_images": 40,
+  "appearance_images": 1,
+  "post_appearance_images": 40,
+  "interval_seconds": 60,
+  "decoded_all_images": true,
+  "original_ten_comparisons": [
+    {
+      "filename": "1499546263_+00000.jpg",
+      "identical_to_original_ten": true
+    },
+    {
+      "filename": "1499546323_+00060.jpg",
+      "identical_to_original_ten": true
+    },
+    {
+      "filename": "1499546383_+00120.jpg",
+      "identical_to_original_ten": true
+    },
+    {
+      "filename": "1499546443_+00180.jpg",
+      "identical_to_original_ten": true
+    },
+    {
+      "filename": "1499546503_+00240.jpg",
+      "identical_to_original_ten": true
+    },
+    {
+      "filename": "1499546563_+00300.jpg",
+      "identical_to_original_ten": true
+    },
+    {
+      "filename": "1499546623_+00360.jpg",
+      "identical_to_original_ten": true
+    },
+    {
+      "filename": "1499546683_+00420.jpg",
+      "identical_to_original_ten": true
+    },
+    {
+      "filename": "1499546743_+00480.jpg",
+      "identical_to_original_ten": true
+    },
+    {
+      "filename": "1499546803_+00540.jpg",
+      "identical_to_original_ten": true
+    }
+  ]
+}

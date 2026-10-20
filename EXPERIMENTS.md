@@ -32,16 +32,30 @@ Start-Process .\experiments\exp001_pyronear_baseline\visualization.html
 安装环境和下载模型后，从仓库根目录运行：
 
 ```powershell
-& .\.venv\Scripts\python.exe .\diagnose_sequence.py `
+$RunId = Get-Date -Format 'yyyyMMdd_HHmmss'
+$RunRoot = Join-Path '.\experiments\exp002_detector_diagnostics\outputs' $RunId
+& .\.venv\Scripts\python.exe .\experiments\exp002_detector_diagnostics\scripts\diagnose_sequence.py `
     --sequence .\data\figlib_whittier_smoke_10 `
     --model .\models\v0.6.0\model.zip `
-    --output-dir .\outputs\exp002_rerun `
+    --output-dir $RunRoot `
     --device cuda
-Start-Process .\outputs\exp002_rerun\visualization.html
+Start-Process (Join-Path $RunRoot 'visualization.html')
 ```
 
 也可使用现有环境解释器和模型的完整路径。脚本拒绝写入非空目录，重跑时请指定新的输出目录。查看已提交结果时，用浏览器打开 `experiments/exp002_detector_diagnostics/visualization.html`。每个前缀只使用当时已有图片重建轨迹和裁剪；不足6张时仍保留官方重复帧填充，重复帧不代表独立观测。
 
+## 第三次实验：Whittier完整81帧回放
+
+状态（2026-10-20核验）：六组均已完成，两组10帧、四组81帧，共344个判断时刻。原版完整回放首次阳性为+6分钟；低阈值、高分辨率、联合设置均为+5分钟，四组出现后首次候选仍为+4分钟。四组在目标烟羽出现前均无阳性窗口，但人工审核表尚未填写，不能据此声明误报率或泛化性能。
+
+- [详细执行方案与命令](experiments/exp003_whittier_full_replay/README.md)
+- [实际结果分析与后续方向](experiments/exp003_whittier_full_replay/analysis_20261020/RESULTS.md)
+- [完整数据来源](data/figlib_whittier_full_81/SOURCE.md)
+- 回放入口：`experiments/exp003_whittier_full_replay/scripts/replay_sequence.py`；分阶段入口位于同目录的 `run_whittier_experiments.ps1`；自动检查位于该实验的 `tests/`。
+- 先复现旧10帧，再固定单图检测方式比较10帧与完整81帧；每次使用当前及过去最近最多20张。之后进行检测阈值和分辨率对照。
+- 结果写入新的`experiments/exp003_whittier_full_replay/outputs/exp003_<RunId>/`，拒绝覆盖既有目录；出现前阳性和首次正确报警需人工复核。
+- 本次结果目录：`experiments/exp003_whittier_full_replay/outputs/exp003_20261019_224724`。迁移前的核算验证CSV/JSONL与配置一致、无未来帧或截断，并独立重算174条保留轨迹概率；原10帧结果精确复现，完整历史未改变原版早期判断。分析结果报告已同步当前路径，其他分析辅助文件暂留本地。
+
 ## 实验记录约定
 
-每次实验在 `experiments/expNNN_描述/` 新建目录，保留简短README、实际预测JSON以及需要时生成的可视化。README写明目的、代码提交号、模型与数据、参数变化、运行命令、结果和局限。代码与依赖历史由Git管理，不重复复制环境和脚本。
+每次实验在 `experiments/expNNN_描述/` 新建目录，保留简短README、实际预测JSON以及需要时生成的可视化。实验入口归入各自的 `scripts/`，新增运行结果写入各自的 `outputs/`，实验检查放入各自的 `tests/`。README写明目的、代码提交号、模型与数据、参数变化、运行命令、结果和局限。代码与依赖历史由Git管理，不重复复制环境和脚本。

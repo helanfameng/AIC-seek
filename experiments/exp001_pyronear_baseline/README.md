@@ -14,17 +14,20 @@ YOLO置信度阈值0.1，输入尺寸1024，NMS IoU 0.2；关联IoU 0.2，至少
 
 ## 运行命令
 
-从仓库根目录运行（输出到outputs，以免覆盖历史记录）：
+从仓库根目录运行。脚本归档于本实验的 `scripts/`，复跑使用新的时间戳输出目录：
 
 ```powershell
-& .\.venv\Scripts\python.exe .\run_sequence.py `
+$RunId = Get-Date -Format 'yyyyMMdd_HHmmss'
+& .\.venv\Scripts\python.exe .\experiments\exp001_pyronear_baseline\scripts\run_sequence.py `
   --sequence .\data\figlib_whittier_smoke_10 `
   --model .\models\v0.6.0\model.zip `
-  --output .\outputs\exp001_rerun.json `
+  --output ".\experiments\exp001_pyronear_baseline\outputs\$RunId\predictions.json" `
   --device cuda
 ```
 
 ## 实际结果
+
+2026-10-20目录整理仅迁移运行脚本并更新复跑命令；下列原始归档结果保持不变。
 
 - 输入10帧，无截断、无输入填充。
 - `is_smoke=true`；最高保留轨迹概率 `0.9937540430233742`。
