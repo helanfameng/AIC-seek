@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>烟雾瞭望协同调度中心</title>
+  <link rel="icon" href="/static/favicon.svg">
+  <link rel="stylesheet" href="/static/app.css?v=65">
+</head>
+<body>
+  <div class="boot" id="boot">正在打开实时监控…</div>
+  <div class="toast" id="toast" hidden></div>
+  <div class="lightbox" id="picker" hidden>
+    <div class="picker-card">
+      <header>
+        <strong>选择处理人</strong>
+        <button class="btn" type="button" data-act="picker-cancel">关闭</button>
+      </header>
+      <p class="muted">先选定处理人，再确认派单。</p>
+      <div class="picker-list" id="picker-list"></div>
+      <button class="btn primary" type="button" data-act="picker-ok">确认派单</button>
+    </div>
+  </div>
+  <div class="lightbox" id="shot-view" hidden>
+    <div class="shot-card">
+      <header>
+        <strong id="shot-title">冒烟画面</strong>
+        <div class="shot-tools">
+          <button class="btn" type="button" data-act="shot-zoom" data-dir="-1">缩小</button>
+          <button class="btn" type="button" data-act="shot-zoom" data-dir="1">放大</button>
+          <button class="btn" type="button" data-act="close-shot">关闭</button>
+        </div>
+      </header>
+      <div class="shot-body">
+        <div class="shot-stage" id="shot-stage"><img id="shot-img" alt="冒烟画面"></div>
+        <div class="shot-side">
+          <div class="shot-thread" id="shot-thread"></div>
+          <div class="shot-prompts">
+            <button type="button" data-act="ask-prompt" data-q="这是烟还是云？">这是烟还是云</button>
+            <button type="button" data-act="ask-prompt" data-q="到现场先核对哪里？">先核对哪里</button>
+          </div>
+          <form data-act="ask-shot">
+            <input name="question" placeholder="问问这张画面" aria-label="询问这张画面" maxlength="200">
+            <button class="btn primary" type="submit">询问</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="lightbox" id="lightbox" hidden>
+    <div class="lightbox-card">
+      <header>
+        <strong id="full-title">实时画面</strong>
+        <button class="btn" type="button" data-act="close-full">关闭</button>
+      </header>
+      <div class="stage tall">
+        <img id="full-img" alt="">
+        <svg id="full-svg" aria-hidden="true"></svg>
+        <span class="chip" id="full-chip"></span>
+      </div>
+    </div>
+  </div>
+
+  <header>
+    <div class="mini">
+      <div><b id="count-sites">8</b><span>点位</span></div>
+      <div><b id="count-live">1</b><span>有画面</span></div>
+      <div><b id="count-open">0</b><span>未结</span></div>
+    </div>
+    <div class="center">
+      <h1>烟雾瞭望协同调度中心</h1>
+      <nav class="nav" aria-label="中控">
+        <button type="button" data-desk="focus">重点关注</button>
+        <button type="button" data-desk="alert">智能预警</button>
+        <button type="button" data-desk="dispatch">运维调度</button>
+        <button type="button" data-desk="assets">模型管理</button>
+        <button type="button" data-desk="collab">协同作业</button>
+      </nav>
+    </div>
+    <div class="head-side">
+      <a class="btn primary" id="field-switch" href="/field">现场工作台</a>
+      <div class="clocks">
+        <b id="now">--:--:--</b>
+      </div>
+      <p class="pill" id="model-pill">模型</p>
+    </div>
+  </header>
+
+  <div id="desk">
+    <section class="page" id="page-focus">
+      <div class="map-wrap">
+        <div id="map" class="map-host"></div>
+        <aside class="float glass">
+          <p class="kicker">当前点位</p>
+          <h2 id="float-title">圣伊内斯峰北</h2>
+          <p class="muted" id="float-meta"></p>
+          <p><span class="tag" id="float-status">准备</span></p>
+          <p class="copy" id="float-text"></p>
+          <div class="timeline" id="timeline" aria-label="整段回放"></div>
+          <div class="row">
+            <button class="btn primary" type="button" data-act="open-live">打开研判</button>
+            <button class="btn" type="button" data-act="fullscreen">全屏回放</button>
+          </div>
+        </aside>
+        <div class="kpis glass">
+          <div><b id="kpi-alarm">0</b><span>建议查看</span></div>
+          <div><b id="kpi-score">—</b><span>当前把握</span></div>
+          <div><b id="kpi-open">0</b><span>未结工单</span></div>
+        </div>
+        <button class="pip" type="button" data-act="open-live">
+          <img id="pip-img" alt="">
+          <svg id="pip-svg" aria-hidden="true"></svg>
+          <span class="chip" id="pip-chip">回放</span>
+        </button>
+        <div class="dock">
+          <section class="glass card">
+            <div class="panel-title"><h2>预警摘要</h2><span class="muted" id="sum-count"></span></div>
+            <div class="list" id="sum-alerts"></div>
+          </section>
+          <section class="glass card">
+            <div class="panel-title">
+              <h2>环境摘要</h2>
+              <span class="tag muted" id="weather-tag">回放参考</span>
+            </div>
+            <div class="metrics" id="weather-grid"></div>
+            <p class="muted" id="compare-line"></p>
+          </section>
+          <section class="glass card">
+            <div class="panel-title"><h2>派单摘要</h2><span class="muted" id="sum-count-orders"></span></div>
+            <div id="sum-order"></div>
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <section class="page" id="page-alert" hidden>
+      <aside class="rail glass" id="rail"></aside>
+      <div class="alert-main">
+        <div class="cam-grid">
+          <article class="glass mini-card"><p>事件锁定</p><strong id="cam-lock">—</strong></article>
+          <article class="glass mini-card"><p>画面来源</p><strong id="cam-source">—</strong></article>
+          <article class="glass mini-card"><p>边缘初判</p><strong id="cam-edge">—</strong></article>
+          <article class="glass mini-card"><p>云端复核</p><strong id="cam-cloud">—</strong></article>
+        </div>
+        <div class="board">
+          <div class="board-stage glass">
+            <div class="stage" id="board-stage">
+              <img id="board-img" alt="">
+              <svg id="board-svg" aria-hidden="true"></svg>
+              <span class="chip" id="board-chip"></span>
+              <div class="hero-empty" id="board-empty" hidden></div>
+            </div>
+            <div class="transport">
+              <div class="scrub-line">
+                <input id="scrub" type="range" min="0" max="80" value="0" aria-label="监测进度">
+                <span id="pos"></span>
+              </div>
+            </div>
+          </div>
+          <div class="agents-wrap glass">
+            <div class="panel-title"><h2>研判黑板</h2><span class="muted" id="judge-state">持续监测</span></div>
+            <div class="judge" id="judge"></div>
+            <div class="judge-actions">
+              <button class="btn primary" id="watch-play" type="button" data-act="play">暂停</button>
+              <button class="btn" type="button" data-act="fullscreen">全屏</button>
+              <button class="btn" type="button" data-act="judge-retry">重新研判</button>
+              <button class="btn" type="button" data-act="dispatch-now">派单</button>
+            </div>
+          </div>
+        </div>
+        <div class="env-strip glass">
+          <div><span>气温</span><b id="env-temp">—</b></div>
+          <div><span>湿度</span><b id="env-hum">—</b></div>
+          <div><span>风速</span><b id="env-wind">—</b></div>
+          <div><span>风向</span><b id="env-dir">—</b></div>
+          <div><span>能见</span><b>良好</b></div>
+          <p class="muted" id="env-note">天气暂未接通</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="page" id="page-dispatch" hidden>
+      <div class="work">
+        <div class="glass card grow">
+          <div class="panel-title">
+            <h2>运维调度</h2>
+            <div class="segment" id="d-counts"></div>
+          </div>
+          <div class="filters" id="d-filters">
+            <button type="button" data-filter="all">全部</button>
+            <button type="button" data-filter="doing">执行中</button>
+            <button type="button" data-filter="review">待审核</button>
+            <button type="button" data-filter="done">已完成</button>
+          </div>
+          <form class="add-phone" data-act="add-by-phone">
+            <input name="phone" inputmode="numeric" placeholder="已注册的电话号" aria-label="处理人电话号" required>
+            <button class="btn primary" type="submit">添加处理人</button>
+          </form>
+          <p class="muted">现场工作台注册后，在这里输入电话号才能加入处理人。</p>
+          <div class="table-wrap" id="d-rows"></div>
+        </div>
+        <aside class="glass card detail" id="d-detail"></aside>
+      </div>
+    </section>
+
+    <section class="page" id="page-assets" hidden>
+      <div class="work">
+        <div class="glass card grow">
+          <div class="panel-title">
+            <h2>数据底座</h2>
+            <div class="segment">
+              <button type="button" data-asset-tab="sites">设备台账</button>
+              <button type="button" data-asset-tab="people">绩效看板</button>
+            </div>
+          </div>
+          <div id="asset-view">
+            <div class="chips" id="a-chips"></div>
+            <input id="asset-q" data-act="asset-q" placeholder="搜索点位、编号、区域" aria-label="搜索点位">
+            <div class="row">
+              <button class="btn" type="button" data-act="show-add" data-add="site">添加点位</button>
+              <button class="btn" type="button" data-act="show-add" data-add="camera">添加摄像头</button>
+            </div>
+            <form class="place-form" data-act="add-site" hidden>
+              <label>名称<input name="name" placeholder="点位名称" aria-label="点位名称" required></label>
+              <label>编号<input name="code" placeholder="例如 EAST-1" aria-label="点位编号" required></label>
+              <label>纬度<input name="lat" inputmode="decimal" placeholder="34.53" aria-label="纬度" required></label>
+              <label>经度<input name="lng" inputmode="decimal" placeholder="-119.98" aria-label="经度" required></label>
+              <label>海拔<input name="elev" inputmode="decimal" placeholder="米，可不填" aria-label="海拔"></label>
+              <label>区域<input name="region" placeholder="所在区域" aria-label="区域"></label>
+              <button class="btn primary span" type="submit">保存点位</button>
+            </form>
+            <form class="place-form" data-act="add-camera" hidden>
+              <label class="span">所属点位<select id="camera-sites" name="siteId" aria-label="所属点位"></select></label>
+              <label class="span">名称<input name="name" placeholder="摄像头名称" aria-label="摄像头名称" required></label>
+              <label class="span">IP<input name="ip" placeholder="例如 192.168.1.10" aria-label="摄像头 IP" required></label>
+              <button class="btn primary span" type="submit">保存摄像头</button>
+            </form>
+            <div class="table-wrap" id="a-rows"></div>
+          </div>
+          <div id="people-view" hidden>
+            <input id="people-q" data-act="people-q" placeholder="搜索姓名、电话、擅长、区域" aria-label="搜索人员">
+            <div class="table-wrap" id="p-rows"></div>
+          </div>
+        </div>
+        <aside class="glass card detail">
+          <div id="model-card"></div>
+          <div id="a-detail"></div>
+          <div id="p-detail"></div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="page" id="page-collab" hidden>
+      <div class="kanban">
+        <aside class="glass card pool" id="pool"></aside>
+        <section class="glass card" id="desk-task"></section>
+        <section class="glass card" id="desk-chat"></section>
+      </div>
+    </section>
+  </div>
+
+  <div id="field" hidden>
+    <div class="field-wrap">
+      <div class="phone">
+        <div class="phone-top">
+          <span>工人端</span>
+        </div>
+        <div id="phone-body"></div>
+        <div id="nav-sheet" class="nav-sheet" hidden></div>
+        <nav class="tabbar" aria-label="现场">
+          <button type="button" data-field-tab="home">工作台</button>
+          <button type="button" data-field-tab="orders">工单中心</button>
+          <button type="button" data-field-tab="me">我的</button>
+        </nav>
+      </div>
+    </div>
+  </div>
+
+  <input id="file-report" type="file" accept="image/jpeg,image/png" hidden>
+  <input id="file-after" type="file" accept="image/jpeg,image/png" hidden>
+  <script src="/static/app.js?v=68"></script>
+</body>
+</html>

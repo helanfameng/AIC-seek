@@ -1,76 +1,115 @@
-# AIC-seek：林火早期烟雾识别实验
+# 烟雾瞭望
 
-研究固定相机复杂环境下的早期烟雾检测与时序复核。目前已在个人笔记本上跑通 Pyronear 官方预训练模型；尚未训练自主改进模型，也没有建立独立测试集性能结论。
+烟雾瞭望是一套跑在本机上的林火早期烟雾值守系统。调度中心和现场工人看同一本台账：固定相机的连续画面先由模型检查，像烟雾的画面写成建议查看，再由工人到场核对、回传，中控复核或删除。
 
-已完成实验记录(实验历史)见 [EXPERIMENTS.md](EXPERIMENTS.md)。已搜集的技术资料等见 [MATERIAL.md](MATERIAL.md)。
+页面只监听 `127.0.0.1:8765`。调度中心是 [http://127.0.0.1:8765/](http://127.0.0.1:8765/)，工人端是 [http://127.0.0.1:8765/field](http://127.0.0.1:8765/field)。
 
-## 当前基线
+实验记录见 [EXPERIMENTS.md](EXPERIMENTS.md)，技术资料见 [MATERIAL.md](MATERIAL.md)。
 
-YOLO提出候选 → 关联轨迹 → 裁剪局部序列 → DINOv2与时序Transformer复核。
+当前值守的是圣伊内斯峰走廊。只有圣伊内斯峰北（SYP-N）有连续画面，来自 HPWREN 公开的 Whittier 固定相机序列。其余点位显示为正常，用来排班、导航和建单，没有单独的连续画面。
 
-实验索引、各次结果与复跑说明统一维护在 [EXPERIMENTS.md](EXPERIMENTS.md)。
+## 调度中心
 
-各实验的运行脚本位于对应实验目录的 `scripts/`，复跑结果写入对应的 `outputs/`；共享输入图片保留在根目录 `data/`。
+- **重点关注。** 地图上看整条走廊，主画面跟着 SYP-N 的当前帧。右侧是预警摘要、天气和环境。预警摘要按「烟刚可见、第一次发现可疑、开始连续出现、第一次建议查看」列出，可以滑动。某一帧上的工单都已通过复核后，这一帧不再出现在摘要里；一条都没有时，中间显示暂无预警。时间轴可以前后看，也可以全屏回放。
+- **智能预警。** 把当前画面交给 DeepSeek 写成研判，说明现在更像烟、云、尘还是光斑，并给出下一步。页面上不把内部分数当成结论。
+- **运维调度。** 工单只有执行中、待审核、已完成。新工单直接进入执行中。可以按电话号把已注册的工人加进处理人，催办、通过复核，或删除这张工单。和现场的对话不写进这里的记录。
+- **模型管理。** 点位台账列出编号、走廊、状态、海拔和摄像头数量。除 SYP-N 外，其余点位状态都是正常。可以添加点位；添加摄像头时必须填写名称和对应 IP。选中一个点后，右侧底部是「去研判」和「为这个点建单」。
+- **协同作业。** 左侧是任务。点中的任务变成浅绿色。中间是这张任务的画面、状态、点位、处理人和说明。右侧可以按这张任务、和这名工人打字，也可以发送 JPG 或 PNG。工人在自己的工单里能看到这些消息，并同样回复文字或图片。
 
-## 环境与安装
+## 工人端
 
-首次成功环境：Windows、Python 3.12.4、PyTorch 2.7.1+cu118、torchvision 0.22.1+cu118、CUDA运行时11.8、RTX 4060 Laptop GPU（8GB）。NumPy 1.26.4。PyTorch包自带所需运行时，驱动须兼容；无需为此另装完整CUDA Toolkit。
+- 用手机号注册或登录。中控在运维调度里输入同一个电话号后，这个人才能被派单。
+- 首页进入待办、现场助手、附近点位和一键上报。
+- 工单里可以同时选择已确认、已拍照、已清除、持续观察、其他处置，再一次提交。其中有「已清除」时，工单进入待审核；只有已拍照不会改状态。也可以上传处理后的照片、请求支援、写备注。
+- 冒烟画面可以放大。放大后用鼠标拖拽查看，并直接问这张图是烟还是云、到现场先核对哪里。
+- 现场助手是一段文字对话，用来问烟和云怎么分、先核对哪里、工单怎么提交。
+- 附近点位按距离排列。地图上只保留右下角的加号和减号。点一个地点后，在页面里看方向和距离，再打开导航。这一步留在工人端，不会跳进调度中心。
 
-安装Python 3.12与Git后，在PowerShell执行：
+## 自动检查怎么工作
+
+检查使用 Pyronear 官方 temporal-model v0.6.0，不在本仓库里训练新模型。一条画面的处理顺序是：
+
+1. YOLO 在单帧上提出候选。
+2. 把前后帧的候选连成轨迹。
+3. 稳住相机抖动，按轨迹裁出局部序列。
+4. DINOv2 和时序 Transformer 看这段局部序列，再用逻辑回归给出像烟雾的程度。
+
+超过大约 0.72 时，页面写成「建议查看」。这个数是像烟雾的程度，不是着火概率，也不是准确率。标准设置下，这组 Whittier 画面大约在烟刚可见之后 6 分钟出现第一次建议查看。偏移 0 是第一张能看见烟的帧，不是点火时刻。
+
+没有模型包时，已有画面仍可翻看。新拍照片要做云端复核时，把 `model.zip` 放到 `models/v0.6.0/model.zip`，不用解压。
+
+DeepSeek 负责三件事：调度中心的研判、工人放大画面后的询问、现场助手的文字对话。密钥只写在本机 `.env`，不进页面，也不进仓库。
+
+## 创新点
+
+- **同一本台账，两头同时用。** 调度中心和工人端读写同一份工单、人员和消息。一边改状态、派人或说话，另一边下一轮就看见，不需要再导出表格。
+- **模型只提出建议，人把结论写回去。** 自动检查负责标出建议查看的时刻。工人用多项处置回传，中控通过后这张画面退出预警摘要，值守列表只留还没了结的事。
+- **按任务说话，而不是按页面留言。** 协同作业先选定一张工单和这名工人，再打字或发照片。对话跟任务走，不混进运维记录。
+- **现场问的是这张图。** 工人放大当前冒烟画面后，问题和这张图一起送给模型；现场助手则回答烟、云、尘、光斑和工单怎么处理，不另编火点、面积或人数。
+- **附近点位在工人端里完成。** 选点之后先给出方向和距离，再交给地图导航，工人不会被带到调度中心。
+- **研究结论接到了值守页面上。** 第三次实验已经在完整 81 帧上核对过官方模型的早期报警时刻。页面直接使用这组成果和原始图片，而不是另做一套演示数据。第四次实验又在 Alison、West、Cranston 三个事件上做了同样的回放，用来看这条早期报警是否换一个山头还成立。索引见 [EXPERIMENTS.md](EXPERIMENTS.md)。
+
+这些做法没有把上游检测模型说成自己的发明。单个有烟序列也不能证明误报率或长期部署效果。
+
+## 怎么运行
+
+需要 Windows、Python 3.12 和一块支持 CUDA 的显卡。本机已验证的环境是 Python 3.12.10、PyTorch 2.7.1+cu118、RTX 4060 Laptop。不要用应用商店里的 `python` 占位程序。
 
 ```powershell
 git clone https://github.com/helanfameng/AIC-seek.git
 Set-Location AIC-seek
-python -m venv .venv
+py -3.12 -m venv .venv
 $Python = "$PWD\.venv\Scripts\python.exe"
 & $Python -m pip install --upgrade pip
 & $Python -m pip install torch==2.7.1 torchvision==0.22.1 --index-url https://download.pytorch.org/whl/cu118
 & $Python -m pip install -r requirements.txt
-& $Python -m pip check
-& $Python -c "import torch; print(torch.__version__, torch.cuda.is_available())"
+Copy-Item .env.example .env
 ```
 
-若 `python` 不在PATH，请使用自己的Python 3.12完整路径创建环境。requirements.txt是成功运行时的依赖记录，包含固定提交的Pyronear引用；其跨机器重新安装尚未完整验证。不要与已有YOLO/AOD环境混装。
+在 `.env` 里填写：
 
-## 模型下载
+```text
+AMAP_KEY=
+AMAP_SECURITY=
+DEEPSEEK_API_KEY=
+```
 
-从[官方v0.6.0文件页](https://huggingface.co/pyronear/temporal-model/tree/v0.6.0)下载 `model.zip`，保存为 `models/v0.6.0/model.zip`，不需要解压。权重不随本仓库上传。
+地图使用高德，询问和研判使用 DeepSeek。缺密钥时，对应功能会提示还没写上，其余页面仍可打开。
 
-本次权重SHA256：
+模型从 [官方 v0.6.0 文件页](https://huggingface.co/pyronear/temporal-model/tree/v0.6.0) 下载 `model.zip`，保存为 `models/v0.6.0/model.zip`。本次权重大小对应的 SHA256：
 
 ```text
 6A328BBC933B4D92855CBCBDE06A6AAC165A386D08B09E9DE59F7448046D455E
 ```
 
-核对命令：
-
 ```powershell
 Get-FileHash .\models\v0.6.0\model.zip -Algorithm SHA256
+& $Python .\web\server.py
 ```
 
-## 运行样例（第一次实验）
+启动后打开调度中心或工人端。静态页面不缓存，改完前端后刷新即可。`web/server.py` 改动后需要重新启动这一个进程。显存不够时，实验脚本可以加 `--device cpu` 先验证接口。
 
-仓库已包含10张原始连续图片，每分钟一张。按文件名排序，无需改名。
+## 仓库里有什么
 
-```powershell
-$Python = "$PWD\.venv\Scripts\python.exe"
-$RunId = Get-Date -Format 'yyyyMMdd_HHmmss'
-& $Python .\experiments\exp001_pyronear_baseline\scripts\run_sequence.py `
-    --sequence .\data\figlib_whittier_smoke_10 `
-    --model .\models\v0.6.0\model.zip `
-    --output ".\experiments\exp001_pyronear_baseline\outputs\$RunId\predictions.json" `
-    --device cuda
-```
+| 路径 | 作用 |
+| --- | --- |
+| `web/server.py` | 本地页面、台账、图片和模型检查 |
+| `web/static/` | 调度中心和工人端的页面 |
+| `data/figlib_whittier_full_81/` | SYP-N 的 81 张原始画面 |
+| `data/figlib_whittier_smoke_10/` | 前两次实验使用的 10 张连续画面 |
+| `data/figlib_exp004_three_events/` | 第四次实验的 Alison、West、Cranston 画面 |
+| `experiments/` | 四次实验的脚本、结果和说明 |
+| `models/v0.6.0/model.zip` | 本地模型包，不上传 |
+| `.env` | 本机密钥，不上传 |
 
-示例按时间戳另存到第一次实验的 `outputs/<RunId>/predictions.json`。
+运行时生成的缩略图、台账和检查进度写在 `.cache/`，不上传。
 
-GPU内存不足时可用 `--device cpu` 先验证接口。
+## 数据、模型和许可
 
-## 第三方来源与许可
+- 画面来自 [HPWREN / UCSD FIgLib](https://www.hpwren.ucsd.edu/FIgLib/)，事件 `20170708_Whittier_syp-n-mobo-c`。使用时注明 HPWREN 来源。81 帧说明见 [SOURCE.md](data/figlib_whittier_full_81/SOURCE.md)。
+- [Pyronear temporal-model](https://github.com/pyronear/temporal-model) 为 Apache-2.0。本仓库按依赖引用官方实现，固定提交 `c0033d32b826d505029bbf6f44037b77e958a2b6`。
+- [Ultralytics](https://github.com/ultralytics/ultralytics) 提供 YOLO 实现，许可为 AGPL-3.0 及商业选项。本仓库不把第三方组件重新授权。
 
-- [Pyronear temporal-model](https://github.com/pyronear/temporal-model)：上游Apache-2.0许可；本仓库通过依赖引用使用，未将其算法表述为原创。固定提交 `c0033d32b826d505029bbf6f44037b77e958a2b6`。
-- [Pyronear模型](https://huggingface.co/pyronear/temporal-model)：官方模型页标注Apache-2.0；使用时同时核对其依赖和配套检测器的许可。
-- [Ultralytics](https://github.com/ultralytics/ultralytics)：提供YOLO实现，采用AGPL-3.0及商业许可选项，具体使用与分发遵守其适用条款。本仓库不将第三方组件统一重新授权。
-- [HPWREN / UCSD FIgLib](https://www.hpwren.ucsd.edu/FIgLib/)：10张图片来自官方公开火灾序列。依官方要求注明HPWREN来源，详见 [SOURCE.md](data/figlib_whittier_smoke_10/SOURCE.md)。图片不因放入代码仓库而改变原有使用条件。
+## 局限
 
-当前仅为研究基线。单个有烟序列不能证明准确率、误报率或真实部署效果。
+调度页面目前值守的是 SYP-N 这一条固定相机。它能说明模型何时建议查看、人和中控怎样把这张画面处理完。第四次实验已经覆盖另外三个事件，但原始自动阳性还不能直接写成首次正确预警，也不能代替多季节的误报评估。
