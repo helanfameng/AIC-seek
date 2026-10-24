@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "purpose": "Controlled diagnosis, not a new automatic detection benchmark or training run.",
+  "source_protocol": "experiments/exp004_figlib_multi_event/events.json",
+  "source_batch": "experiments/exp004_figlib_multi_event/outputs/exp004_20261020_201923",
+  "model_sha256": "6a328bbc933b4d92855cbcbde06a6aac165a386d08b09e9de59f7448046d455e",
+  "via": {
+    "alison": {"filename": "via_project_21Oct2026_14h39m.json", "sha256": "cb9e7180c540c2f70d8158a718099c5f2a158c3c77221d6e61a442ecb1eb254a"},
+    "west": {"filename": "via_project_21Oct2026_15h30m.json", "sha256": "ed10282f443baf70b054466b772710ddbfa1086416fc4488a2231c90ff8d3bf3"},
+    "cranston": {"filename": "via_project_21Oct2026_15h41m.json", "sha256": "6ad43c3508b2361aae51cb4f27b66ccee5e0e0d754c3303791ec050c2c04c93a"}
+  },
+  "coverage_reference": "high_resolution",
+  "default_settings": {
+    "crop": ["full_baseline", "high_resolution"],
+    "oracle": ["manual"],
+    "association": ["full_baseline", "high_resolution"],
+    "calibration": ["full_baseline", "low_threshold", "high_resolution", "combined"]
+  },
+  "crop_context_factors": [1.0, 1.5, 2.0],
+  "oracle_max_frames": 20,
+  "oracle_min_frames": 2,
+  "association_variants": ["original_iou020", "iou010", "center_scale"],
+  "association_center_gate": 0.75,
+  "association_max_scale_ratio": 2.5,
+  "west_background_probe_xyxy": [180, 1130, 780, 1500],
+  "west_background_probe_status": "prior_results_review_region_not_exhaustive_ground_truth",
+  "baseline_logit_tolerance": 0.001,
+  "calibration_tolerance": 0.00000001,
+  "prohibited_interpretations": [
+    "Empty post-onset VIA regions are not smoke-free labels.",
+    "Manual positions and N counterfactuals are not automatic detection improvements.",
+    "Region overlap is diagnostic selection, not independently adjudicated true-positive identity.",
+    "The background probe is not a complete negative dataset or a global false-alarm denominator."
+  ]
+}

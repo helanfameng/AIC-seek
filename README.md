@@ -6,6 +6,8 @@
 
 实验记录见 [EXPERIMENTS.md](EXPERIMENTS.md)，技术资料见 [MATERIAL.md](MATERIAL.md)。
 
+研究进展（2026-10-24）：实验五的原因定位、实验六的背景残差和实验七的PSL区域适配均已完成相应正式批次。实验七已完成42/43/44三个种子的18个模型训练及修订诊断集评价；弱烟单例提前，但尚未证明在早检和误报上综合优于原版。详见[实验六分析](experiments/exp006_background_residual/analysis_20261022/RESULTS.md)、[实验七分析](experiments/exp007_psl_branch/analysis_20261024/ANALYSIS_20261024.md)和[研究路线](RESEARCH_ROADMAP.md)。网页值守继续使用官方原模型。
+
 当前值守的是圣伊内斯峰走廊。只有圣伊内斯峰北（SYP-N）有连续画面，来自 HPWREN 公开的 Whittier 固定相机序列。其余点位显示为正常，用来排班、导航和建单，没有单独的连续画面。
 
 ## 调度中心
@@ -27,7 +29,7 @@
 
 ## 自动检查怎么工作
 
-检查使用 Pyronear 官方 temporal-model v0.6.0，不在本仓库里训练新模型。一条画面的处理顺序是：
+网页检查使用 Pyronear 官方 temporal-model v0.6.0。独立研究实验会训练新增的小分支，但尚未将其替换进值守页面。一条画面的处理顺序是：
 
 1. YOLO 在单帧上提出候选。
 2. 把前后帧的候选连成轨迹。
@@ -56,7 +58,7 @@ DeepSeek 负责三件事：调度中心的研判、工人放大画面后的询�
 需要 Windows、Python 3.12 和一块支持 CUDA 的显卡。本机已验证的环境是 Python 3.12.10、PyTorch 2.7.1+cu118、RTX 4060 Laptop。不要用应用商店里的 `python` 占位程序。
 
 ```powershell
-git clone https://github.com/helanfameng/AIC-seek.git
+git clone -c core.autocrlf=false https://github.com/helanfameng/AIC-seek.git
 Set-Location AIC-seek
 py -3.12 -m venv .venv
 $Python = "$PWD\.venv\Scripts\python.exe"
@@ -65,6 +67,8 @@ $Python = "$PWD\.venv\Scripts\python.exe"
 & $Python -m pip install -r requirements.txt
 Copy-Item .env.example .env
 ```
+
+克隆命令保留文本换行。正式实验会核对源码和输入文件的SHA256；复算应使用对应记录的冻结源码、数据、标签和环境。
 
 在 `.env` 里填写：
 
@@ -98,7 +102,7 @@ Get-FileHash .\models\v0.6.0\model.zip -Algorithm SHA256
 | `data/figlib_whittier_full_81/` | SYP-N 的 81 张原始画面 |
 | `data/figlib_whittier_smoke_10/` | 前两次实验使用的 10 张连续画面 |
 | `data/figlib_exp004_three_events/` | 第四次实验的 Alison、West、Cranston 画面 |
-| `experiments/` | 四次实验的脚本、结果和说明 |
+| `experiments/` | 实验一至七的脚本、已归档正式结果和说明 |
 | `models/v0.6.0/model.zip` | 本地模型包，不上传 |
 | `.env` | 本机密钥，不上传 |
 

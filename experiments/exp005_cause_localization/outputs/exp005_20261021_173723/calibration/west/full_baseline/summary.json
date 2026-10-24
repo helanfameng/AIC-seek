@@ -1,0 +1,80 @@
+{
+  "records": 464,
+  "status_counts": {
+    "ok": 464
+  },
+  "variants": {
+    "original": 116,
+    "N_equals_1": 116,
+    "add_one_irrelevant_tube": 116,
+    "add_two_irrelevant_tubes": 116
+  },
+  "interpretation": "Controlled diagnostics. Manual geometry/overlap and calibration counterfactuals are not deployment performance.",
+  "diagnostics": {
+    "scope": "Descriptive diagnostics; not formal event detection or global false-alarm scores.",
+    "by_variant": {
+      "N_equals_1": {
+        "records": 116,
+        "west_plus6_manual_overlap_examples": [
+          {
+            "tube_id": 1,
+            "frozen_L": 8.83523178100586,
+            "frozen_T": 2,
+            "frozen_C": 0.4360378086566925,
+            "source_N": 2,
+            "counterfactual_N": 1,
+            "probability": 0.9287342829379075,
+            "crosses_threshold": true
+          }
+        ]
+      },
+      "add_one_irrelevant_tube": {
+        "records": 116,
+        "west_plus6_manual_overlap_examples": [
+          {
+            "tube_id": 1,
+            "frozen_L": 8.83523178100586,
+            "frozen_T": 2,
+            "frozen_C": 0.4360378086566925,
+            "source_N": 2,
+            "counterfactual_N": 3,
+            "probability": 0.7978497738627452,
+            "crosses_threshold": true
+          }
+        ]
+      },
+      "add_two_irrelevant_tubes": {
+        "records": 116,
+        "west_plus6_manual_overlap_examples": [
+          {
+            "tube_id": 1,
+            "frozen_L": 8.83523178100586,
+            "frozen_T": 2,
+            "frozen_C": 0.4360378086566925,
+            "source_N": 2,
+            "counterfactual_N": 4,
+            "probability": 0.6847440291326874,
+            "crosses_threshold": false
+          }
+        ]
+      },
+      "original": {
+        "records": 116,
+        "west_plus6_manual_overlap_examples": [
+          {
+            "tube_id": 1,
+            "frozen_L": 8.83523178100586,
+            "frozen_T": 2,
+            "frozen_C": 0.4360378086566925,
+            "source_N": 2,
+            "counterfactual_N": 2,
+            "probability": 0.8776281097472929,
+            "crosses_threshold": true
+          }
+        ]
+      }
+    },
+    "fresh_classifier_forwards": 0,
+    "wall_seconds": 0.03447180000148364
+  }
+}

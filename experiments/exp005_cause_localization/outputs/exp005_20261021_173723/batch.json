@@ -1,0 +1,20 @@
+{
+  "created_at_utc": "2026-10-21T09:44:42.829499+00:00",
+  "common": {
+    "protocol_sha256": "184fd79f5d963157fce85374d941fa2ce151cc7c2f39c526e9809a38fc35ddd1",
+    "program_sha256": {
+      "run_experiment.py": "927742b5bb69931a20686e50cd571de507ac1afa0d10ebafcce1aaaf89a13341",
+      "runtime.py": "cbf73aa960b95ce31ef4001e9e8730a8b982a12e228e2d0f1770ef2c7e065ee3",
+      "stages.py": "9490200eecc005c7d278c7d3464b6333d934e59b32489615faba201cd72aaa74",
+      "support.py": "a8da853a945300760e72c62bb732c192e9a9fcf64e2d60c36dda4ffb83a558ba"
+    },
+    "source_batch": "experiments/exp004_figlib_multi_event/outputs/exp004_20261020_201923",
+    "model_sha256": "6a328bbc933b4d92855cbcbde06a6aac165a386d08b09e9de59f7448046d455e",
+    "requested_device": "cuda",
+    "offset_min": null,
+    "offset_max": null,
+    "limit": null,
+    "code_commit": "5bf4f3dfcb5992ba96f8beca6f99543afba33cfc"
+  },
+  "interpretation": "Controlled exp005 diagnostics; official final evaluation is not performed."
+}

@@ -1,0 +1,137 @@
+{
+  "checked_at": "2026-10-23T16:02:05Z",
+  "run_id": "exp007_main_20261023",
+  "setting": "baseline",
+  "labels_sha256": "ff257520d7bd173f472116a73a5974a7d092e946799e906128e1a3e2652f0dd4",
+  "cache_integrity": "passed_all_record_and_feature_byte_hashes",
+  "all_candidate_count": 2748,
+  "split_candidate_counts": {
+    "test": 812,
+    "val": 783,
+    "train": 1153
+  },
+  "schema_errors": [],
+  "unreviewed_test_candidates": 0,
+  "sources_unchanged": {
+    "experiments/exp006_background_residual/data_selection.json": true,
+    "data/exp006_background_residual/manifest.json": true,
+    "data/exp006_background_residual/labels.json": true,
+    "experiments/exp007_psl_branch/replacement_selection.json": true,
+    "data/exp007_replacement_candidates_20261023/download_manifest.json": true
+  },
+  "train_val_labels_unchanged_from_verified_smoke": {
+    "train": true,
+    "val": true
+  },
+  "code_unchanged_from_verified_smoke": true,
+  "old_test_states_unchanged": {
+    "20261015_HendersonFire_buff-s-mobo-c": true,
+    "20260817_Church2Fire_mlo-s-mobo-c": true,
+    "20260722_RainbowFire_bh-w-mobo-c": true,
+    "20260715_ThornFire_ws-n-mobo-c": true,
+    "20251102_ScissorsFire_mp-n-mobo-c": true,
+    "20250908_CochesFire_sm-n-mobo-c": true,
+    "20260519_TusilFire_mlo-s-mobo-c": true,
+    "20250905_LodgeFire_sm-n-mobo-c": true,
+    "normal_20261016_Q4_sm-n-mobo-c": true,
+    "normal_20261016_Q5_ws-s-mobo-c": true,
+    "normal_20261012_Q6_mlo-s-mobo-c": true,
+    "normal_20261008_Q4_buff-s-mobo-c": true,
+    "normal_20261003_Q5_bh-w-mobo-c": true
+  },
+  "new_sequence_annotations": [
+    {
+      "id": "20191005_FIRE_vo-n-mobo-c",
+      "candidates": 77,
+      "reviewed": 77,
+      "labels": {
+        "background": 39,
+        "smoke": 38
+      },
+      "complete": true,
+      "human_visible_offset_seconds": 0,
+      "human_visible_frame": "D:\\AIC\\AIC-seek\\data\\exp007_replacement_candidates_20261023\\images\\20191005_FIRE_vo-n-mobo-c\\1570309901_+00000.jpg",
+      "first_target_candidate_offset_seconds": 0,
+      "first_target_candidate_frame": "D:\\AIC\\AIC-seek\\data\\exp007_replacement_candidates_20261023\\images\\20191005_FIRE_vo-n-mobo-c\\1570309901_+00000.jpg",
+      "candidate_gap_after_human_seconds": 0,
+      "uncertain_offsets_seconds": []
+    },
+    {
+      "id": "20200306_FIRE_ml-s-mobo-c",
+      "candidates": 42,
+      "reviewed": 42,
+      "labels": {
+        "background": 2,
+        "uncertain": 3,
+        "smoke": 37
+      },
+      "complete": true,
+      "human_visible_offset_seconds": 240,
+      "human_visible_frame": "D:\\AIC\\AIC-seek\\data\\exp007_replacement_candidates_20261023\\images\\20200306_FIRE_ml-s-mobo-c\\1583516115_+00240.jpg",
+      "first_target_candidate_offset_seconds": 240,
+      "first_target_candidate_frame": "D:\\AIC\\AIC-seek\\data\\exp007_replacement_candidates_20261023\\images\\20200306_FIRE_ml-s-mobo-c\\1583516115_+00240.jpg",
+      "candidate_gap_after_human_seconds": 0,
+      "uncertain_offsets_seconds": [
+        60,
+        120,
+        180
+      ]
+    }
+  ],
+  "eligibility_status_counts": {
+    "eligible": 10
+  },
+  "eligibility_pending": [],
+  "completion_marker_update": {
+    "sequence": "20191005_FIRE_vo-n-mobo-c",
+    "only_changed_field": "candidate_review_complete.baseline",
+    "set_to": true,
+    "basis": "Direct user completion statement: 我已标注完毕，请你检查一下; all 77 candidates verified reviewed.",
+    "backup": "D:\\AIC\\AIC-seek\\data\\exp007_psl_branch\\labels.before_completion_check_20261023_234433_1792770273304762100.json"
+  },
+  "formal_multi_seed_training_run": false,
+  "scientific_labels_and_visibility_times_changed_by_check": true,
+  "visual_review": "Original frames and a fixed-context candidate contact sheet checked. User confirmed weak target smoke from t=0; t=0/+60s candidates cover that target region and were corrected to smoke. Other labels retained.",
+  "test_ready": true,
+  "remaining_gate_errors": [],
+  "visibility_correction": {
+    "source": "human_conversation",
+    "user_statement": "从0初可以看到很微弱很微弱的烟，+6+7时才相对明显",
+    "sequence": "20191005_FIRE_vo-n-mobo-c",
+    "changed_candidate_offsets_seconds": [
+      0,
+      60
+    ],
+    "human_visible_offset_seconds": 0,
+    "relatively_clear_offsets_seconds": [
+      360,
+      420
+    ],
+    "record_and_backup": "D:\\AIC\\AIC-seek\\experiments\\exp007_psl_branch\\outputs\\exp007_main_20261023\\baseline\\annotation_visibility_correction_20261023_235753.json"
+  },
+  "last_updated_local_date": "2026-10-24",
+  "train_ready": true,
+  "eligibility_confirmation_record": "D:\\AIC\\AIC-seek\\experiments\\exp007_psl_branch\\outputs\\exp007_main_20261023\\baseline\\annotation_eligibility_confirmation_20261024.json",
+  "source_files_reverified_on_confirmation": {
+    "experiments/exp006_background_residual/data_selection.json": true,
+    "data/exp006_background_residual/manifest.json": true,
+    "data/exp006_background_residual/labels.json": true,
+    "experiments/exp007_psl_branch/replacement_selection.json": true,
+    "data/exp007_replacement_candidates_20261023/download_manifest.json": true
+  },
+  "train_val_labels_reverified_on_confirmation": {
+    "train": true,
+    "val": true
+  },
+  "final_preflight": {
+    "checked_at": "2026-10-23T16:04:18Z",
+    "stage_check_exit_code": 0,
+    "stage_status_exit_code": 0,
+    "cuda": true,
+    "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+    "official_model_sha256": "6a328bbc933b4d92855cbcbde06a6aac165a386d08b09e9de59f7448046d455e",
+    "train_ready": true,
+    "test_ready": true,
+    "training_started": false
+  }
+}

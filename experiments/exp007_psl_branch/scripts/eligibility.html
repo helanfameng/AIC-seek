@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>实验7 · 序列资格审核</title>
+<style>
+body{background:#101827;color:#e7edf5;font:16px system-ui;margin:24px auto;max-width:1280px;padding:0 16px}a{color:#8bd9d1}h1{font-size:24px}p{line-height:1.7}select,button,textarea,input{font:inherit}button,select{background:#26364d;color:white;border:1px solid #6b7f99;border-radius:6px;padding:9px;margin:4px}#frame{display:block;max-width:100%;max-height:68vh;margin:12px auto}textarea{width:95%;min-height:50px;background:#1b293c;color:white}#slider{width:55%}#message{color:#a4e6bf}section{background:#19263a;padding:14px;border-radius:9px;margin:12px 0}
+</style>
+<h1>实验7 · 序列资格审核</h1>
+<p>按时间浏览原始整图，确认目标烟雾能定位、属于日间自然场景，并且没有被近处器械大面积遮挡。远、小、薄、低对比度仍可合格。模型没检出不能作为排除理由。<a href="/" target="_blank">返回候选标注</a></p>
+<section><select id="sequence" aria-label="序列"></select><span id="state"></span><p id="time"></p>
+<button id="prev">上一帧</button><input id="slider" aria-label="帧位置" type="range" min="0" value="0"><button id="next">下一帧</button><button id="onset">官方起点</button>
+<img id="frame" alt="所选序列原始图片"><p>原因或观察：</p><textarea id="reason" aria-label="审核原因"></textarea><p>
+<button data-status="eligible">确认是合格正例</button><button data-status="uncertain">仍不确定</button><button data-status="excluded">不符合范围，记录原因</button></p><div id="message" role="status"></div></section>
+<p>资格确认与候选真假分别保存。完整比较需要10例均有明确资格；不确定或排除会在启动检查中列出，程序不会悄悄缩小召回分母。精确首次可见时间可在候选标注页记录；官方起点不等于点火时间。</p>
+<script>
+'use strict';
+const $=id=>document.getElementById(id);let data,index=0;
+async function api(path,body){const r=await fetch(path,body?{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)}:undefined);const j=await r.json();if(!r.ok)throw Error(j.error);return j}
+function current(){return data.sequences[Number($('sequence').value)||0]}
+function show(){const s=current();index=Math.max(0,Math.min(index,s.frames.length-1));const f=s.frames[index];$('slider').max=s.frames.length-1;$('slider').value=index;$('frame').src='/image?file='+encodeURIComponent(f.file);$('time').textContent=`${index+1}/${s.frames.length}，相对官方起点 ${((f.timestamp-s.official_onset)/60).toFixed(2)} 分钟`;$('state').textContent='当前状态：'+(s.review.status||'pending')}
+function choose(){index=0;$('reason').value=current().review.reason||'';show()}
+async function load(){const old=$('sequence').value;data=await api('/api/eligibility');$('sequence').replaceChildren(...data.sequences.map((s,i)=>{const o=document.createElement('option');o.value=i;o.textContent=s.id+' · '+(s.review.status||'pending');return o}));$('sequence').value=old||'0';choose()}
+$('sequence').onchange=choose;$('prev').onclick=()=>{index--;show()};$('next').onclick=()=>{index++;show()};$('slider').oninput=e=>{index=Number(e.target.value);show()};$('onset').onclick=()=>{index=current().frames.reduce((best,f,i,a)=>Math.abs(f.timestamp-current().official_onset)<Math.abs(a[best].timestamp-current().official_onset)?i:best,0);show()};
+document.querySelectorAll('[data-status]').forEach(b=>b.onclick=async()=>{try{await api('/api/eligibility',{version:data.version,sequence:current().id,status:b.dataset.status,reason:$('reason').value});await load();$('message').textContent='已保存到实验七的独立资格记录。'}catch(e){$('message').textContent=e.message}});
+load().catch(e=>$('message').textContent=e.message);
+</script></html>

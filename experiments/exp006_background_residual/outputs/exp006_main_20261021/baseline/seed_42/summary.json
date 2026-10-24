@@ -1,0 +1,619 @@
+{
+  "created_at": "2026-10-22T12:05:57Z",
+  "setting": "baseline",
+  "seed": 42,
+  "variants": {
+    "original": {
+      "threshold": 0.541115313930415,
+      "normal": {
+        "false_alarm_episodes": 0,
+        "observed_camera_hours": 9.974166666666667,
+        "excluded_normal_clips": 0,
+        "false_alarms_per_camera_hour": 0.0,
+        "positive_time_fraction": 0.0,
+        "positive_minutes": 0.0
+      },
+      "fire": {
+        "events": 10,
+        "detected": 8,
+        "missed_within_observation": 2,
+        "detection_rate": 0.8,
+        "recall_at_5min": 0.7,
+        "recall_at_10min": 0.8,
+        "median_delay_detected_only": 4.491666666666667,
+        "per_event": [
+          {
+            "sequence": "20261015_HendersonFire_buff-s-mobo-c",
+            "detected": true,
+            "delay_minutes_official": 2.0,
+            "delay_minutes_human_visible": 2.0,
+            "observed_post_onset_minutes": 40.0,
+            "unknown_positive_winners": 0
+          },
+          {
+            "sequence": "20260817_Church2Fire_mlo-s-mobo-c",
+            "detected": true,
+            "delay_minutes_official": 4.0,
+            "delay_minutes_human_visible": null,
+            "observed_post_onset_minutes": 40.0,
+            "unknown_positive_winners": 0
+          },
+          {
+            "sequence": "20260722_RainbowFire_bh-w-mobo-c",
+            "detected": true,
+            "delay_minutes_official": 7.0,
+            "delay_minutes_human_visible": 0.0,
+            "observed_post_onset_minutes": 40.0,
+            "unknown_positive_winners": 0
+          },
+          {
+            "sequence": "20260715_ThornFire_ws-n-mobo-c",
+            "detected": true,
+            "delay_minutes_official": 4.983333333333333,
+            "delay_minutes_human_visible": null,
+            "observed_post_onset_minutes": 40.0,
+            "unknown_positive_winners": 0
+          },
+          {
+            "sequence": "20260629_JunctionFire_vo-n-mobo-c",
+            "detected": false,
+            "delay_minutes_official": null,
+            "delay_minutes_human_visible": null,
+            "observed_post_onset_minutes": 40.0,
+            "unknown_positive_winners": 0
+          },
+          {
+            "sequence": "20251102_ScissorsFire_mp-n-mobo-c",
+            "detected": true,
+            "delay_minutes_official": 2.966666666666667,
+            "delay_minutes_human_visible": null,
+            "observed_post_onset_minutes": 39.96666666666667,
+            "unknown_positive_winners": 0
+          },
+          {
+            "sequence": "20250908_CochesFire_sm-n-mobo-c",
+            "detected": true,
+            "delay_minutes_official": 5.0,
+            "delay_minutes_human_visible": null,
+            "observed_post_onset_minutes": 40.0,
+            "unknown_positive_winners": 0
+          },
+          {
+            "sequence": "20240201.062350-FIRE-ml-w-mobo-c",
+            "detected": false,
+            "delay_minutes_official": null,
+            "delay_minutes_human_visible": null,
+            "observed_post_onset_minutes": 40.0,
+            "unknown_positive_winners": 0
+          },
+          {
+            "sequence": "20260519_TusilFire_mlo-s-mobo-c",
+            "detected": true,
+            "delay_minutes_official": 5.0,
+            "delay_minutes_human_visible": null,
+            "observed_post_onset_minutes": 40.0,
+            "unknown_positive_winners": 0
+          },
+          {
+            "sequence": "20250905_LodgeFire_sm-n-mobo-c",
+            "detected": true,
+            "delay_minutes_official": 4.0,
+            "delay_minutes_human_visible": null,
+            "observed_post_onset_minutes": 39.0,
+            "unknown_positive_winners": 0
+          }
+        ]
+      }
+    },
+    "calibration_only": {
+      "threshold": 0.4886569486690521,
+      "normal": {
+        "false_alarm_episodes": 1,
+        "observed_camera_hours": 9.974166666666667,
+        "excluded_normal_clips": 0,
+        "false_alarms_per_camera_hour": 0.10025900242292589,
+        "positive_time_fraction": 0.03172083437769794,
+        "positive_minutes": 18.983333333333334
+      },
+      "fire": {
+        "events": 10,
+        "detected": 8,
+        "missed_within_observation": 2,
+        "detection_rate": 0.8,
+        "recall_at_5min": 0.7,
+        "recall_at_10min": 0.8,
+        "median_delay_detected_only": 4.491666666666667,
+        "per_event": [
+          {
+            "sequence": "20261015_HendersonFire_buff-s-mobo-c",
+            "detected": true,
+            "delay_minutes_official": 2.0,
+            "delay_minutes_human_visible": 2.0,
+            "observed_post_onset_minutes": 40.0,
+            "unknown_positive_winners": 0
+          },
+          {
+            "sequence": "20260817_Church2Fire_mlo-s-mobo-c",
+            "detected": true,
+            "delay_minutes_official": 3.0,
+            "delay_minutes_human_visible": null,
+            "observed_post_onset_minutes": 40.0,
+            "unknown_positive_winners": 0
+          },
+          {
+            "sequence": "20260722_RainbowFire_bh-w-mobo-c",
+            "detected": true,
+            "delay_minutes_official": 7.0,
+            "delay_minutes_human_visible": 0.0,
+            "observed_post_onset_minutes": 40.0,
+            "unknown_positive_winners": 0
+          },
+          {
+            "sequence": "20260715_ThornFire_ws-n-mobo-c",
+            "detected": true,
+            "delay_minutes_official": 4.983333333333333,
+            "delay_minutes_human_visible": null,
+            "observed_post_onset_minutes": 40.0,
+            "unknown_positive_winners": 0
+          },
+          {
+            "sequence": "20260629_JunctionFire_vo-n-mobo-c",
+            "detected": false,
+            "delay_minutes_official": null,
+            "delay_minutes_human_visible": null,
+            "observed_post_onset_minutes": 40.0,
+            "unknown_positive_winners": 0
+          },
+          {
+            "sequence": "20251102_ScissorsFire_mp-n-mobo-c",
+            "detected": true,
+            "delay_minutes_official": 2.966666666666667,
+            "delay_minutes_human_visible": null,
+            "observed_post_onset_minutes": 39.96666666666667,
+            "unknown_positive_winners": 0
+          },
+          {
+            "sequence": "20250908_CochesFire_sm-n-mobo-c",
+            "detected": true,
+            "delay_minutes_official": 5.0,
+            "delay_minutes_human_visible": null,
+            "observed_post_onset_minutes": 40.0,
+            "unknown_positive_winners": 0
+          },
+          {
+            "sequence": "20240201.062350-FIRE-ml-w-mobo-c",
+            "detected": false,
+            "delay_minutes_official": null,
+            "delay_minutes_human_visible": null,
+            "observed_post_onset_minutes": 40.0,
+            "unknown_positive_winners": 0
+          },
+          {
+            "sequence": "20260519_TusilFire_mlo-s-mobo-c",
+            "detected": true,
+            "delay_minutes_official": 5.0,
+            "delay_minutes_human_visible": null,
+            "observed_post_onset_minutes": 40.0,
+            "unknown_positive_winners": 0
+          },
+          {
+            "sequence": "20250905_LodgeFire_sm-n-mobo-c",
+            "detected": true,
+            "delay_minutes_official": 4.0,
+            "delay_minutes_human_visible": null,
+            "observed_post_onset_minutes": 39.0,
+            "unknown_positive_winners": 0
+          }
+        ]
+      }
+    },
+    "history": {
+      "threshold": 0.5658662127090454,
+      "normal": {
+        "false_alarm_episodes": 0,
+        "observed_camera_hours": 9.974166666666667,
+        "excluded_normal_clips": 0,
+        "false_alarms_per_camera_hour": 0.0,
+        "positive_time_fraction": 0.0,
+        "positive_minutes": 0.0
+      },
+      "fire": {
+        "events": 10,
+        "detected": 8,
+        "missed_within_observation": 2,
+        "detection_rate": 0.8,
+        "recall_at_5min": 0.3,
+        "recall_at_10min": 0.6,
+        "median_delay_detected_only": 7.508333333333334,
+        "per_event": [
+          {
+            "sequence": "20261015_HendersonFire_buff-s-mobo-c",
+            "detected": true,
+            "delay_minutes_official": 3.0,
+            "delay_minutes_human_visible": 3.0,
+            "observed_post_onset_minutes": 40.0,
+            "unknown_positive_winners": 0
+          },
+          {
+            "sequence": "20260817_Church2Fire_mlo-s-mobo-c",
+            "detected": true,
+            "delay_minutes_official": 7.0,
+            "delay_minutes_human_visible": null,
+            "observed_post_onset_minutes": 40.0,
+            "unknown_positive_winners": 0
+          },
+          {
+            "sequence": "20260722_RainbowFire_bh-w-mobo-c",
+            "detected": true,
+            "delay_minutes_official": 8.016666666666667,
+            "delay_minutes_human_visible": 1.0166666666666666,
+            "observed_post_onset_minutes": 40.0,
+            "unknown_positive_winners": 0
+          },
+          {
+            "sequence": "20260715_ThornFire_ws-n-mobo-c",
+            "detected": true,
+            "delay_minutes_official": 12.016666666666667,
+            "delay_minutes_human_visible": null,
+            "observed_post_onset_minutes": 40.0,
+            "unknown_positive_winners": 0
+          },
+          {
+            "sequence": "20260629_JunctionFire_vo-n-mobo-c",
+            "detected": false,
+            "delay_minutes_official": null,
+            "delay_minutes_human_visible": null,
+            "observed_post_onset_minutes": 40.0,
+            "unknown_positive_winners": 0
+          },
+          {
+            "sequence": "20251102_ScissorsFire_mp-n-mobo-c",
+            "detected": true,
+            "delay_minutes_official": 2.966666666666667,
+            "delay_minutes_human_visible": null,
+            "observed_post_onset_minutes": 39.96666666666667,
+            "unknown_positive_winners": 0
+          },
+          {
+            "sequence": "20250908_CochesFire_sm-n-mobo-c",
+            "detected": true,
+            "delay_minutes_official": 14.0,
+            "delay_minutes_human_visible": null,
+            "observed_post_onset_minutes": 40.0,
+            "unknown_positive_winners": 0
+          },
+          {
+            "sequence": "20240201.062350-FIRE-ml-w-mobo-c",
+            "detected": false,
+            "delay_minutes_official": null,
+            "delay_minutes_human_visible": null,
+            "observed_post_onset_minutes": 40.0,
+            "unknown_positive_winners": 0
+          },
+          {
+            "sequence": "20260519_TusilFire_mlo-s-mobo-c",
+            "detected": true,
+            "delay_minutes_official": 8.016666666666667,
+            "delay_minutes_human_visible": null,
+            "observed_post_onset_minutes": 40.0,
+            "unknown_positive_winners": 0
+          },
+          {
+            "sequence": "20250905_LodgeFire_sm-n-mobo-c",
+            "detected": true,
+            "delay_minutes_official": 5.0,
+            "delay_minutes_human_visible": null,
+            "observed_post_onset_minutes": 39.0,
+            "unknown_positive_winners": 0
+          }
+        ]
+      }
+    },
+    "mean_residual": {
+      "threshold": 0.792130808694458,
+      "normal": {
+        "false_alarm_episodes": 1,
+        "observed_camera_hours": 9.974166666666667,
+        "excluded_normal_clips": 0,
+        "false_alarms_per_camera_hour": 0.10025900242292589,
+        "positive_time_fraction": 0.03172083437769794,
+        "positive_minutes": 18.983333333333334
+      },
+      "fire": {
+        "events": 10,
+        "detected": 8,
+        "missed_within_observation": 2,
+        "detection_rate": 0.8,
+        "recall_at_5min": 0.7,
+        "recall_at_10min": 0.8,
+        "median_delay_detected_only": 3.5,
+        "per_event": [
+          {
+            "sequence": "20261015_HendersonFire_buff-s-mobo-c",
+            "detected": true,
+            "delay_minutes_official": 2.0,
+            "delay_minutes_human_visible": 2.0,
+            "observed_post_onset_minutes": 40.0,
+            "unknown_positive_winners": 0
+          },
+          {
+            "sequence": "20260817_Church2Fire_mlo-s-mobo-c",
+            "detected": true,
+            "delay_minutes_official": 3.0,
+            "delay_minutes_human_visible": null,
+            "observed_post_onset_minutes": 40.0,
+            "unknown_positive_winners": 0
+          },
+          {
+            "sequence": "20260722_RainbowFire_bh-w-mobo-c",
+            "detected": true,
+            "delay_minutes_official": 7.0,
+            "delay_minutes_human_visible": 0.0,
+            "observed_post_onset_minutes": 40.0,
+            "unknown_positive_winners": 0
+          },
+          {
+            "sequence": "20260715_ThornFire_ws-n-mobo-c",
+            "detected": true,
+            "delay_minutes_official": 4.983333333333333,
+            "delay_minutes_human_visible": null,
+            "observed_post_onset_minutes": 40.0,
+            "unknown_positive_winners": 0
+          },
+          {
+            "sequence": "20260629_JunctionFire_vo-n-mobo-c",
+            "detected": false,
+            "delay_minutes_official": null,
+            "delay_minutes_human_visible": null,
+            "observed_post_onset_minutes": 40.0,
+            "unknown_positive_winners": 0
+          },
+          {
+            "sequence": "20251102_ScissorsFire_mp-n-mobo-c",
+            "detected": true,
+            "delay_minutes_official": 2.966666666666667,
+            "delay_minutes_human_visible": null,
+            "observed_post_onset_minutes": 39.96666666666667,
+            "unknown_positive_winners": 0
+          },
+          {
+            "sequence": "20250908_CochesFire_sm-n-mobo-c",
+            "detected": true,
+            "delay_minutes_official": 5.0,
+            "delay_minutes_human_visible": null,
+            "observed_post_onset_minutes": 40.0,
+            "unknown_positive_winners": 0
+          },
+          {
+            "sequence": "20240201.062350-FIRE-ml-w-mobo-c",
+            "detected": false,
+            "delay_minutes_official": null,
+            "delay_minutes_human_visible": null,
+            "observed_post_onset_minutes": 40.0,
+            "unknown_positive_winners": 0
+          },
+          {
+            "sequence": "20260519_TusilFire_mlo-s-mobo-c",
+            "detected": true,
+            "delay_minutes_official": 2.0166666666666666,
+            "delay_minutes_human_visible": null,
+            "observed_post_onset_minutes": 40.0,
+            "unknown_positive_winners": 0
+          },
+          {
+            "sequence": "20250905_LodgeFire_sm-n-mobo-c",
+            "detected": true,
+            "delay_minutes_official": 4.0,
+            "delay_minutes_human_visible": null,
+            "observed_post_onset_minutes": 39.0,
+            "unknown_positive_winners": 0
+          }
+        ]
+      }
+    },
+    "learned_residual": {
+      "threshold": 0.5625224517417907,
+      "normal": {
+        "false_alarm_episodes": 5,
+        "observed_camera_hours": 9.974166666666667,
+        "excluded_normal_clips": 0,
+        "false_alarms_per_camera_hour": 0.5012950121146295,
+        "positive_time_fraction": 0.03840476787255967,
+        "positive_minutes": 22.983333333333334
+      },
+      "fire": {
+        "events": 10,
+        "detected": 8,
+        "missed_within_observation": 2,
+        "detection_rate": 0.8,
+        "recall_at_5min": 0.7,
+        "recall_at_10min": 0.8,
+        "median_delay_detected_only": 2.9833333333333334,
+        "per_event": [
+          {
+            "sequence": "20261015_HendersonFire_buff-s-mobo-c",
+            "detected": true,
+            "delay_minutes_official": 2.0,
+            "delay_minutes_human_visible": 2.0,
+            "observed_post_onset_minutes": 40.0,
+            "unknown_positive_winners": 0
+          },
+          {
+            "sequence": "20260817_Church2Fire_mlo-s-mobo-c",
+            "detected": true,
+            "delay_minutes_official": 3.0,
+            "delay_minutes_human_visible": null,
+            "observed_post_onset_minutes": 40.0,
+            "unknown_positive_winners": 0
+          },
+          {
+            "sequence": "20260722_RainbowFire_bh-w-mobo-c",
+            "detected": true,
+            "delay_minutes_official": 7.0,
+            "delay_minutes_human_visible": 0.0,
+            "observed_post_onset_minutes": 40.0,
+            "unknown_positive_winners": 0
+          },
+          {
+            "sequence": "20260715_ThornFire_ws-n-mobo-c",
+            "detected": true,
+            "delay_minutes_official": 2.966666666666667,
+            "delay_minutes_human_visible": null,
+            "observed_post_onset_minutes": 40.0,
+            "unknown_positive_winners": 0
+          },
+          {
+            "sequence": "20260629_JunctionFire_vo-n-mobo-c",
+            "detected": false,
+            "delay_minutes_official": null,
+            "delay_minutes_human_visible": null,
+            "observed_post_onset_minutes": 40.0,
+            "unknown_positive_winners": 0
+          },
+          {
+            "sequence": "20251102_ScissorsFire_mp-n-mobo-c",
+            "detected": true,
+            "delay_minutes_official": 2.966666666666667,
+            "delay_minutes_human_visible": null,
+            "observed_post_onset_minutes": 39.96666666666667,
+            "unknown_positive_winners": 0
+          },
+          {
+            "sequence": "20250908_CochesFire_sm-n-mobo-c",
+            "detected": true,
+            "delay_minutes_official": 5.0,
+            "delay_minutes_human_visible": null,
+            "observed_post_onset_minutes": 40.0,
+            "unknown_positive_winners": 0
+          },
+          {
+            "sequence": "20240201.062350-FIRE-ml-w-mobo-c",
+            "detected": false,
+            "delay_minutes_official": null,
+            "delay_minutes_human_visible": null,
+            "observed_post_onset_minutes": 40.0,
+            "unknown_positive_winners": 0
+          },
+          {
+            "sequence": "20260519_TusilFire_mlo-s-mobo-c",
+            "detected": true,
+            "delay_minutes_official": 2.0166666666666666,
+            "delay_minutes_human_visible": null,
+            "observed_post_onset_minutes": 40.0,
+            "unknown_positive_winners": 0
+          },
+          {
+            "sequence": "20250905_LodgeFire_sm-n-mobo-c",
+            "detected": true,
+            "delay_minutes_official": 4.0,
+            "delay_minutes_human_visible": null,
+            "observed_post_onset_minutes": 39.0,
+            "unknown_positive_winners": 0
+          }
+        ]
+      }
+    }
+  },
+  "official_default_reference": {
+    "threshold": 0.7207499167831384,
+    "normal": {
+      "false_alarm_episodes": 0,
+      "observed_camera_hours": 9.974166666666667,
+      "excluded_normal_clips": 0,
+      "false_alarms_per_camera_hour": 0.0,
+      "positive_time_fraction": 0.0,
+      "positive_minutes": 0.0
+    },
+    "fire": {
+      "events": 10,
+      "detected": 8,
+      "missed_within_observation": 2,
+      "detection_rate": 0.8,
+      "recall_at_5min": 0.7,
+      "recall_at_10min": 0.8,
+      "median_delay_detected_only": 4.491666666666667,
+      "per_event": [
+        {
+          "sequence": "20261015_HendersonFire_buff-s-mobo-c",
+          "detected": true,
+          "delay_minutes_official": 2.0,
+          "delay_minutes_human_visible": 2.0,
+          "observed_post_onset_minutes": 40.0,
+          "unknown_positive_winners": 0
+        },
+        {
+          "sequence": "20260817_Church2Fire_mlo-s-mobo-c",
+          "detected": true,
+          "delay_minutes_official": 4.0,
+          "delay_minutes_human_visible": null,
+          "observed_post_onset_minutes": 40.0,
+          "unknown_positive_winners": 0
+        },
+        {
+          "sequence": "20260722_RainbowFire_bh-w-mobo-c",
+          "detected": true,
+          "delay_minutes_official": 7.0,
+          "delay_minutes_human_visible": 0.0,
+          "observed_post_onset_minutes": 40.0,
+          "unknown_positive_winners": 0
+        },
+        {
+          "sequence": "20260715_ThornFire_ws-n-mobo-c",
+          "detected": true,
+          "delay_minutes_official": 4.983333333333333,
+          "delay_minutes_human_visible": null,
+          "observed_post_onset_minutes": 40.0,
+          "unknown_positive_winners": 0
+        },
+        {
+          "sequence": "20260629_JunctionFire_vo-n-mobo-c",
+          "detected": false,
+          "delay_minutes_official": null,
+          "delay_minutes_human_visible": null,
+          "observed_post_onset_minutes": 40.0,
+          "unknown_positive_winners": 0
+        },
+        {
+          "sequence": "20251102_ScissorsFire_mp-n-mobo-c",
+          "detected": true,
+          "delay_minutes_official": 2.966666666666667,
+          "delay_minutes_human_visible": null,
+          "observed_post_onset_minutes": 39.96666666666667,
+          "unknown_positive_winners": 0
+        },
+        {
+          "sequence": "20250908_CochesFire_sm-n-mobo-c",
+          "detected": true,
+          "delay_minutes_official": 5.0,
+          "delay_minutes_human_visible": null,
+          "observed_post_onset_minutes": 40.0,
+          "unknown_positive_winners": 0
+        },
+        {
+          "sequence": "20240201.062350-FIRE-ml-w-mobo-c",
+          "detected": false,
+          "delay_minutes_official": null,
+          "delay_minutes_human_visible": null,
+          "observed_post_onset_minutes": 40.0,
+          "unknown_positive_winners": 0
+        },
+        {
+          "sequence": "20260519_TusilFire_mlo-s-mobo-c",
+          "detected": true,
+          "delay_minutes_official": 5.0,
+          "delay_minutes_human_visible": null,
+          "observed_post_onset_minutes": 40.0,
+          "unknown_positive_winners": 0
+        },
+        {
+          "sequence": "20250905_LodgeFire_sm-n-mobo-c",
+          "detected": true,
+          "delay_minutes_official": 4.0,
+          "delay_minutes_human_visible": null,
+          "observed_post_onset_minutes": 39.0,
+          "unknown_positive_winners": 0
+        }
+      ]
+    }
+  }
+}

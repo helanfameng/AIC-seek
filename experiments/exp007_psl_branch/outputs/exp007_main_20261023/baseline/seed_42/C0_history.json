@@ -1,0 +1,92 @@
+[
+  {
+    "epoch": 1,
+    "train_loss": 0.33201905949967775,
+    "val_event_bce": 0.6355072565410135,
+    "batches": 16,
+    "bes_active_batches": 0,
+    "bes_loss_mean": 0.0,
+    "max_gradient_norm": 0.49214139580726624,
+    "max_scatter_condition": 0.0
+  },
+  {
+    "epoch": 2,
+    "train_loss": 0.2895848985864991,
+    "val_event_bce": 0.5820392041458822,
+    "batches": 16,
+    "bes_active_batches": 0,
+    "bes_loss_mean": 0.0,
+    "max_gradient_norm": 0.21217258274555206,
+    "max_scatter_condition": 0.0
+  },
+  {
+    "epoch": 3,
+    "train_loss": 0.22807390964853777,
+    "val_event_bce": 0.4781379071919454,
+    "batches": 16,
+    "bes_active_batches": 0,
+    "bes_loss_mean": 0.0,
+    "max_gradient_norm": 0.2635999619960785,
+    "max_scatter_condition": 0.0
+  },
+  {
+    "epoch": 4,
+    "train_loss": 0.14624257259891896,
+    "val_event_bce": 0.4674497498525692,
+    "batches": 16,
+    "bes_active_batches": 0,
+    "bes_loss_mean": 0.0,
+    "max_gradient_norm": 0.2303546667098999,
+    "max_scatter_condition": 0.0
+  },
+  {
+    "epoch": 5,
+    "train_loss": 0.09769238552306879,
+    "val_event_bce": 0.5754591342848288,
+    "batches": 16,
+    "bes_active_batches": 0,
+    "bes_loss_mean": 0.0,
+    "max_gradient_norm": 0.20168453454971313,
+    "max_scatter_condition": 0.0
+  },
+  {
+    "epoch": 6,
+    "train_loss": 0.07470105655959411,
+    "val_event_bce": 0.6206039835497644,
+    "batches": 16,
+    "bes_active_batches": 0,
+    "bes_loss_mean": 0.0,
+    "max_gradient_norm": 0.13826264441013336,
+    "max_scatter_condition": 0.0
+  },
+  {
+    "epoch": 7,
+    "train_loss": 0.06285025561890199,
+    "val_event_bce": 0.7175757898283451,
+    "batches": 16,
+    "bes_active_batches": 0,
+    "bes_loss_mean": 0.0,
+    "max_gradient_norm": 0.09599889069795609,
+    "max_scatter_condition": 0.0
+  },
+  {
+    "epoch": 8,
+    "train_loss": 0.04328213220444939,
+    "val_event_bce": 0.8202138138439315,
+    "batches": 16,
+    "bes_active_batches": 0,
+    "bes_loss_mean": 0.0,
+    "max_gradient_norm": 0.07430438697338104,
+    "max_scatter_condition": 0.0
+  },
+  {
+    "epoch": 9,
+    "train_loss": 0.042275448649139534,
+    "val_event_bce": 0.876513546024801,
+    "batches": 16,
+    "bes_active_batches": 0,
+    "bes_loss_mean": 0.0,
+    "max_gradient_norm": 0.09905732423067093,
+    "max_scatter_condition": 0.0
+  }
+]

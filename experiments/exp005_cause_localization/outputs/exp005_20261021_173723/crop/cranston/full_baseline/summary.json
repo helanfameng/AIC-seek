@@ -1,0 +1,63 @@
+{
+  "records": 22,
+  "status_counts": {
+    "no_kept_target_overlap": 2,
+    "ok": 20
+  },
+  "variants": {
+    "not_scored": 2,
+    "original": 4,
+    "manual_center_original_extent": 4,
+    "manual_extent_c1": 4,
+    "manual_extent_c1p5": 4,
+    "manual_extent_c2": 4
+  },
+  "interpretation": "Controlled diagnostics. Manual geometry/overlap and calibration counterfactuals are not deployment performance.",
+  "diagnostics": {
+    "scope": "Descriptive diagnostics; not formal event detection or global false-alarm scores.",
+    "by_variant": {
+      "manual_center_original_extent": {
+        "records": 4,
+        "median_raw_logit": -3.5201966762542725,
+        "median_paired_delta_logit": 0.26344791054725647,
+        "contrast_reference": "original",
+        "changed_component": "center_only",
+        "median_delta_logit_vs_single_change_contrast": 0.26344791054725647
+      },
+      "manual_extent_c1": {
+        "records": 4,
+        "median_raw_logit": -2.6336400508880615,
+        "median_paired_delta_logit": 0.8375638723373413,
+        "contrast_reference": "manual_extent_c1p5",
+        "changed_component": "context_only",
+        "median_delta_logit_vs_single_change_contrast": -0.5122867822647095
+      },
+      "manual_extent_c1p5": {
+        "records": 4,
+        "median_raw_logit": -2.713215708732605,
+        "median_paired_delta_logit": 1.7245146036148071,
+        "contrast_reference": "manual_center_original_extent",
+        "changed_component": "extent_only",
+        "median_delta_logit_vs_single_change_contrast": 0.8069809675216675
+      },
+      "manual_extent_c2": {
+        "records": 4,
+        "median_raw_logit": -1.8047546446323395,
+        "median_paired_delta_logit": 0.5325236320495605,
+        "contrast_reference": "manual_extent_c1p5",
+        "changed_component": "context_only",
+        "median_delta_logit_vs_single_change_contrast": 0.818729966878891
+      },
+      "original": {
+        "records": 4,
+        "median_raw_logit": -4.445449233055115,
+        "median_paired_delta_logit": 0.0,
+        "contrast_reference": null,
+        "changed_component": "none",
+        "median_delta_logit_vs_single_change_contrast": 0.0
+      }
+    },
+    "fresh_classifier_forwards": 20,
+    "wall_seconds": 6.2947335000008025
+  }
+}

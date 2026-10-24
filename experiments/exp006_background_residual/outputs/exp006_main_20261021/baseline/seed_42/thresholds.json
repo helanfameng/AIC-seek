@@ -1,0 +1,71 @@
+{
+  "created_at": "2026-10-22T10:52:07Z",
+  "setting": "baseline",
+  "seed": 42,
+  "validation_labels_sha256": "a322ec532a58803528aa192c735399a6b2e4146d95df1108c2758d4b8bf0a079",
+  "train_labels_sha256": "79f5fda0532ebcd4206bd8adc7423546874a7311ac09d3cbc8e866816a8336b7",
+  "protocol_sha256": "da64775571850063ee6ddce072317e5e898c19c32747486b132cbbdc1d2cefd1",
+  "checkpoint_sha256": {
+    "calibration_only": "490f271a1f0d4058a133d7fb2b6f6dba9786f02df9866770dfa195186c1011dd",
+    "history": "fa5ea512b83bb72e97bc041a8862f1288a358179e000709f56bd0139279a02b0",
+    "mean_residual": "577bce29505fb0ead1dbe1ca3d906ca1ec2e7fa38e484109687e2ab2cc722d78",
+    "learned_residual": "ad217ae7a8e8d77b25ce35be84e490d65b870e12429b2e4ec0571ae20c28d3db"
+  },
+  "variants": {
+    "original": {
+      "threshold": 0.541115313930415,
+      "validation_normal": {
+        "false_alarm_episodes": 0,
+        "observed_camera_hours": 7.9475,
+        "excluded_normal_clips": 1,
+        "false_alarms_per_camera_hour": 0.0,
+        "positive_time_fraction": 0.0,
+        "positive_minutes": 0.0
+      }
+    },
+    "calibration_only": {
+      "threshold": 0.4886569486690521,
+      "validation_normal": {
+        "false_alarm_episodes": 0,
+        "observed_camera_hours": 7.9475,
+        "excluded_normal_clips": 1,
+        "false_alarms_per_camera_hour": 0.0,
+        "positive_time_fraction": 0.0,
+        "positive_minutes": 0.0
+      }
+    },
+    "history": {
+      "threshold": 0.5658662127090454,
+      "validation_normal": {
+        "false_alarm_episodes": 0,
+        "observed_camera_hours": 7.9475,
+        "excluded_normal_clips": 1,
+        "false_alarms_per_camera_hour": 0.0,
+        "positive_time_fraction": 0.0,
+        "positive_minutes": 0.0
+      }
+    },
+    "mean_residual": {
+      "threshold": 0.792130808694458,
+      "validation_normal": {
+        "false_alarm_episodes": 0,
+        "observed_camera_hours": 7.9475,
+        "excluded_normal_clips": 1,
+        "false_alarms_per_camera_hour": 0.0,
+        "positive_time_fraction": 0.0,
+        "positive_minutes": 0.0
+      }
+    },
+    "learned_residual": {
+      "threshold": 0.5625224517417907,
+      "validation_normal": {
+        "false_alarm_episodes": 0,
+        "observed_camera_hours": 7.9475,
+        "excluded_normal_clips": 1,
+        "false_alarms_per_camera_hour": 0.0,
+        "positive_time_fraction": 0.0,
+        "positive_minutes": 0.0
+      }
+    }
+  }
+}

@@ -68,6 +68,53 @@ Start-Process (Join-Path $RunRoot 'visualization.html')
 - 本次脚本、协议和检查位于`experiments/exp004_figlib_multi_event/`；结果运行时写入其`outputs/exp004_<RunId>/<事件>/<设置>/`，拒绝覆盖已有目录。
 - 用于检验Whittier的早期候选/轨迹/判定瓶颈是否重复出现；是否与预训练数据重叠尚未核实，自动输出仍需人工复核，不作为总体误报率或模型上限的结论。
 
+## 第五次实验：早期薄烟、轨迹关联与校准的原因定位
+
+状态（2026-10-21）：完整正式批次`exp005_20261021_173723`已完成，12个任务均为`completed`，无时间或数量截断；共2247条记录、244次新的分类器推理。任务执行约84秒，不含前置模型加载。此前小范围试跑与正式结果分开保存。
+
+- [实验设计、输出解释与完整启动命令](experiments/exp005_cause_localization/README.md)
+- [实际结果、裁剪解释、问题判断与11篇论文技术选择](experiments/exp005_cause_localization/RESULTS.md)
+- [本次完整正式输出](experiments/exp005_cause_localization/outputs/exp005_20261021_173723/)
+- 直接读取第四次保存的框和轨迹，以及三个原始VIA标注；不重新运行检测器，不依赖此前未发布的标注检查辅助文件。
+- Alison/Cranston分别固定已有轨迹做裁剪对照、用人工位置做独立诊断；West先固定检测框比较关联，再固定轨迹特征检查N的校准作用。
+- 默认12个任务；保留原版和高分辨率来源对照，校准另包含低阈值及联合来源。人工位置和校准反事实不作为自动检测成绩。
+- 实际结果：Alison对裁剪敏感，高分辨率来源人工范围/上下文2.0在+15、+16分钟跨阈；Cranston早期裁剪变体仍未跨阈。West原版替代关联将目标跨阈由+6提前到+5，但背景仍连续72个窗口阳性。固定目标证据、N由2增至4可将p从0.877628压至0.684744。
+- 后续优先做EARL背景预测/局部残差的单模块对照，SmokeCPC为第二选择；关联与校准单独验证。尚未实现或验证新模型，三个开发事件不足以证明通用最优方案。
+- 结果写入新的`experiments/exp005_cause_localization/outputs/exp005_<RunId>/`，拒绝覆盖已有任务。试跑与正式结果使用不同RunId。
+
+## 第六次实验：冻结 Pyronear 的背景预测与局部残差融合
+
+状态（2026-10-22）：baseline/seed_42正式独立评价及深入复核已完成。五种方法均检出8/10个测试事件；原版、均值残差、学习残差的检出事件中位延迟分别为4.49、3.50、2.98分钟，正常9.974摄像头小时分别产生0、1、5段误报。学习残差相对均值残差仅在Thorn额外提前，正常预测误差在验证/测试上均高于均值参考；当前尚未证明综合优势。1536及43/44种子尚无正式结果。
+
+口径补充：8/10是冻结清单的原始程序结果。Junction的可见目标烟雾尚待完整序列确认；ml-w经用户指出左侧器械遮挡下有烟，而现有候选位于右侧。二者不能直接视为同类漏检，也不能为提高成绩而删除困难正例。当前测试已经用于诊断和方案设计，后续最终泛化结论需要新的隔离测试集。详见[问题汇总](RESEARCH_ROADMAP.md)。
+
+- [方案、数据划分、标注方式和完整启动命令](experiments/exp006_background_residual/README.md)
+- [正式结果与深入分析](experiments/exp006_background_residual/analysis_20261022/RESULTS.md)
+- [冻结阈值的原始测试汇总](experiments/exp006_background_residual/outputs/exp006_main_20261021/baseline/seed_42/RESULTS.md)
+- 官方检测器、关联、裁剪、DINOv2和原时序分类器全部冻结，仅训练新增预测器和融合头。借鉴EARL正常特征预测/残差，不宣称完整复现或已成立创新。
+- 对照包括原版、仅校准、相同历史的普通融合、简单均值残差及学习预测残差；保留0.10/1024和0.10/1536设置。
+- 按站点隔离train/val/test，排除旧开发站点；阈值只由验证集确定，独立测试同时比较延迟、漏检、误报次数和超阈时长。
+- GPU兼容性试跑使用旧Alison事件8帧，成功提取8×16×384局部特征并完成原推理；不是完整实验结果。
+
+## 第七次实验分支：PSL思想的区域分类适配
+
+状态（2026-10-24）：标注及新版10例资格已确认；正式批次`exp007_main_20261023`完成42/43/44三个种子的18个模型、验证阈值冻结、旧方法复评及诊断评价。各方法最终均检出10/10；原版平均延迟5.10分钟、5分钟召回80%、正常9.974小时观察误报0，完整P5三种子平均分别为5.76分钟、60%和0.167段/小时，正常超阈占比5.85%。2019弱烟稳定提前约4～5分钟，但尚未证明总体优势。新版包含已经用于开发分析的原8例，属于修订诊断集。
+
+- [完整结果、局限与后续诊断](experiments/exp007_psl_branch/analysis_20261024/ANALYSIS_20261024.md)
+- [三种子原始汇总](experiments/exp007_psl_branch/outputs/exp007_main_20261023/baseline/RESULTS_ALL_SEEDS.md)、[逐事件明细](experiments/exp007_psl_branch/analysis_20261024/event_details.csv)
+
+- [完整启动命令与输出说明](experiments/exp007_psl_branch/RUN.md)
+- [运行协议](experiments/exp007_psl_branch/protocol.json)、[具体实现与原PSL的差异](experiments/exp007_psl_branch/METHODS.md)
+- [程序验证记录](experiments/exp007_psl_branch/VALIDATION_20261023.md)
+
+- [分支设计、对照组和评价条件](experiments/exp007_psl_branch/README.md)
+- [两例数据的调整规则、候选初筛和实施顺序](experiments/exp007_psl_branch/DATA_REVISION_PLAN.md)：原数据分别保留为待核实与遮挡专项。
+- [2026-10-23替代序列下载结果](experiments/exp007_psl_branch/REPLACEMENTS_20261023.md)：选定20191005 FIRE / vo-n及20200306 FIRE / ml-s，共158张原图。下载记录保留当时状态；新增119条候选及10例资格已于正式运行前完成确认，见[最终标注核查](experiments/exp007_psl_branch/ANNOTATION_CHECK_20261023.md)。
+- [现有问题与整体改进路线](RESEARCH_ROADMAP.md)
+- 固定原检测、关联与特征，先使用候选级标签对照普通分类头、单/多原型、BES、PUO及组合；普通监督对比学习可作扩展对照。
+- 原论文是像素级分割，本分支是区域分类适配，不称为完整PSL复现；不同时混入残差、新鲜度或新检测器，以便判断独立贡献。
+- 新鲜背景误报是该分支重点；无正确候选、旧证据延续分别由候选端和新鲜度实验处理。最终效果须在新的隔离数据上确认。
+
 ## 实验记录约定
 
 每次实验在 `experiments/expNNN_描述/` 新建目录，保留简短README、实际预测JSON以及需要时生成的可视化。实验入口归入各自的 `scripts/`，新增运行结果写入各自的 `outputs/`，实验检查放入各自的 `tests/`。README写明目的、代码提交号、模型与数据、参数变化、运行命令、结果和局限。代码与依赖历史由Git管理，不重复复制环境和脚本。

@@ -1,0 +1,260 @@
+{
+  "train": {
+    "kind": "unconstrained_nearest_prototype_within_reviewed_class_not_sinkhorn_balanced",
+    "per_class": {
+      "0": {
+        "nearest_counts": [
+          239,
+          18
+        ],
+        "per_event": {
+          "20190813_FIRE_69bravo-e-mobo-c": [
+            25,
+            0
+          ],
+          "20240927_86Fire_tp-e-mobo-c": [
+            0,
+            18
+          ],
+          "20241007_Posta3Fire_pi-e-mobo-c": [
+            54,
+            0
+          ],
+          "20250914_HenshawFire_mg-n-mobo-c": [
+            74,
+            0
+          ],
+          "20260622_BernardoFire_wc-w-mobo-c": [
+            3,
+            0
+          ],
+          "normal_20261003_Q4_signal-s-mobo-c": [
+            83,
+            0
+          ]
+        }
+      },
+      "1": {
+        "nearest_counts": [
+          682,
+          32
+        ],
+        "per_event": {
+          "20190813_FIRE_69bravo-e-mobo-c": [
+            58,
+            1
+          ],
+          "20190827_FIRE_so-w-mobo-c": [
+            19,
+            0
+          ],
+          "20191006_FIRE_lo-w-mobo-c": [
+            41,
+            0
+          ],
+          "20201205_typical-range-fire_sclm-e-mobo-c": [
+            53,
+            0
+          ],
+          "20220905-FairviewFire-stgo-e-mobo-c": [
+            39,
+            0
+          ],
+          "20240909_BridgeFire_marconi-n-mobo-c": [
+            28,
+            0
+          ],
+          "20240927_86Fire_tp-e-mobo-c": [
+            34,
+            0
+          ],
+          "20241007_Posta3Fire_pi-e-mobo-c": [
+            38,
+            0
+          ],
+          "20241108_ResortFire_mg-n-mobo-c": [
+            25,
+            0
+          ],
+          "20250107_PalisadesFire_dwpgm-s-mobo-c": [
+            38,
+            0
+          ],
+          "20250914_HenshawFire_mg-n-mobo-c": [
+            10,
+            31
+          ],
+          "20251009_RanchoFire_bm-s-mobo-c": [
+            33,
+            0
+          ],
+          "20260408_RainbowFir_rm-e-mobo-c": [
+            44,
+            0
+          ],
+          "20260428_LiveOakFire_rm-s-mobo-c": [
+            38,
+            0
+          ],
+          "20260618_MissionFire_rm-s-mobo-c": [
+            25,
+            0
+          ],
+          "20260622_BernardoFire_wc-w-mobo-c": [
+            36,
+            0
+          ],
+          "20260816_SorrentoFire_sdsc-e-mobo-c": [
+            33,
+            0
+          ],
+          "20260906_BrengleFire_rm-s-mobo-c": [
+            51,
+            0
+          ],
+          "20261016_NorteFire_sjh-w-mobo-c": [
+            39,
+            0
+          ]
+        }
+      }
+    },
+    "cosine_gram": [
+      [
+        1.0,
+        0.573638916015625,
+        0.6915671229362488,
+        0.5317291021347046
+      ],
+      [
+        0.573638916015625,
+        1.0,
+        0.35380473732948303,
+        0.07670456171035767
+      ],
+      [
+        0.6915671229362488,
+        0.35380473732948303,
+        1.0000001192092896,
+        0.512604296207428
+      ],
+      [
+        0.5317291021347046,
+        0.07670456171035767,
+        0.512604296207428,
+        1.0000001192092896
+      ]
+    ]
+  },
+  "val": {
+    "kind": "unconstrained_nearest_prototype_within_reviewed_class_not_sinkhorn_balanced",
+    "per_class": {
+      "0": {
+        "nearest_counts": [
+          299,
+          84
+        ],
+        "per_event": {
+          "20190924_FIRE_bl-s-mobo-c": [
+            54,
+            18
+          ],
+          "20240625_DelMarFire_tdlln-n-mobo-c": [
+            20,
+            0
+          ],
+          "20250823_Clubfire_starr-n-mobo-c": [
+            13,
+            33
+          ],
+          "20260319_CrosleyFire_mpo-w-mobo-c": [
+            122,
+            32
+          ],
+          "normal_20261008_Q4_wilson-s-mobo-c": [
+            72,
+            0
+          ],
+          "normal_20261019_Q4_mpo-w-mobo-c": [
+            18,
+            1
+          ]
+        }
+      },
+      "1": {
+        "nearest_counts": [
+          322,
+          7
+        ],
+        "per_event": {
+          "20160722_FIRE_mw-e-mobo-c": [
+            33,
+            0
+          ],
+          "20190924_FIRE_bl-s-mobo-c": [
+            37,
+            0
+          ],
+          "20240625_DelMarFire_tdlln-n-mobo-c": [
+            37,
+            0
+          ],
+          "20240728_Border65Fire_om-e-mobo-c": [
+            37,
+            0
+          ],
+          "20240905_ValleyFire_cp-s-mobo-c": [
+            39,
+            0
+          ],
+          "20240924_OtayLakesFire_om-w-mobo-c": [
+            31,
+            6
+          ],
+          "20250823_Clubfire_starr-n-mobo-c": [
+            41,
+            0
+          ],
+          "20260128_Fire_wilson-s-mobo-c": [
+            39,
+            0
+          ],
+          "20260319_CrosleyFire_mpo-w-mobo-c": [
+            9,
+            1
+          ],
+          "20260909_GettyFire_wilson-w-mobo-c": [
+            19,
+            0
+          ]
+        }
+      }
+    },
+    "cosine_gram": [
+      [
+        1.0,
+        0.573638916015625,
+        0.6915671229362488,
+        0.5317291021347046
+      ],
+      [
+        0.573638916015625,
+        1.0,
+        0.35380473732948303,
+        0.07670456171035767
+      ],
+      [
+        0.6915671229362488,
+        0.35380473732948303,
+        1.0000001192092896,
+        0.512604296207428
+      ],
+      [
+        0.5317291021347046,
+        0.07670456171035767,
+        0.512604296207428,
+        1.0000001192092896
+      ]
+    ]
+  }
+}

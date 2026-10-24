@@ -1,0 +1,1224 @@
+{
+  "created_at": "2026-10-23T16:22:04Z",
+  "seed": 42,
+  "evaluation_tier": "revised_diagnostic_set_not_independent_test",
+  "evaluation_identity": {
+    "test_labels_sha256": "bf7962dba8db055ad99803d3cab8f3b238f5ed09897df548de0802b472727183",
+    "eligibility_sha256": "452cc668bcf516765a74beef1bfa5b19a6ca99482280c906a36e1a4be570c7aa",
+    "thresholds_sha256": "ff61e478d4d5fa070b0268be160b30d3e17875fe075c188ba20892793b9d5586"
+  },
+  "variants": {
+    "R0": {
+      "threshold": 0.541115313930415,
+      "normal": {
+        "false_alarm_episodes": 0,
+        "observed_camera_hours": 9.974166666666667,
+        "excluded_normal_clips": 0,
+        "false_alarms_per_camera_hour": 0.0,
+        "positive_time_fraction": 0.0,
+        "positive_minutes": 0.0
+      },
+      "fire": {
+        "events": 10,
+        "detected": 10,
+        "missed_within_observation": 0,
+        "detection_rate": 1.0,
+        "recall_at_5min": 0.8,
+        "recall_at_10min": 0.9,
+        "median_delay_detected_only": 4.491666666666667,
+        "per_event": [
+          {
+            "sequence": "20261015_HendersonFire_buff-s-mobo-c",
+            "detected": true,
+            "delay_minutes_official": 2.0,
+            "delay_minutes_human_visible": 2.0,
+            "observed_post_onset_minutes": 40.0,
+            "unknown_positive_winners": 0,
+            "site": "buff",
+            "first_target_candidate_minutes": 2.0,
+            "first_any_target_crossing_minutes": 2.0,
+            "wrong_region_positive_windows": 0
+          },
+          {
+            "sequence": "20260817_Church2Fire_mlo-s-mobo-c",
+            "detected": true,
+            "delay_minutes_official": 4.0,
+            "delay_minutes_human_visible": null,
+            "observed_post_onset_minutes": 40.0,
+            "unknown_positive_winners": 0,
+            "site": "mlo",
+            "first_target_candidate_minutes": 3.0,
+            "first_any_target_crossing_minutes": 4.0,
+            "wrong_region_positive_windows": 0
+          },
+          {
+            "sequence": "20260722_RainbowFire_bh-w-mobo-c",
+            "detected": true,
+            "delay_minutes_official": 7.0,
+            "delay_minutes_human_visible": 0.0,
+            "observed_post_onset_minutes": 40.0,
+            "unknown_positive_winners": 0,
+            "site": "bh",
+            "first_target_candidate_minutes": 7.0,
+            "first_any_target_crossing_minutes": 7.0,
+            "wrong_region_positive_windows": 0
+          },
+          {
+            "sequence": "20260715_ThornFire_ws-n-mobo-c",
+            "detected": true,
+            "delay_minutes_official": 4.983333333333333,
+            "delay_minutes_human_visible": null,
+            "observed_post_onset_minutes": 40.0,
+            "unknown_positive_winners": 0,
+            "site": "ws",
+            "first_target_candidate_minutes": 2.966666666666667,
+            "first_any_target_crossing_minutes": 4.983333333333333,
+            "wrong_region_positive_windows": 0
+          },
+          {
+            "sequence": "20191005_FIRE_vo-n-mobo-c",
+            "detected": true,
+            "delay_minutes_official": 12.033333333333333,
+            "delay_minutes_human_visible": 12.033333333333333,
+            "observed_post_onset_minutes": 39.0,
+            "unknown_positive_winners": 0,
+            "site": "vo",
+            "first_target_candidate_minutes": 0.0,
+            "first_any_target_crossing_minutes": 12.033333333333333,
+            "wrong_region_positive_windows": 0
+          },
+          {
+            "sequence": "20251102_ScissorsFire_mp-n-mobo-c",
+            "detected": true,
+            "delay_minutes_official": 2.966666666666667,
+            "delay_minutes_human_visible": null,
+            "observed_post_onset_minutes": 39.96666666666667,
+            "unknown_positive_winners": 0,
+            "site": "mp",
+            "first_target_candidate_minutes": 2.966666666666667,
+            "first_any_target_crossing_minutes": 2.966666666666667,
+            "wrong_region_positive_windows": 0
+          },
+          {
+            "sequence": "20250908_CochesFire_sm-n-mobo-c",
+            "detected": true,
+            "delay_minutes_official": 5.0,
+            "delay_minutes_human_visible": null,
+            "observed_post_onset_minutes": 40.0,
+            "unknown_positive_winners": 0,
+            "site": "sm",
+            "first_target_candidate_minutes": 5.0,
+            "first_any_target_crossing_minutes": 5.0,
+            "wrong_region_positive_windows": 0
+          },
+          {
+            "sequence": "20200306_FIRE_ml-s-mobo-c",
+            "detected": true,
+            "delay_minutes_official": 4.0,
+            "delay_minutes_human_visible": 0.0,
+            "observed_post_onset_minutes": 40.0,
+            "unknown_positive_winners": 0,
+            "site": "ml",
+            "first_target_candidate_minutes": 4.0,
+            "first_any_target_crossing_minutes": 4.0,
+            "wrong_region_positive_windows": 0
+          },
+          {
+            "sequence": "20260519_TusilFire_mlo-s-mobo-c",
+            "detected": true,
+            "delay_minutes_official": 5.0,
+            "delay_minutes_human_visible": null,
+            "observed_post_onset_minutes": 40.0,
+            "unknown_positive_winners": 0,
+            "site": "mlo",
+            "first_target_candidate_minutes": 2.0166666666666666,
+            "first_any_target_crossing_minutes": 2.0166666666666666,
+            "wrong_region_positive_windows": 5
+          },
+          {
+            "sequence": "20250905_LodgeFire_sm-n-mobo-c",
+            "detected": true,
+            "delay_minutes_official": 4.0,
+            "delay_minutes_human_visible": null,
+            "observed_post_onset_minutes": 39.0,
+            "unknown_positive_winners": 0,
+            "site": "sm",
+            "first_target_candidate_minutes": 4.0,
+            "first_any_target_crossing_minutes": 4.0,
+            "wrong_region_positive_windows": 0
+          }
+        ]
+      }
+    },
+    "C0": {
+      "threshold": 0.8097396896911621,
+      "normal": {
+        "false_alarm_episodes": 1,
+        "observed_camera_hours": 9.974166666666667,
+        "excluded_normal_clips": 0,
+        "false_alarms_per_camera_hour": 0.10025900242292589,
+        "positive_time_fraction": 0.0034255159161166344,
+        "positive_minutes": 2.05
+      },
+      "fire": {
+        "events": 10,
+        "detected": 10,
+        "missed_within_observation": 0,
+        "detection_rate": 1.0,
+        "recall_at_5min": 0.8,
+        "recall_at_10min": 0.9,
+        "median_delay_detected_only": 4.0,
+        "per_event": [
+          {
+            "sequence": "20261015_HendersonFire_buff-s-mobo-c",
+            "detected": true,
+            "delay_minutes_official": 5.0,
+            "delay_minutes_human_visible": 5.0,
+            "observed_post_onset_minutes": 40.0,
+            "unknown_positive_winners": 0,
+            "site": "buff",
+            "first_target_candidate_minutes": 2.0,
+            "first_any_target_crossing_minutes": 5.0,
+            "wrong_region_positive_windows": 0
+          },
+          {
+            "sequence": "20260817_Church2Fire_mlo-s-mobo-c",
+            "detected": true,
+            "delay_minutes_official": 4.0,
+            "delay_minutes_human_visible": null,
+            "observed_post_onset_minutes": 40.0,
+            "unknown_positive_winners": 0,
+            "site": "mlo",
+            "first_target_candidate_minutes": 3.0,
+            "first_any_target_crossing_minutes": 4.0,
+            "wrong_region_positive_windows": 0
+          },
+          {
+            "sequence": "20260722_RainbowFire_bh-w-mobo-c",
+            "detected": true,
+            "delay_minutes_official": 7.0,
+            "delay_minutes_human_visible": 0.0,
+            "observed_post_onset_minutes": 40.0,
+            "unknown_positive_winners": 0,
+            "site": "bh",
+            "first_target_candidate_minutes": 7.0,
+            "first_any_target_crossing_minutes": 7.0,
+            "wrong_region_positive_windows": 0
+          },
+          {
+            "sequence": "20260715_ThornFire_ws-n-mobo-c",
+            "detected": true,
+            "delay_minutes_official": 2.966666666666667,
+            "delay_minutes_human_visible": null,
+            "observed_post_onset_minutes": 40.0,
+            "unknown_positive_winners": 0,
+            "site": "ws",
+            "first_target_candidate_minutes": 2.966666666666667,
+            "first_any_target_crossing_minutes": 2.966666666666667,
+            "wrong_region_positive_windows": 0
+          },
+          {
+            "sequence": "20191005_FIRE_vo-n-mobo-c",
+            "detected": true,
+            "delay_minutes_official": 17.0,
+            "delay_minutes_human_visible": 17.0,
+            "observed_post_onset_minutes": 39.0,
+            "unknown_positive_winners": 0,
+            "site": "vo",
+            "first_target_candidate_minutes": 0.0,
+            "first_any_target_crossing_minutes": 17.0,
+            "wrong_region_positive_windows": 0
+          },
+          {
+            "sequence": "20251102_ScissorsFire_mp-n-mobo-c",
+            "detected": true,
+            "delay_minutes_official": 2.966666666666667,
+            "delay_minutes_human_visible": null,
+            "observed_post_onset_minutes": 39.96666666666667,
+            "unknown_positive_winners": 0,
+            "site": "mp",
+            "first_target_candidate_minutes": 2.966666666666667,
+            "first_any_target_crossing_minutes": 2.966666666666667,
+            "wrong_region_positive_windows": 0
+          },
+          {
+            "sequence": "20250908_CochesFire_sm-n-mobo-c",
+            "detected": true,
+            "delay_minutes_official": 5.0,
+            "delay_minutes_human_visible": null,
+            "observed_post_onset_minutes": 40.0,
+            "unknown_positive_winners": 0,
+            "site": "sm",
+            "first_target_candidate_minutes": 5.0,
+            "first_any_target_crossing_minutes": 5.0,
+            "wrong_region_positive_windows": 0
+          },
+          {
+            "sequence": "20200306_FIRE_ml-s-mobo-c",
+            "detected": true,
+            "delay_minutes_official": 4.0,
+            "delay_minutes_human_visible": 0.0,
+            "observed_post_onset_minutes": 40.0,
+            "unknown_positive_winners": 1,
+            "site": "ml",
+            "first_target_candidate_minutes": 4.0,
+            "first_any_target_crossing_minutes": 4.0,
+            "wrong_region_positive_windows": 0
+          },
+          {
+            "sequence": "20260519_TusilFire_mlo-s-mobo-c",
+            "detected": true,
+            "delay_minutes_official": 4.0,
+            "delay_minutes_human_visible": null,
+            "observed_post_onset_minutes": 40.0,
+            "unknown_positive_winners": 0,
+            "site": "mlo",
+            "first_target_candidate_minutes": 2.0166666666666666,
+            "first_any_target_crossing_minutes": 2.0166666666666666,
+            "wrong_region_positive_windows": 4
+          },
+          {
+            "sequence": "20250905_LodgeFire_sm-n-mobo-c",
+            "detected": true,
+            "delay_minutes_official": 4.0,
+            "delay_minutes_human_visible": null,
+            "observed_post_onset_minutes": 39.0,
+            "unknown_positive_winners": 0,
+            "site": "sm",
+            "first_target_candidate_minutes": 4.0,
+            "first_any_target_crossing_minutes": 4.0,
+            "wrong_region_positive_windows": 0
+          }
+        ]
+      }
+    },
+    "P1": {
+      "threshold": 0.8155829714370727,
+      "normal": {
+        "false_alarm_episodes": 0,
+        "observed_camera_hours": 9.974166666666667,
+        "excluded_normal_clips": 0,
+        "false_alarms_per_camera_hour": 0.0,
+        "positive_time_fraction": 0.0,
+        "positive_minutes": 0.0
+      },
+      "fire": {
+        "events": 10,
+        "detected": 10,
+        "missed_within_observation": 0,
+        "detection_rate": 1.0,
+        "recall_at_5min": 0.5,
+        "recall_at_10min": 0.9,
+        "median_delay_detected_only": 5.491666666666667,
+        "per_event": [
+          {
+            "sequence": "20261015_HendersonFire_buff-s-mobo-c",
+            "detected": true,
+            "delay_minutes_official": 6.0,
+            "delay_minutes_human_visible": 6.0,
+            "observed_post_onset_minutes": 40.0,
+            "unknown_positive_winners": 0,
+            "site": "buff",
+            "first_target_candidate_minutes": 2.0,
+            "first_any_target_crossing_minutes": 6.0,
+            "wrong_region_positive_windows": 0
+          },
+          {
+            "sequence": "20260817_Church2Fire_mlo-s-mobo-c",
+            "detected": true,
+            "delay_minutes_official": 4.0,
+            "delay_minutes_human_visible": null,
+            "observed_post_onset_minutes": 40.0,
+            "unknown_positive_winners": 0,
+            "site": "mlo",
+            "first_target_candidate_minutes": 3.0,
+            "first_any_target_crossing_minutes": 4.0,
+            "wrong_region_positive_windows": 0
+          },
+          {
+            "sequence": "20260722_RainbowFire_bh-w-mobo-c",
+            "detected": true,
+            "delay_minutes_official": 7.0,
+            "delay_minutes_human_visible": 0.0,
+            "observed_post_onset_minutes": 40.0,
+            "unknown_positive_winners": 0,
+            "site": "bh",
+            "first_target_candidate_minutes": 7.0,
+            "first_any_target_crossing_minutes": 7.0,
+            "wrong_region_positive_windows": 0
+          },
+          {
+            "sequence": "20260715_ThornFire_ws-n-mobo-c",
+            "detected": true,
+            "delay_minutes_official": 4.983333333333333,
+            "delay_minutes_human_visible": null,
+            "observed_post_onset_minutes": 40.0,
+            "unknown_positive_winners": 0,
+            "site": "ws",
+            "first_target_candidate_minutes": 2.966666666666667,
+            "first_any_target_crossing_minutes": 4.983333333333333,
+            "wrong_region_positive_windows": 0
+          },
+          {
+            "sequence": "20191005_FIRE_vo-n-mobo-c",
+            "detected": true,
+            "delay_minutes_official": 8.016666666666667,
+            "delay_minutes_human_visible": 8.016666666666667,
+            "observed_post_onset_minutes": 39.0,
+            "unknown_positive_winners": 0,
+            "site": "vo",
+            "first_target_candidate_minutes": 0.0,
+            "first_any_target_crossing_minutes": 8.016666666666667,
+            "wrong_region_positive_windows": 0
+          },
+          {
+            "sequence": "20251102_ScissorsFire_mp-n-mobo-c",
+            "detected": true,
+            "delay_minutes_official": 2.966666666666667,
+            "delay_minutes_human_visible": null,
+            "observed_post_onset_minutes": 39.96666666666667,
+            "unknown_positive_winners": 0,
+            "site": "mp",
+            "first_target_candidate_minutes": 2.966666666666667,
+            "first_any_target_crossing_minutes": 2.966666666666667,
+            "wrong_region_positive_windows": 0
+          },
+          {
+            "sequence": "20250908_CochesFire_sm-n-mobo-c",
+            "detected": true,
+            "delay_minutes_official": 13.0,
+            "delay_minutes_human_visible": null,
+            "observed_post_onset_minutes": 40.0,
+            "unknown_positive_winners": 0,
+            "site": "sm",
+            "first_target_candidate_minutes": 5.0,
+            "first_any_target_crossing_minutes": 13.0,
+            "wrong_region_positive_windows": 0
+          },
+          {
+            "sequence": "20200306_FIRE_ml-s-mobo-c",
+            "detected": true,
+            "delay_minutes_official": 4.0,
+            "delay_minutes_human_visible": 0.0,
+            "observed_post_onset_minutes": 40.0,
+            "unknown_positive_winners": 2,
+            "site": "ml",
+            "first_target_candidate_minutes": 4.0,
+            "first_any_target_crossing_minutes": 4.0,
+            "wrong_region_positive_windows": 0
+          },
+          {
+            "sequence": "20260519_TusilFire_mlo-s-mobo-c",
+            "detected": true,
+            "delay_minutes_official": 8.016666666666667,
+            "delay_minutes_human_visible": null,
+            "observed_post_onset_minutes": 40.0,
+            "unknown_positive_winners": 0,
+            "site": "mlo",
+            "first_target_candidate_minutes": 2.0166666666666666,
+            "first_any_target_crossing_minutes": 2.0166666666666666,
+            "wrong_region_positive_windows": 13
+          },
+          {
+            "sequence": "20250905_LodgeFire_sm-n-mobo-c",
+            "detected": true,
+            "delay_minutes_official": 4.0,
+            "delay_minutes_human_visible": null,
+            "observed_post_onset_minutes": 39.0,
+            "unknown_positive_winners": 0,
+            "site": "sm",
+            "first_target_candidate_minutes": 4.0,
+            "first_any_target_crossing_minutes": 4.0,
+            "wrong_region_positive_windows": 0
+          }
+        ]
+      }
+    },
+    "P2": {
+      "threshold": 0.7107096718383789,
+      "normal": {
+        "false_alarm_episodes": 6,
+        "observed_camera_hours": 9.974166666666667,
+        "excluded_normal_clips": 0,
+        "false_alarms_per_camera_hour": 0.6015540145375553,
+        "positive_time_fraction": 0.04829141950037597,
+        "positive_minutes": 28.9
+      },
+      "fire": {
+        "events": 10,
+        "detected": 10,
+        "missed_within_observation": 0,
+        "detection_rate": 1.0,
+        "recall_at_5min": 0.6,
+        "recall_at_10min": 0.9,
+        "median_delay_detected_only": 4.5,
+        "per_event": [
+          {
+            "sequence": "20261015_HendersonFire_buff-s-mobo-c",
+            "detected": true,
+            "delay_minutes_official": 6.0,
+            "delay_minutes_human_visible": 6.0,
+            "observed_post_onset_minutes": 40.0,
+            "unknown_positive_winners": 0,
+            "site": "buff",
+            "first_target_candidate_minutes": 2.0,
+            "first_any_target_crossing_minutes": 6.0,
+            "wrong_region_positive_windows": 0
+          },
+          {
+            "sequence": "20260817_Church2Fire_mlo-s-mobo-c",
+            "detected": true,
+            "delay_minutes_official": 4.0,
+            "delay_minutes_human_visible": null,
+            "observed_post_onset_minutes": 40.0,
+            "unknown_positive_winners": 0,
+            "site": "mlo",
+            "first_target_candidate_minutes": 3.0,
+            "first_any_target_crossing_minutes": 4.0,
+            "wrong_region_positive_windows": 0
+          },
+          {
+            "sequence": "20260722_RainbowFire_bh-w-mobo-c",
+            "detected": true,
+            "delay_minutes_official": 7.0,
+            "delay_minutes_human_visible": 0.0,
+            "observed_post_onset_minutes": 40.0,
+            "unknown_positive_winners": 0,
+            "site": "bh",
+            "first_target_candidate_minutes": 7.0,
+            "first_any_target_crossing_minutes": 7.0,
+            "wrong_region_positive_windows": 0
+          },
+          {
+            "sequence": "20260715_ThornFire_ws-n-mobo-c",
+            "detected": true,
+            "delay_minutes_official": 2.966666666666667,
+            "delay_minutes_human_visible": null,
+            "observed_post_onset_minutes": 40.0,
+            "unknown_positive_winners": 0,
+            "site": "ws",
+            "first_target_candidate_minutes": 2.966666666666667,
+            "first_any_target_crossing_minutes": 2.966666666666667,
+            "wrong_region_positive_windows": 0
+          },
+          {
+            "sequence": "20191005_FIRE_vo-n-mobo-c",
+            "detected": true,
+            "delay_minutes_official": 7.0,
+            "delay_minutes_human_visible": 7.0,
+            "observed_post_onset_minutes": 39.0,
+            "unknown_positive_winners": 0,
+            "site": "vo",
+            "first_target_candidate_minutes": 0.0,
+            "first_any_target_crossing_minutes": 7.0,
+            "wrong_region_positive_windows": 0
+          },
+          {
+            "sequence": "20251102_ScissorsFire_mp-n-mobo-c",
+            "detected": true,
+            "delay_minutes_official": 2.966666666666667,
+            "delay_minutes_human_visible": null,
+            "observed_post_onset_minutes": 39.96666666666667,
+            "unknown_positive_winners": 0,
+            "site": "mp",
+            "first_target_candidate_minutes": 2.966666666666667,
+            "first_any_target_crossing_minutes": 2.966666666666667,
+            "wrong_region_positive_windows": 0
+          },
+          {
+            "sequence": "20250908_CochesFire_sm-n-mobo-c",
+            "detected": true,
+            "delay_minutes_official": 5.0,
+            "delay_minutes_human_visible": null,
+            "observed_post_onset_minutes": 40.0,
+            "unknown_positive_winners": 0,
+            "site": "sm",
+            "first_target_candidate_minutes": 5.0,
+            "first_any_target_crossing_minutes": 5.0,
+            "wrong_region_positive_windows": 0
+          },
+          {
+            "sequence": "20200306_FIRE_ml-s-mobo-c",
+            "detected": true,
+            "delay_minutes_official": 4.0,
+            "delay_minutes_human_visible": 0.0,
+            "observed_post_onset_minutes": 40.0,
+            "unknown_positive_winners": 3,
+            "site": "ml",
+            "first_target_candidate_minutes": 4.0,
+            "first_any_target_crossing_minutes": 4.0,
+            "wrong_region_positive_windows": 1
+          },
+          {
+            "sequence": "20260519_TusilFire_mlo-s-mobo-c",
+            "detected": true,
+            "delay_minutes_official": 22.0,
+            "delay_minutes_human_visible": null,
+            "observed_post_onset_minutes": 40.0,
+            "unknown_positive_winners": 0,
+            "site": "mlo",
+            "first_target_candidate_minutes": 2.0166666666666666,
+            "first_any_target_crossing_minutes": 2.0166666666666666,
+            "wrong_region_positive_windows": 22
+          },
+          {
+            "sequence": "20250905_LodgeFire_sm-n-mobo-c",
+            "detected": true,
+            "delay_minutes_official": 4.0,
+            "delay_minutes_human_visible": null,
+            "observed_post_onset_minutes": 39.0,
+            "unknown_positive_winners": 0,
+            "site": "sm",
+            "first_target_candidate_minutes": 4.0,
+            "first_any_target_crossing_minutes": 4.0,
+            "wrong_region_positive_windows": 0
+          }
+        ]
+      }
+    },
+    "P3": {
+      "threshold": 0.721859972341156,
+      "normal": {
+        "false_alarm_episodes": 7,
+        "observed_camera_hours": 9.974166666666667,
+        "excluded_normal_clips": 0,
+        "false_alarms_per_camera_hour": 0.7018130169604813,
+        "positive_time_fraction": 0.03495140223354778,
+        "positive_minutes": 20.916666666666668
+      },
+      "fire": {
+        "events": 10,
+        "detected": 10,
+        "missed_within_observation": 0,
+        "detection_rate": 1.0,
+        "recall_at_5min": 0.6,
+        "recall_at_10min": 1.0,
+        "median_delay_detected_only": 4.5,
+        "per_event": [
+          {
+            "sequence": "20261015_HendersonFire_buff-s-mobo-c",
+            "detected": true,
+            "delay_minutes_official": 6.0,
+            "delay_minutes_human_visible": 6.0,
+            "observed_post_onset_minutes": 40.0,
+            "unknown_positive_winners": 0,
+            "site": "buff",
+            "first_target_candidate_minutes": 2.0,
+            "first_any_target_crossing_minutes": 6.0,
+            "wrong_region_positive_windows": 0
+          },
+          {
+            "sequence": "20260817_Church2Fire_mlo-s-mobo-c",
+            "detected": true,
+            "delay_minutes_official": 4.0,
+            "delay_minutes_human_visible": null,
+            "observed_post_onset_minutes": 40.0,
+            "unknown_positive_winners": 0,
+            "site": "mlo",
+            "first_target_candidate_minutes": 3.0,
+            "first_any_target_crossing_minutes": 4.0,
+            "wrong_region_positive_windows": 0
+          },
+          {
+            "sequence": "20260722_RainbowFire_bh-w-mobo-c",
+            "detected": true,
+            "delay_minutes_official": 7.0,
+            "delay_minutes_human_visible": 0.0,
+            "observed_post_onset_minutes": 40.0,
+            "unknown_positive_winners": 0,
+            "site": "bh",
+            "first_target_candidate_minutes": 7.0,
+            "first_any_target_crossing_minutes": 7.0,
+            "wrong_region_positive_windows": 0
+          },
+          {
+            "sequence": "20260715_ThornFire_ws-n-mobo-c",
+            "detected": true,
+            "delay_minutes_official": 2.966666666666667,
+            "delay_minutes_human_visible": null,
+            "observed_post_onset_minutes": 40.0,
+            "unknown_positive_winners": 0,
+            "site": "ws",
+            "first_target_candidate_minutes": 2.966666666666667,
+            "first_any_target_crossing_minutes": 2.966666666666667,
+            "wrong_region_positive_windows": 0
+          },
+          {
+            "sequence": "20191005_FIRE_vo-n-mobo-c",
+            "detected": true,
+            "delay_minutes_official": 8.016666666666667,
+            "delay_minutes_human_visible": 8.016666666666667,
+            "observed_post_onset_minutes": 39.0,
+            "unknown_positive_winners": 0,
+            "site": "vo",
+            "first_target_candidate_minutes": 0.0,
+            "first_any_target_crossing_minutes": 8.016666666666667,
+            "wrong_region_positive_windows": 0
+          },
+          {
+            "sequence": "20251102_ScissorsFire_mp-n-mobo-c",
+            "detected": true,
+            "delay_minutes_official": 2.966666666666667,
+            "delay_minutes_human_visible": null,
+            "observed_post_onset_minutes": 39.96666666666667,
+            "unknown_positive_winners": 0,
+            "site": "mp",
+            "first_target_candidate_minutes": 2.966666666666667,
+            "first_any_target_crossing_minutes": 2.966666666666667,
+            "wrong_region_positive_windows": 0
+          },
+          {
+            "sequence": "20250908_CochesFire_sm-n-mobo-c",
+            "detected": true,
+            "delay_minutes_official": 5.0,
+            "delay_minutes_human_visible": null,
+            "observed_post_onset_minutes": 40.0,
+            "unknown_positive_winners": 0,
+            "site": "sm",
+            "first_target_candidate_minutes": 5.0,
+            "first_any_target_crossing_minutes": 5.0,
+            "wrong_region_positive_windows": 0
+          },
+          {
+            "sequence": "20200306_FIRE_ml-s-mobo-c",
+            "detected": true,
+            "delay_minutes_official": 4.0,
+            "delay_minutes_human_visible": 0.0,
+            "observed_post_onset_minutes": 40.0,
+            "unknown_positive_winners": 3,
+            "site": "ml",
+            "first_target_candidate_minutes": 4.0,
+            "first_any_target_crossing_minutes": 4.0,
+            "wrong_region_positive_windows": 1
+          },
+          {
+            "sequence": "20260519_TusilFire_mlo-s-mobo-c",
+            "detected": true,
+            "delay_minutes_official": 8.016666666666667,
+            "delay_minutes_human_visible": null,
+            "observed_post_onset_minutes": 40.0,
+            "unknown_positive_winners": 0,
+            "site": "mlo",
+            "first_target_candidate_minutes": 2.0166666666666666,
+            "first_any_target_crossing_minutes": 2.0166666666666666,
+            "wrong_region_positive_windows": 18
+          },
+          {
+            "sequence": "20250905_LodgeFire_sm-n-mobo-c",
+            "detected": true,
+            "delay_minutes_official": 4.0,
+            "delay_minutes_human_visible": null,
+            "observed_post_onset_minutes": 39.0,
+            "unknown_positive_winners": 0,
+            "site": "sm",
+            "first_target_candidate_minutes": 4.0,
+            "first_any_target_crossing_minutes": 4.0,
+            "wrong_region_positive_windows": 0
+          }
+        ]
+      }
+    },
+    "P4": {
+      "threshold": 0.6364267276359558,
+      "normal": {
+        "false_alarm_episodes": 7,
+        "observed_camera_hours": 9.974166666666667,
+        "excluded_normal_clips": 0,
+        "false_alarms_per_camera_hour": 0.7018130169604813,
+        "positive_time_fraction": 0.03497925195644303,
+        "positive_minutes": 20.933333333333334
+      },
+      "fire": {
+        "events": 10,
+        "detected": 10,
+        "missed_within_observation": 0,
+        "detection_rate": 1.0,
+        "recall_at_5min": 0.6,
+        "recall_at_10min": 1.0,
+        "median_delay_detected_only": 4.5,
+        "per_event": [
+          {
+            "sequence": "20261015_HendersonFire_buff-s-mobo-c",
+            "detected": true,
+            "delay_minutes_official": 6.0,
+            "delay_minutes_human_visible": 6.0,
+            "observed_post_onset_minutes": 40.0,
+            "unknown_positive_winners": 0,
+            "site": "buff",
+            "first_target_candidate_minutes": 2.0,
+            "first_any_target_crossing_minutes": 6.0,
+            "wrong_region_positive_windows": 4
+          },
+          {
+            "sequence": "20260817_Church2Fire_mlo-s-mobo-c",
+            "detected": true,
+            "delay_minutes_official": 4.0,
+            "delay_minutes_human_visible": null,
+            "observed_post_onset_minutes": 40.0,
+            "unknown_positive_winners": 0,
+            "site": "mlo",
+            "first_target_candidate_minutes": 3.0,
+            "first_any_target_crossing_minutes": 4.0,
+            "wrong_region_positive_windows": 0
+          },
+          {
+            "sequence": "20260722_RainbowFire_bh-w-mobo-c",
+            "detected": true,
+            "delay_minutes_official": 7.0,
+            "delay_minutes_human_visible": 0.0,
+            "observed_post_onset_minutes": 40.0,
+            "unknown_positive_winners": 0,
+            "site": "bh",
+            "first_target_candidate_minutes": 7.0,
+            "first_any_target_crossing_minutes": 7.0,
+            "wrong_region_positive_windows": 0
+          },
+          {
+            "sequence": "20260715_ThornFire_ws-n-mobo-c",
+            "detected": true,
+            "delay_minutes_official": 2.966666666666667,
+            "delay_minutes_human_visible": null,
+            "observed_post_onset_minutes": 40.0,
+            "unknown_positive_winners": 0,
+            "site": "ws",
+            "first_target_candidate_minutes": 2.966666666666667,
+            "first_any_target_crossing_minutes": 2.966666666666667,
+            "wrong_region_positive_windows": 0
+          },
+          {
+            "sequence": "20191005_FIRE_vo-n-mobo-c",
+            "detected": true,
+            "delay_minutes_official": 8.016666666666667,
+            "delay_minutes_human_visible": 8.016666666666667,
+            "observed_post_onset_minutes": 39.0,
+            "unknown_positive_winners": 0,
+            "site": "vo",
+            "first_target_candidate_minutes": 0.0,
+            "first_any_target_crossing_minutes": 8.016666666666667,
+            "wrong_region_positive_windows": 0
+          },
+          {
+            "sequence": "20251102_ScissorsFire_mp-n-mobo-c",
+            "detected": true,
+            "delay_minutes_official": 2.966666666666667,
+            "delay_minutes_human_visible": null,
+            "observed_post_onset_minutes": 39.96666666666667,
+            "unknown_positive_winners": 0,
+            "site": "mp",
+            "first_target_candidate_minutes": 2.966666666666667,
+            "first_any_target_crossing_minutes": 2.966666666666667,
+            "wrong_region_positive_windows": 0
+          },
+          {
+            "sequence": "20250908_CochesFire_sm-n-mobo-c",
+            "detected": true,
+            "delay_minutes_official": 5.0,
+            "delay_minutes_human_visible": null,
+            "observed_post_onset_minutes": 40.0,
+            "unknown_positive_winners": 0,
+            "site": "sm",
+            "first_target_candidate_minutes": 5.0,
+            "first_any_target_crossing_minutes": 5.0,
+            "wrong_region_positive_windows": 0
+          },
+          {
+            "sequence": "20200306_FIRE_ml-s-mobo-c",
+            "detected": true,
+            "delay_minutes_official": 4.0,
+            "delay_minutes_human_visible": 0.0,
+            "observed_post_onset_minutes": 40.0,
+            "unknown_positive_winners": 3,
+            "site": "ml",
+            "first_target_candidate_minutes": 4.0,
+            "first_any_target_crossing_minutes": 4.0,
+            "wrong_region_positive_windows": 1
+          },
+          {
+            "sequence": "20260519_TusilFire_mlo-s-mobo-c",
+            "detected": true,
+            "delay_minutes_official": 8.016666666666667,
+            "delay_minutes_human_visible": null,
+            "observed_post_onset_minutes": 40.0,
+            "unknown_positive_winners": 0,
+            "site": "mlo",
+            "first_target_candidate_minutes": 2.0166666666666666,
+            "first_any_target_crossing_minutes": 3.0,
+            "wrong_region_positive_windows": 23
+          },
+          {
+            "sequence": "20250905_LodgeFire_sm-n-mobo-c",
+            "detected": true,
+            "delay_minutes_official": 4.0,
+            "delay_minutes_human_visible": null,
+            "observed_post_onset_minutes": 39.0,
+            "unknown_positive_winners": 0,
+            "site": "sm",
+            "first_target_candidate_minutes": 4.0,
+            "first_any_target_crossing_minutes": 4.0,
+            "wrong_region_positive_windows": 0
+          }
+        ]
+      }
+    },
+    "P5": {
+      "threshold": 0.633313875062561,
+      "normal": {
+        "false_alarm_episodes": 3,
+        "observed_camera_hours": 9.974166666666667,
+        "excluded_normal_clips": 0,
+        "false_alarms_per_camera_hour": 0.30077700726877765,
+        "positive_time_fraction": 0.0652519007435876,
+        "positive_minutes": 39.05
+      },
+      "fire": {
+        "events": 10,
+        "detected": 10,
+        "missed_within_observation": 0,
+        "detection_rate": 1.0,
+        "recall_at_5min": 0.7,
+        "recall_at_10min": 1.0,
+        "median_delay_detected_only": 4.0,
+        "per_event": [
+          {
+            "sequence": "20261015_HendersonFire_buff-s-mobo-c",
+            "detected": true,
+            "delay_minutes_official": 6.0,
+            "delay_minutes_human_visible": 6.0,
+            "observed_post_onset_minutes": 40.0,
+            "unknown_positive_winners": 0,
+            "site": "buff",
+            "first_target_candidate_minutes": 2.0,
+            "first_any_target_crossing_minutes": 6.0,
+            "wrong_region_positive_windows": 4
+          },
+          {
+            "sequence": "20260817_Church2Fire_mlo-s-mobo-c",
+            "detected": true,
+            "delay_minutes_official": 4.0,
+            "delay_minutes_human_visible": null,
+            "observed_post_onset_minutes": 40.0,
+            "unknown_positive_winners": 0,
+            "site": "mlo",
+            "first_target_candidate_minutes": 3.0,
+            "first_any_target_crossing_minutes": 4.0,
+            "wrong_region_positive_windows": 0
+          },
+          {
+            "sequence": "20260722_RainbowFire_bh-w-mobo-c",
+            "detected": true,
+            "delay_minutes_official": 7.0,
+            "delay_minutes_human_visible": 0.0,
+            "observed_post_onset_minutes": 40.0,
+            "unknown_positive_winners": 0,
+            "site": "bh",
+            "first_target_candidate_minutes": 7.0,
+            "first_any_target_crossing_minutes": 7.0,
+            "wrong_region_positive_windows": 0
+          },
+          {
+            "sequence": "20260715_ThornFire_ws-n-mobo-c",
+            "detected": true,
+            "delay_minutes_official": 2.966666666666667,
+            "delay_minutes_human_visible": null,
+            "observed_post_onset_minutes": 40.0,
+            "unknown_positive_winners": 0,
+            "site": "ws",
+            "first_target_candidate_minutes": 2.966666666666667,
+            "first_any_target_crossing_minutes": 2.966666666666667,
+            "wrong_region_positive_windows": 0
+          },
+          {
+            "sequence": "20191005_FIRE_vo-n-mobo-c",
+            "detected": true,
+            "delay_minutes_official": 8.016666666666667,
+            "delay_minutes_human_visible": 8.016666666666667,
+            "observed_post_onset_minutes": 39.0,
+            "unknown_positive_winners": 0,
+            "site": "vo",
+            "first_target_candidate_minutes": 0.0,
+            "first_any_target_crossing_minutes": 8.016666666666667,
+            "wrong_region_positive_windows": 0
+          },
+          {
+            "sequence": "20251102_ScissorsFire_mp-n-mobo-c",
+            "detected": true,
+            "delay_minutes_official": 2.966666666666667,
+            "delay_minutes_human_visible": null,
+            "observed_post_onset_minutes": 39.96666666666667,
+            "unknown_positive_winners": 0,
+            "site": "mp",
+            "first_target_candidate_minutes": 2.966666666666667,
+            "first_any_target_crossing_minutes": 2.966666666666667,
+            "wrong_region_positive_windows": 0
+          },
+          {
+            "sequence": "20250908_CochesFire_sm-n-mobo-c",
+            "detected": true,
+            "delay_minutes_official": 5.0,
+            "delay_minutes_human_visible": null,
+            "observed_post_onset_minutes": 40.0,
+            "unknown_positive_winners": 0,
+            "site": "sm",
+            "first_target_candidate_minutes": 5.0,
+            "first_any_target_crossing_minutes": 5.0,
+            "wrong_region_positive_windows": 0
+          },
+          {
+            "sequence": "20200306_FIRE_ml-s-mobo-c",
+            "detected": true,
+            "delay_minutes_official": 4.0,
+            "delay_minutes_human_visible": 0.0,
+            "observed_post_onset_minutes": 40.0,
+            "unknown_positive_winners": 3,
+            "site": "ml",
+            "first_target_candidate_minutes": 4.0,
+            "first_any_target_crossing_minutes": 4.0,
+            "wrong_region_positive_windows": 1
+          },
+          {
+            "sequence": "20260519_TusilFire_mlo-s-mobo-c",
+            "detected": true,
+            "delay_minutes_official": 4.0,
+            "delay_minutes_human_visible": null,
+            "observed_post_onset_minutes": 40.0,
+            "unknown_positive_winners": 0,
+            "site": "mlo",
+            "first_target_candidate_minutes": 2.0166666666666666,
+            "first_any_target_crossing_minutes": 2.0166666666666666,
+            "wrong_region_positive_windows": 25
+          },
+          {
+            "sequence": "20250905_LodgeFire_sm-n-mobo-c",
+            "detected": true,
+            "delay_minutes_official": 4.0,
+            "delay_minutes_human_visible": null,
+            "observed_post_onset_minutes": 39.0,
+            "unknown_positive_winners": 0,
+            "site": "sm",
+            "first_target_candidate_minutes": 4.0,
+            "first_any_target_crossing_minutes": 4.0,
+            "wrong_region_positive_windows": 0
+          }
+        ]
+      }
+    }
+  },
+  "paired": {
+    "C0_vs_R0": {
+      "common_detected_events": 10,
+      "mean_advance_minutes": -0.495,
+      "median_advance_minutes": 0.0,
+      "earlier": 2,
+      "unchanged": 6,
+      "later": 2,
+      "newly_detected": 0,
+      "newly_missed": 0
+    },
+    "P1_vs_R0": {
+      "common_detected_events": 10,
+      "mean_advance_minutes": -1.1,
+      "median_advance_minutes": 0.0,
+      "earlier": 1,
+      "unchanged": 6,
+      "later": 3,
+      "newly_detected": 0,
+      "newly_missed": 0
+    },
+    "P2_vs_R0": {
+      "common_detected_events": 10,
+      "mean_advance_minutes": -1.395,
+      "median_advance_minutes": 0.0,
+      "earlier": 2,
+      "unchanged": 6,
+      "later": 2,
+      "newly_detected": 0,
+      "newly_missed": 0
+    },
+    "P3_vs_R0": {
+      "common_detected_events": 10,
+      "mean_advance_minutes": -0.09833333333333352,
+      "median_advance_minutes": 0.0,
+      "earlier": 2,
+      "unchanged": 6,
+      "later": 2,
+      "newly_detected": 0,
+      "newly_missed": 0
+    },
+    "P4_vs_R0": {
+      "common_detected_events": 10,
+      "mean_advance_minutes": -0.09833333333333352,
+      "median_advance_minutes": 0.0,
+      "earlier": 2,
+      "unchanged": 6,
+      "later": 2,
+      "newly_detected": 0,
+      "newly_missed": 0
+    },
+    "P5_vs_R0": {
+      "common_detected_events": 10,
+      "mean_advance_minutes": 0.30333333333333323,
+      "median_advance_minutes": 0.0,
+      "earlier": 3,
+      "unchanged": 6,
+      "later": 1,
+      "newly_detected": 0,
+      "newly_missed": 0
+    },
+    "R0_vs_C0": {
+      "common_detected_events": 10,
+      "mean_advance_minutes": 0.495,
+      "median_advance_minutes": 0.0,
+      "earlier": 2,
+      "unchanged": 6,
+      "later": 2,
+      "newly_detected": 0,
+      "newly_missed": 0
+    },
+    "P1_vs_C0": {
+      "common_detected_events": 10,
+      "mean_advance_minutes": -0.6050000000000002,
+      "median_advance_minutes": 0.0,
+      "earlier": 1,
+      "unchanged": 5,
+      "later": 4,
+      "newly_detected": 0,
+      "newly_missed": 0
+    },
+    "P2_vs_C0": {
+      "common_detected_events": 10,
+      "mean_advance_minutes": -0.9,
+      "median_advance_minutes": 0.0,
+      "earlier": 1,
+      "unchanged": 7,
+      "later": 2,
+      "newly_detected": 0,
+      "newly_missed": 0
+    },
+    "P3_vs_C0": {
+      "common_detected_events": 10,
+      "mean_advance_minutes": 0.3966666666666665,
+      "median_advance_minutes": 0.0,
+      "earlier": 1,
+      "unchanged": 7,
+      "later": 2,
+      "newly_detected": 0,
+      "newly_missed": 0
+    },
+    "P4_vs_C0": {
+      "common_detected_events": 10,
+      "mean_advance_minutes": 0.3966666666666665,
+      "median_advance_minutes": 0.0,
+      "earlier": 1,
+      "unchanged": 7,
+      "later": 2,
+      "newly_detected": 0,
+      "newly_missed": 0
+    },
+    "P5_vs_C0": {
+      "common_detected_events": 10,
+      "mean_advance_minutes": 0.7983333333333332,
+      "median_advance_minutes": 0.0,
+      "earlier": 1,
+      "unchanged": 8,
+      "later": 1,
+      "newly_detected": 0,
+      "newly_missed": 0
+    },
+    "R0_vs_P2": {
+      "common_detected_events": 10,
+      "mean_advance_minutes": 1.395,
+      "median_advance_minutes": 0.0,
+      "earlier": 2,
+      "unchanged": 6,
+      "later": 2,
+      "newly_detected": 0,
+      "newly_missed": 0
+    },
+    "C0_vs_P2": {
+      "common_detected_events": 10,
+      "mean_advance_minutes": 0.9,
+      "median_advance_minutes": 0.0,
+      "earlier": 2,
+      "unchanged": 7,
+      "later": 1,
+      "newly_detected": 0,
+      "newly_missed": 0
+    },
+    "P1_vs_P2": {
+      "common_detected_events": 10,
+      "mean_advance_minutes": 0.2949999999999998,
+      "median_advance_minutes": 0.0,
+      "earlier": 1,
+      "unchanged": 6,
+      "later": 3,
+      "newly_detected": 0,
+      "newly_missed": 0
+    },
+    "P3_vs_P2": {
+      "common_detected_events": 10,
+      "mean_advance_minutes": 1.2966666666666664,
+      "median_advance_minutes": 0.0,
+      "earlier": 1,
+      "unchanged": 8,
+      "later": 1,
+      "newly_detected": 0,
+      "newly_missed": 0
+    },
+    "P4_vs_P2": {
+      "common_detected_events": 10,
+      "mean_advance_minutes": 1.2966666666666664,
+      "median_advance_minutes": 0.0,
+      "earlier": 1,
+      "unchanged": 8,
+      "later": 1,
+      "newly_detected": 0,
+      "newly_missed": 0
+    },
+    "P5_vs_P2": {
+      "common_detected_events": 10,
+      "mean_advance_minutes": 1.6983333333333333,
+      "median_advance_minutes": 0.0,
+      "earlier": 1,
+      "unchanged": 8,
+      "later": 1,
+      "newly_detected": 0,
+      "newly_missed": 0
+    }
+  },
+  "head_inference_timing": {
+    "scope": "new_head_only_excludes_feature_IO_model_loading_detector_and_encoder",
+    "device": "cuda",
+    "candidates": 812,
+    "feature_candidates": 790,
+    "variants": {
+      "C0": {
+        "forward_seconds": 0.014239999998608255,
+        "milliseconds_per_feature_candidate": 0.0180253164539345
+      },
+      "P1": {
+        "forward_seconds": 0.07276720000118075,
+        "milliseconds_per_feature_candidate": 0.09211037974833007
+      },
+      "P2": {
+        "forward_seconds": 0.09108809999997902,
+        "milliseconds_per_feature_candidate": 0.11530139240503674
+      },
+      "P3": {
+        "forward_seconds": 0.07079030000022613,
+        "milliseconds_per_feature_candidate": 0.08960797468383054
+      },
+      "P4": {
+        "forward_seconds": 0.09937940000054368,
+        "milliseconds_per_feature_candidate": 0.1257967088614477
+      },
+      "P5": {
+        "forward_seconds": 0.08609470000010333,
+        "milliseconds_per_feature_candidate": 0.1089806329115232
+      }
+    }
+  },
+  "feature_coverage": {
+    "all_candidates": 812,
+    "with_features": 790
+  }
+}

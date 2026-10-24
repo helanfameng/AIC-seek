@@ -1,0 +1,37 @@
+{
+  "records": 243,
+  "status_counts": {
+    "ok": 243
+  },
+  "variants": {
+    "original_iou020": 81,
+    "iou010": 81,
+    "center_scale": 81
+  },
+  "interpretation": "Controlled diagnostics. Manual geometry/overlap and calibration counterfactuals are not deployment performance.",
+  "diagnostics": {
+    "scope": "Descriptive diagnostics; not formal event detection or global false-alarm scores.",
+    "by_variant": {
+      "center_scale": {
+        "records": 81,
+        "first_manual_overlap_retained_two_real_observations_minute": 5.0,
+        "first_manual_overlap_threshold_minute": 5.0,
+        "background_probe_positive_windows": 72
+      },
+      "iou010": {
+        "records": 81,
+        "first_manual_overlap_retained_two_real_observations_minute": 5.0,
+        "first_manual_overlap_threshold_minute": 5.0,
+        "background_probe_positive_windows": 72
+      },
+      "original_iou020": {
+        "records": 81,
+        "first_manual_overlap_retained_two_real_observations_minute": 6.0,
+        "first_manual_overlap_threshold_minute": 6.0,
+        "background_probe_positive_windows": 72
+      }
+    },
+    "fresh_classifier_forwards": 19,
+    "wall_seconds": 9.584474199999022
+  }
+}

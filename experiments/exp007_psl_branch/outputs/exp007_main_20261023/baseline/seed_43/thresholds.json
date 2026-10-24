@@ -1,0 +1,97 @@
+{
+  "created_at": "2026-10-23T16:21:41Z",
+  "variants": {
+    "R0": {
+      "threshold": 0.541115313930415,
+      "validation_normal": {
+        "false_alarm_episodes": 0,
+        "observed_camera_hours": 7.9475,
+        "excluded_normal_clips": 1,
+        "false_alarms_per_camera_hour": 0.0,
+        "positive_time_fraction": 0.0,
+        "positive_minutes": 0.0
+      }
+    },
+    "C0": {
+      "threshold": 0.8267711208892822,
+      "validation_normal": {
+        "false_alarm_episodes": 0,
+        "observed_camera_hours": 7.9475,
+        "excluded_normal_clips": 1,
+        "false_alarms_per_camera_hour": 0.0,
+        "positive_time_fraction": 0.0,
+        "positive_minutes": 0.0
+      }
+    },
+    "P1": {
+      "threshold": 0.7321822451187133,
+      "validation_normal": {
+        "false_alarm_episodes": 0,
+        "observed_camera_hours": 7.9475,
+        "excluded_normal_clips": 1,
+        "false_alarms_per_camera_hour": 0.0,
+        "positive_time_fraction": 0.0,
+        "positive_minutes": 0.0
+      }
+    },
+    "P2": {
+      "threshold": 0.7351787494255065,
+      "validation_normal": {
+        "false_alarm_episodes": 0,
+        "observed_camera_hours": 7.9475,
+        "excluded_normal_clips": 1,
+        "false_alarms_per_camera_hour": 0.0,
+        "positive_time_fraction": 0.0,
+        "positive_minutes": 0.0
+      }
+    },
+    "P3": {
+      "threshold": 0.7442846702171325,
+      "validation_normal": {
+        "false_alarm_episodes": 0,
+        "observed_camera_hours": 7.9475,
+        "excluded_normal_clips": 1,
+        "false_alarms_per_camera_hour": 0.0,
+        "positive_time_fraction": 0.0,
+        "positive_minutes": 0.0
+      }
+    },
+    "P4": {
+      "threshold": 0.7550958798957824,
+      "validation_normal": {
+        "false_alarm_episodes": 0,
+        "observed_camera_hours": 7.9475,
+        "excluded_normal_clips": 1,
+        "false_alarms_per_camera_hour": 0.0,
+        "positive_time_fraction": 0.0,
+        "positive_minutes": 0.0
+      }
+    },
+    "P5": {
+      "threshold": 0.7497868345809936,
+      "validation_normal": {
+        "false_alarm_episodes": 0,
+        "observed_camera_hours": 7.9475,
+        "excluded_normal_clips": 1,
+        "false_alarms_per_camera_hour": 0.0,
+        "positive_time_fraction": 0.0,
+        "positive_minutes": 0.0
+      }
+    }
+  },
+  "seed": 43,
+  "label_fingerprints": {
+    "train": "d6d1fe787d864aeef9092a1a235afb746aef5630acfca0595e271ef5ef9a6aee",
+    "val": "e15feceed28ea0eee7c84390e7b2f27196fff18ed18314c175352b8667a03824"
+  },
+  "protocol_sha256": "5e47f094e8570bd00be04f69a445a32ef50c44b9e277939831fe00b0c50fc7e5",
+  "cache_identity": "0f62ff681bc5995d937e579b2775d2d920033cc8ca78a14023a3a808fa31d0e0",
+  "checkpoint_sha256": {
+    "C0": "9cad5c0b8192a5c42641d234dfcb834f85b6632babd57f82e68df1b6b41ac5ec",
+    "P1": "78f503293f6a1e3d65925bc570d5d8c2bf9b5a724f701e81c9a67aeaa6586aec",
+    "P2": "0433778d8a06f2adae84d05af2b0ac8d3e37c19279f8843a1b946e5673639e2a",
+    "P3": "972a4438f8c645990f9cf1a3eb89ce503c09adf8767f686c10b2a75a060444e1",
+    "P4": "1421c741012acc2673a750669d2346cc05843dc1c0daa34b5e646a6c1835bf03",
+    "P5": "6f66dba5b42dd997c17a16acc8e02135ce24526f0ab23f15cf902f670a79aa72"
+  }
+}

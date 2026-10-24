@@ -1,0 +1,58 @@
+{
+  "selection_date_local": "2026-10-23",
+  "timezone": "Asia/Shanghai",
+  "status": "two replacement sequences selected and fully downloaded; candidate labels pending",
+  "purpose": "replacement events for the revised diagnostic comparison; not a new independent test set",
+  "data_root_project_relative": "data/exp007_replacement_candidates_20261023",
+  "download_manifest": "download_manifest.json",
+  "search_protocol": "search_protocol.json",
+  "integrity_report": "integrity_check.json",
+  "selection_basis": "fixed metadata order, official original images and temporal coverage; no model scores",
+  "original_experiment_unchanged": true,
+  "pretraining_overlap": "unknown; older source events may overlap official model training",
+  "review_provenance": {
+    "reviewer_type": "assistant visual inspection",
+    "method": "chronological overview contact sheets covering every downloaded frame, plus selected regional previews",
+    "frames_covered": 158,
+    "human_expert_review": "not performed in this download task",
+    "pixel_masks": "not provided",
+    "candidate_target_labels": "pending",
+    "precise_human_visible_onset": "pending; do not treat official onset or clearly-visible example time as a new human onset label"
+  },
+  "selected_sequences": [
+    {
+      "id": "20191005_FIRE_vo-n-mobo-c",
+      "site": "vo",
+      "camera": "vo-n-mobo-c",
+      "event_group": "20191005",
+      "replaces_in_next_main_comparison": "20260629_JunctionFire_vo-n-mobo-c",
+      "source_url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20191005_FIRE_vo-n-mobo-c/index.html",
+      "frame_count": 77,
+      "offset_seconds": [-2400, 2340],
+      "max_gap_seconds": 120,
+      "onset_history_available": true,
+      "visual_screen": "pass",
+      "observations": "Daylight wooded landscape. A pale plume develops behind the ridge near the central-right portion of the image; it is clearly visible in the +9 minute regional example. No foreground equipment obscures that region.",
+      "review_region_xyxy_normalized": [0.33, 0.40, 0.74, 0.59],
+      "review_region_is_ground_truth_box": false,
+      "original_disputed_case_disposition": "retain as uncertain-visibility case; do not relabel as confirmed no-smoke"
+    },
+    {
+      "id": "20200306_FIRE_ml-s-mobo-c",
+      "site": "ml",
+      "camera": "ml-s-mobo-c",
+      "event_group": "20200306",
+      "replaces_in_next_main_comparison": "20240201.062350-FIRE-ml-w-mobo-c",
+      "source_url": "https://cdn.hpwren.ucsd.edu/HPWREN-FIgLib-Data/20200306_FIRE_ml-s-mobo-c/index.html",
+      "frame_count": 81,
+      "offset_seconds": [-2400, 2400],
+      "max_gap_seconds": 60,
+      "onset_history_available": true,
+      "visual_screen": "pass",
+      "observations": "Daylight backlit landscape with clouds. A small pale plume emerges near the ridge right of center and expands; it is clearly visible by the +9/+10 minute regional examples. Equipment at the top edge does not cover the target plume. Weak early contrast is retained as a challenge.",
+      "review_region_xyxy_normalized": [0.56, 0.48, 0.86, 0.69],
+      "review_region_is_ground_truth_box": false,
+      "original_disputed_case_disposition": "retain as a separate occluded-smoke positive case"
+    }
+  ]
+}

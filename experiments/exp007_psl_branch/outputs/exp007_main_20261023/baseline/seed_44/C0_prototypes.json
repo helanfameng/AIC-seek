@@ -1,0 +1,8 @@
+{
+  "train": {
+    "kind": "ordinary_classifier_no_prototypes"
+  },
+  "val": {
+    "kind": "ordinary_classifier_no_prototypes"
+  }
+}

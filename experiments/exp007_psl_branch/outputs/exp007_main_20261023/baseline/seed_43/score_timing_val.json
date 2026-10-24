@@ -1,0 +1,32 @@
+{
+  "scope": "new_head_only_excludes_feature_IO_model_loading_detector_and_encoder",
+  "device": "cuda",
+  "candidates": 783,
+  "feature_candidates": 764,
+  "variants": {
+    "C0": {
+      "forward_seconds": 0.012288299998544971,
+      "milliseconds_per_feature_candidate": 0.016084162301760435
+    },
+    "P1": {
+      "forward_seconds": 0.011814900000899797,
+      "milliseconds_per_feature_candidate": 0.015464528796989263
+    },
+    "P2": {
+      "forward_seconds": 0.013165599999410915,
+      "milliseconds_per_feature_candidate": 0.01723246073221324
+    },
+    "P3": {
+      "forward_seconds": 0.012853700000050594,
+      "milliseconds_per_feature_candidate": 0.016824214659752087
+    },
+    "P4": {
+      "forward_seconds": 0.01317889999882027,
+      "milliseconds_per_feature_candidate": 0.017249869108403496
+    },
+    "P5": {
+      "forward_seconds": 0.015276000000085332,
+      "milliseconds_per_feature_candidate": 0.01999476439801745
+    }
+  }
+}

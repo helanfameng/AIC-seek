@@ -1,0 +1,183 @@
+{
+  "train": {
+    "kind": "unconstrained_nearest_prototype_within_reviewed_class_not_sinkhorn_balanced",
+    "per_class": {
+      "0": {
+        "nearest_counts": [
+          257
+        ],
+        "per_event": {
+          "20190813_FIRE_69bravo-e-mobo-c": [
+            25
+          ],
+          "20240927_86Fire_tp-e-mobo-c": [
+            18
+          ],
+          "20241007_Posta3Fire_pi-e-mobo-c": [
+            54
+          ],
+          "20250914_HenshawFire_mg-n-mobo-c": [
+            74
+          ],
+          "20260622_BernardoFire_wc-w-mobo-c": [
+            3
+          ],
+          "normal_20261003_Q4_signal-s-mobo-c": [
+            83
+          ]
+        }
+      },
+      "1": {
+        "nearest_counts": [
+          714
+        ],
+        "per_event": {
+          "20190813_FIRE_69bravo-e-mobo-c": [
+            59
+          ],
+          "20190827_FIRE_so-w-mobo-c": [
+            19
+          ],
+          "20191006_FIRE_lo-w-mobo-c": [
+            41
+          ],
+          "20201205_typical-range-fire_sclm-e-mobo-c": [
+            53
+          ],
+          "20220905-FairviewFire-stgo-e-mobo-c": [
+            39
+          ],
+          "20240909_BridgeFire_marconi-n-mobo-c": [
+            28
+          ],
+          "20240927_86Fire_tp-e-mobo-c": [
+            34
+          ],
+          "20241007_Posta3Fire_pi-e-mobo-c": [
+            38
+          ],
+          "20241108_ResortFire_mg-n-mobo-c": [
+            25
+          ],
+          "20250107_PalisadesFire_dwpgm-s-mobo-c": [
+            38
+          ],
+          "20250914_HenshawFire_mg-n-mobo-c": [
+            41
+          ],
+          "20251009_RanchoFire_bm-s-mobo-c": [
+            33
+          ],
+          "20260408_RainbowFir_rm-e-mobo-c": [
+            44
+          ],
+          "20260428_LiveOakFire_rm-s-mobo-c": [
+            38
+          ],
+          "20260618_MissionFire_rm-s-mobo-c": [
+            25
+          ],
+          "20260622_BernardoFire_wc-w-mobo-c": [
+            36
+          ],
+          "20260816_SorrentoFire_sdsc-e-mobo-c": [
+            33
+          ],
+          "20260906_BrengleFire_rm-s-mobo-c": [
+            51
+          ],
+          "20261016_NorteFire_sjh-w-mobo-c": [
+            39
+          ]
+        }
+      }
+    },
+    "cosine_gram": [
+      [
+        1.0,
+        0.6968539357185364
+      ],
+      [
+        0.6968539357185364,
+        1.0
+      ]
+    ]
+  },
+  "val": {
+    "kind": "unconstrained_nearest_prototype_within_reviewed_class_not_sinkhorn_balanced",
+    "per_class": {
+      "0": {
+        "nearest_counts": [
+          383
+        ],
+        "per_event": {
+          "20190924_FIRE_bl-s-mobo-c": [
+            72
+          ],
+          "20240625_DelMarFire_tdlln-n-mobo-c": [
+            20
+          ],
+          "20250823_Clubfire_starr-n-mobo-c": [
+            46
+          ],
+          "20260319_CrosleyFire_mpo-w-mobo-c": [
+            154
+          ],
+          "normal_20261008_Q4_wilson-s-mobo-c": [
+            72
+          ],
+          "normal_20261019_Q4_mpo-w-mobo-c": [
+            19
+          ]
+        }
+      },
+      "1": {
+        "nearest_counts": [
+          329
+        ],
+        "per_event": {
+          "20160722_FIRE_mw-e-mobo-c": [
+            33
+          ],
+          "20190924_FIRE_bl-s-mobo-c": [
+            37
+          ],
+          "20240625_DelMarFire_tdlln-n-mobo-c": [
+            37
+          ],
+          "20240728_Border65Fire_om-e-mobo-c": [
+            37
+          ],
+          "20240905_ValleyFire_cp-s-mobo-c": [
+            39
+          ],
+          "20240924_OtayLakesFire_om-w-mobo-c": [
+            37
+          ],
+          "20250823_Clubfire_starr-n-mobo-c": [
+            41
+          ],
+          "20260128_Fire_wilson-s-mobo-c": [
+            39
+          ],
+          "20260319_CrosleyFire_mpo-w-mobo-c": [
+            10
+          ],
+          "20260909_GettyFire_wilson-w-mobo-c": [
+            19
+          ]
+        }
+      }
+    },
+    "cosine_gram": [
+      [
+        1.0,
+        0.6968539357185364
+      ],
+      [
+        0.6968539357185364,
+        1.0
+      ]
+    ]
+  }
+}

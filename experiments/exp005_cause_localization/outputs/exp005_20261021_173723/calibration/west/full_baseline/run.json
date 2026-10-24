@@ -1,0 +1,158 @@
+{
+  "job": {
+    "stage": "calibration",
+    "event": "west",
+    "setting": "full_baseline",
+    "relative_output": "calibration/west/full_baseline"
+  },
+  "command": [
+    "D:\\AIC\\AIC-seek\\experiments\\exp005_cause_localization\\scripts\\run_experiment.py",
+    "run",
+    "--stage",
+    "all",
+    "--event",
+    "all",
+    "--setting",
+    "default",
+    "--model",
+    "D:\\AIC\\pyronear_lab\\models\\v0.6.0\\model.zip",
+    "--device",
+    "cuda",
+    "--run-id",
+    "20261021_173723"
+  ],
+  "common": {
+    "protocol_sha256": "184fd79f5d963157fce85374d941fa2ce151cc7c2f39c526e9809a38fc35ddd1",
+    "program_sha256": {
+      "run_experiment.py": "927742b5bb69931a20686e50cd571de507ac1afa0d10ebafcce1aaaf89a13341",
+      "runtime.py": "cbf73aa960b95ce31ef4001e9e8730a8b982a12e228e2d0f1770ef2c7e065ee3",
+      "stages.py": "9490200eecc005c7d278c7d3464b6333d934e59b32489615faba201cd72aaa74",
+      "support.py": "a8da853a945300760e72c62bb732c192e9a9fcf64e2d60c36dda4ffb83a558ba"
+    },
+    "source_batch": "experiments/exp004_figlib_multi_event/outputs/exp004_20261020_201923",
+    "model_sha256": "6a328bbc933b4d92855cbcbde06a6aac165a386d08b09e9de59f7448046d455e",
+    "requested_device": "cuda",
+    "offset_min": null,
+    "offset_max": null,
+    "limit": null,
+    "code_commit": "5bf4f3dfcb5992ba96f8beca6f99543afba33cfc"
+  },
+  "environment": {
+    "python": "3.12.4 (tags/v3.12.4:8e8a4ba, Jun  6 2024, 19:30:16) [MSC v.1940 64 bit (AMD64)]",
+    "torch": "2.7.1+cu118",
+    "cuda_runtime": "11.8",
+    "device": "cuda",
+    "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+    "core_module": "D:\\AIC\\pyronear_lab\\temporal-model\\core\\src\\temporal_model\\core",
+    "core_source_sha256": {
+      "model.py": "18aeed5e72e458039bb8a46140f7dfd22acb304957a1e60797f157ed8317135c",
+      "pipeline.py": "019aac1089680dae0f5579ff79332bcf599692b76e4ed45c2a22dfb728d76fea",
+      "inference.py": "4580749cdc85fe2d5d689f06028adaaf51155de635dfa12b35720fe4e335f5b8",
+      "crop.py": "b7cd2741c6dc3837e069427c70e22a81fc5cf79fd06708df2dcdbcdf56b99f56",
+      "tubes.py": "55fa1b3dde32ae3273e3f085be7afcf4752690a75222a59493759eaf06250c1f",
+      "stabilize.py": "da302a16f3571356c54bef56a47cc6015ac6bbfce118abf213b9ea7b70cfa86e",
+      "types.py": "bfd2f65e893770e1088da2d4d77c1870fa2c2544f86fb6756ca9231940e856a4",
+      "logistic_calibrator.py": "e2598f0322a71d2bf89bfd1863df630cff5df5f17f0e444afb0368914a14eb64"
+    }
+  },
+  "input_sha256": {
+    "experiments/exp005_cause_localization/protocol.json": "184fd79f5d963157fce85374d941fa2ce151cc7c2f39c526e9809a38fc35ddd1",
+    "experiments/exp004_figlib_multi_event/events.json": "13eeaa383094ea741edd800e88f5797c8bbbe74532f49837e4afd11b69540daf",
+    "data/figlib_exp004_three_events/20180706_West_lp-n-mobo-c/manifest.json": "fad49a3bcb9aea1c0731da7d495e29620ee8d18c55317a7cb3b0157465c76010",
+    "data/figlib_exp004_three_events/20180706_West_lp-n-mobo-c/via_project_21Oct2026_15h30m.json": "ed10282f443baf70b054466b772710ddbfa1086416fc4488a2231c90ff8d3bf3",
+    "experiments/exp005_cause_localization/scripts/run_experiment.py": "927742b5bb69931a20686e50cd571de507ac1afa0d10ebafcce1aaaf89a13341",
+    "experiments/exp005_cause_localization/scripts/runtime.py": "cbf73aa960b95ce31ef4001e9e8730a8b982a12e228e2d0f1770ef2c7e065ee3",
+    "experiments/exp005_cause_localization/scripts/stages.py": "9490200eecc005c7d278c7d3464b6333d934e59b32489615faba201cd72aaa74",
+    "experiments/exp005_cause_localization/scripts/support.py": "a8da853a945300760e72c62bb732c192e9a9fcf64e2d60c36dda4ffb83a558ba",
+    "experiments/exp004_figlib_multi_event/outputs/exp004_20261020_201923/west/full_baseline/run.json": "e053e344d759c3e3d6674edab141960225e3ec56f28c0c62ed4dcfb06abac2ee",
+    "experiments/exp004_figlib_multi_event/outputs/exp004_20261020_201923/west/full_baseline/steps.jsonl": "2232f33a53b83714dff8035908c713e13d039b5b7376e59530238e7fc403c3ef"
+  },
+  "selected_endpoints": 81,
+  "manual_annotation_semantics": "Official onset stays zero; West 0..2m is not discernible; later omitted boxes reference high_resolution, not smoke absence.",
+  "uses_detector_inference": false,
+  "compute_trigger": false,
+  "status": "completed",
+  "started_at_utc": "2026-10-21T09:46:06.171478+00:00",
+  "completed_at_utc": "2026-10-21T09:46:06.236197+00:00",
+  "summary": {
+    "records": 464,
+    "status_counts": {
+      "ok": 464
+    },
+    "variants": {
+      "original": 116,
+      "N_equals_1": 116,
+      "add_one_irrelevant_tube": 116,
+      "add_two_irrelevant_tubes": 116
+    },
+    "interpretation": "Controlled diagnostics. Manual geometry/overlap and calibration counterfactuals are not deployment performance.",
+    "diagnostics": {
+      "scope": "Descriptive diagnostics; not formal event detection or global false-alarm scores.",
+      "by_variant": {
+        "N_equals_1": {
+          "records": 116,
+          "west_plus6_manual_overlap_examples": [
+            {
+              "tube_id": 1,
+              "frozen_L": 8.83523178100586,
+              "frozen_T": 2,
+              "frozen_C": 0.4360378086566925,
+              "source_N": 2,
+              "counterfactual_N": 1,
+              "probability": 0.9287342829379075,
+              "crosses_threshold": true
+            }
+          ]
+        },
+        "add_one_irrelevant_tube": {
+          "records": 116,
+          "west_plus6_manual_overlap_examples": [
+            {
+              "tube_id": 1,
+              "frozen_L": 8.83523178100586,
+              "frozen_T": 2,
+              "frozen_C": 0.4360378086566925,
+              "source_N": 2,
+              "counterfactual_N": 3,
+              "probability": 0.7978497738627452,
+              "crosses_threshold": true
+            }
+          ]
+        },
+        "add_two_irrelevant_tubes": {
+          "records": 116,
+          "west_plus6_manual_overlap_examples": [
+            {
+              "tube_id": 1,
+              "frozen_L": 8.83523178100586,
+              "frozen_T": 2,
+              "frozen_C": 0.4360378086566925,
+              "source_N": 2,
+              "counterfactual_N": 4,
+              "probability": 0.6847440291326874,
+              "crosses_threshold": false
+            }
+          ]
+        },
+        "original": {
+          "records": 116,
+          "west_plus6_manual_overlap_examples": [
+            {
+              "tube_id": 1,
+              "frozen_L": 8.83523178100586,
+              "frozen_T": 2,
+              "frozen_C": 0.4360378086566925,
+              "source_N": 2,
+              "counterfactual_N": 2,
+              "probability": 0.8776281097472929,
+              "crosses_threshold": true
+            }
+          ]
+        }
+      },
+      "fresh_classifier_forwards": 0,
+      "wall_seconds": 0.03447180000148364
+    }
+  },
+  "error": null
+}

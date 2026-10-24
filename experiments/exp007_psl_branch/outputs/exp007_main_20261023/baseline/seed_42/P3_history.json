@@ -1,0 +1,72 @@
+[
+  {
+    "epoch": 1,
+    "train_loss": 0.2388796576756282,
+    "val_event_bce": 0.5777011470151353,
+    "batches": 16,
+    "bes_active_batches": 16,
+    "bes_loss_mean": 0.24157364014536142,
+    "max_gradient_norm": 1.0174649953842163,
+    "max_scatter_condition": 1419.46435546875
+  },
+  {
+    "epoch": 2,
+    "train_loss": 0.15488330642361842,
+    "val_event_bce": 0.5080301498867387,
+    "batches": 16,
+    "bes_active_batches": 16,
+    "bes_loss_mean": 0.2260029362514615,
+    "max_gradient_norm": 0.40405669808387756,
+    "max_scatter_condition": 1492.9716796875
+  },
+  {
+    "epoch": 3,
+    "train_loss": 0.07886210763798192,
+    "val_event_bce": 0.5845195984406398,
+    "batches": 16,
+    "bes_active_batches": 16,
+    "bes_loss_mean": 0.2163986498489976,
+    "max_gradient_norm": 0.29899394512176514,
+    "max_scatter_condition": 1303.4989013671875
+  },
+  {
+    "epoch": 4,
+    "train_loss": 0.0379659700659166,
+    "val_event_bce": 0.5480889421031753,
+    "batches": 16,
+    "bes_active_batches": 16,
+    "bes_loss_mean": 0.2217990206554532,
+    "max_gradient_norm": 0.24512000381946564,
+    "max_scatter_condition": 1351.0860595703125
+  },
+  {
+    "epoch": 5,
+    "train_loss": 0.025003720842202096,
+    "val_event_bce": 0.8632220929805637,
+    "batches": 16,
+    "bes_active_batches": 16,
+    "bes_loss_mean": 0.21660400275141,
+    "max_gradient_norm": 0.19336310029029846,
+    "max_scatter_condition": 1463.5181884765625
+  },
+  {
+    "epoch": 6,
+    "train_loss": 0.024680758789028246,
+    "val_event_bce": 0.5738158141465668,
+    "batches": 16,
+    "bes_active_batches": 16,
+    "bes_loss_mean": 0.194815494120121,
+    "max_gradient_norm": 0.5837223529815674,
+    "max_scatter_condition": 1467.6632080078125
+  },
+  {
+    "epoch": 7,
+    "train_loss": 0.03202054210306442,
+    "val_event_bce": 0.903964732605838,
+    "batches": 16,
+    "bes_active_batches": 16,
+    "bes_loss_mean": 0.22428431920707226,
+    "max_gradient_norm": 0.3537106513977051,
+    "max_scatter_condition": 1316.69287109375
+  }
+]

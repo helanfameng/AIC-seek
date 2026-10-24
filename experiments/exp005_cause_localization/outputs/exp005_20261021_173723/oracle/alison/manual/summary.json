@@ -1,0 +1,36 @@
+{
+  "records": 49,
+  "status_counts": {
+    "insufficient_visible_history": 1,
+    "ok": 48
+  },
+  "variants": {
+    "not_scored": 1,
+    "manual_extent_c1": 16,
+    "manual_extent_c1p5": 16,
+    "manual_extent_c2": 16
+  },
+  "interpretation": "Controlled diagnostics. Manual geometry/overlap and calibration counterfactuals are not deployment performance.",
+  "diagnostics": {
+    "scope": "Descriptive diagnostics; not formal event detection or global false-alarm scores.",
+    "by_variant": {
+      "manual_extent_c1": {
+        "records": 16,
+        "median_raw_logit": 0.3983387053012848,
+        "median_paired_delta_logit": 2.2483514845371246
+      },
+      "manual_extent_c1p5": {
+        "records": 16,
+        "median_raw_logit": -1.6377927660942078,
+        "median_paired_delta_logit": 0.0
+      },
+      "manual_extent_c2": {
+        "records": 16,
+        "median_raw_logit": -0.9910422563552856,
+        "median_paired_delta_logit": 1.2008073925971985
+      }
+    },
+    "fresh_classifier_forwards": 48,
+    "wall_seconds": 4.979484899999079
+  }
+}

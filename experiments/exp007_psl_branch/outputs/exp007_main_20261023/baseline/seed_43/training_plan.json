@@ -1,0 +1,155 @@
+{
+  "config": {
+    "experiment": "exp007_psl_region_adaptation",
+    "evaluation_tier": "revised_diagnostic_set_not_independent_test",
+    "model_sha256": "6a328bbc933b4d92855cbcbde06a6aac165a386d08b09e9de59f7448046d455e",
+    "legacy_run_id": "exp006_main_20261021",
+    "legacy_seed": 42,
+    "seeds": [
+      42,
+      43,
+      44
+    ],
+    "variants": [
+      "C0",
+      "P1",
+      "P2",
+      "P3",
+      "P4",
+      "P5"
+    ],
+    "optional_variant": "C1",
+    "history_frames": 5,
+    "residual_steps": 3,
+    "maximum_history_gap_seconds": 120,
+    "grid_size": 4,
+    "normal_training_grid": 3,
+    "settings": {
+      "baseline": {
+        "confidence_threshold": 0.1,
+        "image_size": 1024
+      }
+    },
+    "feature_dimension": 384,
+    "projection_dimension": 32,
+    "fusion_hidden_dimension": 64,
+    "prototypes_per_class": 2,
+    "temperature": 0.15,
+    "epochs": 30,
+    "patience": 5,
+    "batch_size": 64,
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "gradient_clip": 1.0,
+    "appearance_loss_weight": 0.25,
+    "bes_weight": 0.05,
+    "bes_bottom_k": 8,
+    "scatter_ridge": 0.001,
+    "loss_epsilon": 1e-06,
+    "sinkhorn_iterations": 5,
+    "sinkhorn_epsilon": 0.1,
+    "puo_step": 0.05,
+    "supcon_weight": 0.1,
+    "sampling": "equal expected weight per independent sequence",
+    "checkpoint_selection": "unweighted BCE averaged equally over validation sequences",
+    "false_alarms_per_camera_hour": 0.1,
+    "maximum_positive_time_fraction": 0.01,
+    "alarm_release_minutes": 5,
+    "human_visible_onset_required": false,
+    "test_event_eligibility_required": true,
+    "expected_test_events": 10,
+    "minimum_normal_camera_hours_advisory": 30,
+    "method_scope": "frozen DINOv2 regional features; stabilized BES and post-Adam scatter-metric Stiefel PUO adaptation; not pixel PSL reproduction"
+  },
+  "seed": 43,
+  "protocol_sha256": "5e47f094e8570bd00be04f69a445a32ef50c44b9e277939831fe00b0c50fc7e5",
+  "manifest_selection_sha256": "3add2fc3563bb3408553249e5d1f255644d83e45272f6c3f84ff08cd2ca5bc78",
+  "code_fingerprints": {
+    "experiments/exp006_background_residual/scripts/common.py": "293c231445cdd1e7f5d45829712363a5bb9897daae53bc5c9f57020320ec0806",
+    "experiments/exp006_background_residual/scripts/evaluation.py": "01926ba1cb9893d675028933640b28a49ded73bcc68512017c868cc26cadf915",
+    "experiments/exp006_background_residual/scripts/features.py": "37eacc8596c369aa462929f51f8077b5dc4eea457d226318b80d667e24fc34aa",
+    "experiments/exp006_background_residual/scripts/learning.py": "3a28484ba5cda39e6753abacf21141b06446dc924d7ccfdcb637d5bfab4575cc",
+    "experiments/exp006_background_residual/scripts/review.html": "2aefd4062a53918ec80e024edc0cf0bb59cd35e6ba83931aa17d723fc806b8ca",
+    "experiments/exp006_background_residual/scripts/review.py": "f4db2e42ab6d370f20afc2858b9ddf2a4f2581d0a0171058c3bf7ba72cabb752",
+    "experiments/exp006_background_residual/scripts/review_assist.py": "92cc00e1a747febb7b62dc5b97cb43e909d25abe7e0395de7edeaddbfd12d2ea",
+    "experiments/exp007_psl_branch/scripts/bootstrap.py": "63905f9a6ef4f0c028654dd05b78d0b3ce5c55a9e13628cf96a10cde997c2839",
+    "experiments/exp007_psl_branch/scripts/common7.py": "4334f3694d002b6afd14482caab4d49c1a61fd4ce6c77cd63bd041488395a267",
+    "experiments/exp007_psl_branch/scripts/data7.py": "7940041262d9bd37f21523ffcbd4f3282e7255576d12bd93ad4ab0f8a8e37b50",
+    "experiments/exp007_psl_branch/scripts/eligibility.html": "df63b523c4db69124ff07660ba302722df00009ff9f8b084a1f3c3ced8e288c5",
+    "experiments/exp007_psl_branch/scripts/evaluation7.py": "4ab0e1064d62c1ad790921d49f01e174a73f2a3296c252f21e79805904b34e07",
+    "experiments/exp007_psl_branch/scripts/learning7.py": "fb20b39dac761d24ba6ef22d68398f026bd97654cd5cb6882e71e38be13aac4c",
+    "experiments/exp007_psl_branch/scripts/legacy7.py": "de85e58c32cc482c003343069e22340053dde0ea5e095a057b2b205fd420659e",
+    "experiments/exp007_psl_branch/scripts/models7.py": "f274d4113e1c6d6c1d986f970b7e8107289244aa2207a37925ab1fbbe49f5638",
+    "experiments/exp007_psl_branch/scripts/prepare_replacements.py": "5482c548dd8fd55df4e6a2455517c86f6bcf933882a0bef1d50f8f466017c36a",
+    "experiments/exp007_psl_branch/scripts/review7.py": "6b95cef36de2d767b46805c549de25a44611cf88fcb12718d5a050dbbc178428",
+    "experiments/exp007_psl_branch/scripts/run_experiment.ps1": "56a80f4fd83383b903dcad92bcbe721a1fdd5a0431f1eb25a57a8f12c1c29f7c",
+    "experiments/exp007_psl_branch/scripts/run_experiment.py": "321ec3c7a5832132a41153136d91cba8905e3b55e5f431ccddda34e4beca612f"
+  },
+  "cache_identity": "0f62ff681bc5995d937e579b2775d2d920033cc8ca78a14023a3a808fa31d0e0",
+  "label_fingerprints": {
+    "train": "d6d1fe787d864aeef9092a1a235afb746aef5630acfca0595e271ef5ef9a6aee",
+    "val": "e15feceed28ea0eee7c84390e7b2f27196fff18ed18314c175352b8667a03824"
+  },
+  "training_data": {
+    "candidates": 971,
+    "class_counts": {
+      "1": 714,
+      "0": 257
+    },
+    "events": [
+      "20190813_FIRE_69bravo-e-mobo-c",
+      "20190827_FIRE_so-w-mobo-c",
+      "20191006_FIRE_lo-w-mobo-c",
+      "20201205_typical-range-fire_sclm-e-mobo-c",
+      "20220905-FairviewFire-stgo-e-mobo-c",
+      "20240909_BridgeFire_marconi-n-mobo-c",
+      "20240927_86Fire_tp-e-mobo-c",
+      "20241007_Posta3Fire_pi-e-mobo-c",
+      "20241108_ResortFire_mg-n-mobo-c",
+      "20250107_PalisadesFire_dwpgm-s-mobo-c",
+      "20250914_HenshawFire_mg-n-mobo-c",
+      "20251009_RanchoFire_bm-s-mobo-c",
+      "20260408_RainbowFir_rm-e-mobo-c",
+      "20260428_LiveOakFire_rm-s-mobo-c",
+      "20260618_MissionFire_rm-s-mobo-c",
+      "20260622_BernardoFire_wc-w-mobo-c",
+      "20260816_SorrentoFire_sdsc-e-mobo-c",
+      "20260906_BrengleFire_rm-s-mobo-c",
+      "20261016_NorteFire_sjh-w-mobo-c",
+      "normal_20261003_Q4_signal-s-mobo-c"
+    ],
+    "candidate_ids_sha256": "e445c98064477a0470b06f47c10ab29cf7ebe9063829880452b68cecd257fd05"
+  },
+  "validation_data": {
+    "candidates": 712,
+    "class_counts": {
+      "1": 329,
+      "0": 383
+    },
+    "events": [
+      "20160722_FIRE_mw-e-mobo-c",
+      "20190924_FIRE_bl-s-mobo-c",
+      "20240625_DelMarFire_tdlln-n-mobo-c",
+      "20240728_Border65Fire_om-e-mobo-c",
+      "20240905_ValleyFire_cp-s-mobo-c",
+      "20240924_OtayLakesFire_om-w-mobo-c",
+      "20250823_Clubfire_starr-n-mobo-c",
+      "20260128_Fire_wilson-s-mobo-c",
+      "20260319_CrosleyFire_mpo-w-mobo-c",
+      "20260909_GettyFire_wilson-w-mobo-c",
+      "normal_20261008_Q4_wilson-s-mobo-c",
+      "normal_20261019_Q4_mpo-w-mobo-c"
+    ],
+    "candidate_ids_sha256": "a9f09fe8a4519eb96361b083c35bff67bc2736aa1fc3e9a2e0318376c407b362"
+  },
+  "variants": [
+    "C0",
+    "P1",
+    "P2",
+    "P3",
+    "P4",
+    "P5"
+  ],
+  "smoke_test_only": false,
+  "torch_version": "2.7.1+cu118"
+}

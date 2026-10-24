@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="zh-CN">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>实验6 · 分组复核</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#111827;color:#e5e7eb;font:15px system-ui,sans-serif}
+header{position:sticky;top:0;z-index:10;background:#172033;padding:14px 20px;border-bottom:1px solid #374151}
+h1{font-size:21px;margin:0 0 8px}p{line-height:1.6;margin:8px 0}button,select,input{font:inherit}
+button,select{border:1px solid #526075;border-radius:6px;padding:7px 10px;background:#26334a;color:#fff;margin:3px 4px 3px 0}
+button{cursor:pointer}button:hover{background:#3b4e6c}button:disabled{opacity:.4;cursor:default}
+select#seq{max-width:min(760px,95vw)}input[type=checkbox]{margin:0 5px 0 12px}input[type=range]{width:min(430px,50vw)}
+.primary{background:#176452;border-color:#218770}.danger{background:#723e29}.muted{color:#a6b1c2}.note{color:#f6d58b}
+main{padding:14px 20px;max-width:1800px;margin:auto}.bar{display:flex;align-items:center;flex-wrap:wrap;gap:3px}
+#save{font-size:14px;color:#86efac;min-height:21px}.panel{background:#1b2639;border:1px solid #3a485d;border-radius:8px;padding:12px;margin:12px 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:9px}
+.tile{margin:0;padding:6px;background:#111827;text-align:left;min-width:0;border-width:2px}
+.tile img{display:block;width:100%;height:175px;object-fit:contain;background:#080e18}.tile p{font-size:13px;margin:4px 0;line-height:1.45}
+.smoke{border-color:#e78a53}.background{border-color:#4c9cf1}.unknown{border-color:#b4a772}.human{box-shadow:inset 0 0 0 1px #6ee7b7}
+.badge{display:inline-block;background:#36465e;padding:2px 7px;border-radius:4px;font-size:13px;margin-right:6px}
+canvas{display:block;max-width:100%;max-height:70vh;width:auto;height:auto;margin:auto;background:#080e18}
+#viewer{scroll-margin-top:180px}
+#info{font:13px ui-monospace,monospace;white-space:pre-wrap;overflow-wrap:anywhere}.hidden,[hidden]{display:none!important}
+</style>
+<header>
+  <h1>实验6 · 分组复核</h1>
+  <div class="bar"><select id="seq" aria-label="片段"></select><button id="nextseq">下个片段</button>
+    <select id="mode" aria-label="复核模式"><option value="groups">分组复核（推荐）</option><option value="frames">原图与烟羽框</option><option value="candidates">单个候选详情</option></select>
+    <button id="refresh">更新自动预标注</button></div>
+  <div id="save" role="status">已保存的标签会保留；自动预标注经过你确认后才写入正式标签。</div>
+</header>
+<main>
+  <p class="note">先看连续画面，再整组确认；也可以看完整个片段后一次确认全部预标注。原有人工标签默认保留。不确定就标不确定。</p>
+  <div class="panel"><div id="summary"></div><div class="bar">
+    <button id="normal">整段已确认无烟</button><button id="reject">排除正常候选片段</button>
+    <button id="visible">将当前帧记为人工首次可见</button><button id="complete">本序列候选身份复核完成</button>
+  </div><p class="muted" id="visibleinfo"></p></div>
+  <section id="groupPanel" class="panel">
+    <div class="bar"><button id="prevgroup">上一组 ←</button><button id="nextgroup">下一组 →</button><button id="play">播放本组</button><button id="restartReview">从头浏览</button>
+      <label><input type="checkbox" id="pendingOnly" checked>只看待复核</label><span id="groupcounter"></span></div>
+    <p id="groupinfo"></p><div class="grid" id="gallery"></div>
+    <div class="bar" id="groupActions">
+      <button id="acceptgroup" class="primary">本组预标注无误，确认保存</button>
+      <button id="groupsmoke">本组是烟 S</button><button id="groupbackground">本组是背景 B</button><button id="groupunknown">本组不确定 U</button>
+      <label><input id="target" type="checkbox" checked>烟属于目标火情</label>
+      <label><input id="overwrite" type="checkbox">同时修改已有人工标签</label>
+    </div>
+    <p class="muted">每组最多12个连续候选，红框是模型查看范围。点击缩略图查看整张原图。缩略图下面的“预标”尚未保存为人工答案。</p>
+    <button id="acceptsequence" class="primary">本序列预标注已看完，确认并保存</button><span id="seeninfo" class="muted"></span>
+  </section>
+  <section id="viewer" class="panel" hidden>
+    <div class="bar" id="playbackControls" hidden><button id="returnPlayback">停止播放并返回分组</button><span id="playposition"></span></div>
+    <div class="bar" id="frameNavigation"><button id="previous">上一张 ←</button><button id="next">下一张 →</button>
+      <input id="slider" type="range" min="0" value="0"><span id="counter"></span><button id="backgroup">返回分组</button></div>
+    <div class="bar" id="frameActions"><button id="framevisible">可见 V</button><button id="frameabsent">整图无烟 A</button><button id="frameunknown">不确定 U</button><button id="clearboxes">清空当前框</button></div>
+    <div class="bar" id="candidateActions"><button id="smoke">烟 S</button><button id="background">背景 B</button><button id="unknown">不确定 U</button><label><input id="singleTarget" type="checkbox" checked>属于目标火情</label></div>
+    <p id="info"></p><canvas id="view"></canvas>
+  </section>
+</main>
+<script>
+'use strict';
+const $=id=>document.getElementById(id),canvas=$('view'),ctx=canvas.getContext('2d');
+let sequences=[],current=null,rowById=new Map(),groups=[],groupIndex=0,index=0,items=[],boxes=[],drag=null,image=new Image(),activeFrame=null,activeRow=null;
+let seen=new Set(),timer=null,busy=false,selectionToken=0,galleryObserver=null,activeGroupId=null;
+const labelName=x=>x===1?'烟':x===0?'背景':'不确定';
+const escapeOffset=x=>x==null?'':`${x>=0?'+':''}${(x/60).toFixed(1)} 分钟`;
+function storageKey(){return `exp006.review.${current.run_id}.${current.setting}.${current.id}`}
+function remember(){if(!current)return;try{localStorage.setItem(storageKey(),JSON.stringify({seen:[...seen],groupIndex,index}));localStorage.setItem('exp006.lastSequence',current.id)}catch(e){}}
+async function api(path,data){const r=await fetch(path,data?{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)}:undefined);let v;try{v=await r.json()}catch(e){throw Error('服务响应异常，请保留页面并检查终端')}if(!r.ok)throw Error(v.error||'保存失败');return v}
+function setBusy(value){busy=value;document.querySelectorAll('button,select').forEach(b=>b.disabled=value);if(!value&&current)render()}
+function stopPlay(){if(timer){clearInterval(timer);timer=null}$('play').textContent='播放本组'}
+function status(text,error=false){$('save').textContent=text;$('save').style.color=error?'#fca5a5':'#86efac'}
+async function refreshSequences(){sequences=await api('/api/sequences');const selected=current?.id;$('seq').replaceChildren();for(const s of sequences){let tail=s.source==='hpwren'?(s.normal_status==='confirmed_normal'?'已确认无烟':s.normal_status==='excluded'?'已排除':'待确认正常'):(s.total?`待复核 ${s.pending}/${s.total}`:'无检测候选');const o=new Option(`${s.split} | ${s.source} | ${s.id} | ${tail}`,s.id);$('seq').add(o)}if(selected)$('seq').value=selected}
+async function selectSequence(){if(busy)return;stopPlay();const token=++selectionToken;const value=await api('/api/sequence?id='+encodeURIComponent($('seq').value));if(token!==selectionToken)return;current=value;rowById=new Map(current.candidates.map(r=>[r.id,r]));seen=new Set();activeGroupId=null;groupIndex=0;index=0;try{const old=JSON.parse(localStorage.getItem(storageKey())||'{}');seen=new Set(old.seen||[]);groupIndex=old.groupIndex||0;index=old.index||0}catch(e){}if(current.source==='hpwren'&&$('mode').value==='groups')$('mode').value='frames';render();remember()}
+async function reloadCurrent(){const oldId=current.id;current=await api('/api/sequence?id='+encodeURIComponent(oldId));rowById=new Map(current.candidates.map(r=>[r.id,r]));await refreshSequences();render();remember()}
+async function update(data){if(busy)return false;stopPlay();setBusy(true);status('正在写入磁盘，请稍候…');try{const result=await api('/api/update',{sequence:current.id,version:current.version,...data});$('overwrite').checked=false;await reloadCurrent();status(`已保存到磁盘 ${new Date().toLocaleTimeString()}${result.changed!==undefined?`；本次写入 ${result.changed} 个，保留已有标签 ${result.preserved} 个`:''}。可以安全关闭页面。`);return true}catch(e){status(e.message,true);try{await reloadCurrent()}catch(ignore){}alert(e.message);return false}finally{setBusy(false)}}
+function render(){if(!current)return;stopPlay();const pending=current.candidates.filter(r=>!r.reviewed).length;
+  $('summary').textContent=`${current.split} · ${current.source} · ${current.id}｜候选 ${current.candidates.length} 个，待复核 ${pending} 个`+(current.source==='hpwren'?`｜正常状态：${({confirmed_normal:'已确认无烟',excluded:'已排除',contains_smoke:'有烟',unreviewed:'未确认'})[current.labels.normal_status]||current.labels.normal_status}`:'');
+  const first=current.frames.find(f=>f.timestamp===current.labels.human_visible_timestamp);
+  $('visibleinfo').textContent=current.source==='hpwren'?'正常片段只需整段确认；无需逐张点无烟，也无需设置首次可见。':`人工首次可见：${first?escapeOffset(first.offset_seconds):'尚未设置'}。在原图或单个候选详情中选择最早可见帧后点一次。`;
+  $('normal').disabled=busy||current.source!=='hpwren';$('reject').disabled=busy||current.source!=='hpwren';$('visible').disabled=busy||current.source!=='figlib'||$('mode').value==='groups';
+  const grouped=$('mode').value==='groups';$('groupPanel').hidden=!grouped;$('viewer').hidden=grouped;$('frameNavigation').hidden=grouped;$('playbackControls').hidden=true;
+  $('frameActions').hidden=$('mode').value!=='frames';$('candidateActions').hidden=$('mode').value!=='candidates';$('backgroup').hidden=$('mode').value==='frames';
+  if(grouped)renderGroup();else{items=$('mode').value==='frames'?current.frames:current.candidates;index=Math.max(0,Math.min(index,items.length-1));showSingle()}}
+function renderGroup(){groups=current.groups.filter(g=>!$('pendingOnly').checked||g.pending>0);groupIndex=Math.max(0,Math.min(groupIndex,groups.length-1));const g=groups[groupIndex];$('gallery').replaceChildren();$('groupActions').hidden=!g;$('play').disabled=busy||!g;
+  $('groupcounter').textContent=g?`${groupIndex+1}/${groups.length} 组`:'';$('prevgroup').disabled=busy||!g||groupIndex===0;$('nextgroup').disabled=busy||!g||groupIndex===groups.length-1;
+  $('groupinfo').textContent=g?`位置轨迹 ${g.track} · 第 ${g.part} 段｜${g.ids.length} 个连续候选，其中 ${g.reviewed} 个已有人工答案（默认保留）`:current.candidates.length?'当前没有待复核候选。可取消“只看待复核”回看，或切换下个片段。':'尚无候选；如已提取，请检查 Review 与 Extract 使用相同的 RunId 和 Setting。';
+  if(g){if(activeGroupId!==g.id){$('target').checked=true;$('overwrite').checked=false;activeGroupId=g.id}const token=selectionToken,groupId=g.id;const viewed=new Set();
+    if(galleryObserver)galleryObserver.disconnect();
+    const recordView=(card,id)=>{const img=card.querySelector('img');if(card.dataset.visible==='yes'&&img?.complete&&img.naturalWidth){viewed.add(id);if(token===selectionToken&&viewed.size===g.ids.length){seen.add(groupId);remember();updateSeen()}}};
+    galleryObserver=new IntersectionObserver(entries=>{for(const entry of entries){entry.target.dataset.visible=entry.isIntersecting&&entry.intersectionRatio>=.5?'yes':'no';recordView(entry.target,entry.target.dataset.id)}},{threshold:.5});
+    for(const id of g.ids){const row=rowById.get(id),label=row.reviewed?row.reviewed_label:row.suggestion.label;const card=document.createElement('button');card.className=`tile ${label===1?'smoke':label===0?'background':'unknown'} ${row.reviewed?'human':''}`;card.title='点击查看整图和单个候选';
+      const img=document.createElement('img');img.alt=`候选 ${escapeOffset(row.offset_seconds)}，${row.reviewed?'已人工确认':'待复核预标'}${labelName(label)}`;
+      card.dataset.id=id;img.onload=()=>recordView(card,id);
+      img.onerror=()=>{status('部分缩略图加载失败，请查看整图；暂未计入已看分组。',true)};
+      img.src='/thumbnail?sequence='+encodeURIComponent(current.id)+'&id='+encodeURIComponent(id);card.append(img);
+      const caption=document.createElement('p');caption.textContent=`${escapeOffset(row.offset_seconds)}｜${row.reviewed?'已人工确认':'预标'}：${labelName(label)}`;card.append(caption);
+      const reason=document.createElement('p');reason.className='muted';reason.textContent=row.reviewed?'保留已有记录':label===null?'请重点复核':row.suggestion.directly_viewed_sample?'已看抽样，待你确认':row.suggestion.method==='assistant_visual_samples_and_group_propagation'?'组内预判，待你确认':'相似样本预判，待你确认';card.title+='；'+(row.suggestion.reason||'已有人工记录');card.append(reason);
+      card.onclick=()=>{stopPlay();index=current.candidates.findIndex(r=>r.id===id);$('mode').value='candidates';render();remember()};$('gallery').append(card);galleryObserver.observe(card)}
+    $('acceptgroup').disabled=busy||!g.pending||g.ids.some(id=>!rowById.get(id).reviewed&&rowById.get(id).suggestion.reason==='尚未生成预标注');
+  }updateSeen()}
+function updateSeen(){if(!current)return;const pending=current.groups.filter(g=>g.pending>0);const n=pending.filter(g=>seen.has(g.id)).length;const ready=pending.length>0&&n===pending.length&&current.candidates.every(r=>r.reviewed||r.suggestion.reason!=='尚未生成预标注');$('seeninfo').textContent=` 本序列待复核分组已看 ${n}/${pending.length}；看完后可一次确认。`;$('acceptsequence').disabled=busy||!ready}
+function moveGroup(n){if(busy)return;stopPlay();groupIndex=Math.max(0,Math.min(groups.length-1,groupIndex+n));renderGroup();$('viewer').hidden=true;remember()}
+function showSingle(){if(!items.length){$('info').textContent='没有候选。请先完成 Extract，并使用同一 RunId / Setting。';$('counter').textContent='';ctx.clearRect(0,0,canvas.width,canvas.height);return}
+  activeRow=$('mode').value==='candidates'?items[index]:null;activeFrame=activeRow?current.frames.find(f=>f.file===activeRow.frame_file):items[index];
+  $('slider').max=Math.max(0,items.length-1);$('slider').value=index;$('counter').textContent=`${index+1}/${items.length}`;showImage(activeFrame,activeRow);
+  if(activeRow)$('singleTarget').checked=activeRow.reviewed?activeRow.reviewed_target:true;remember()}
+function showImage(frame,row){activeFrame=frame;activeRow=row;const key=frame.file.split('/').pop().replace(/\.[^.]+$/,'');const annotation=current.labels.frames[key]||{};boxes=JSON.parse(JSON.stringify(annotation.smoke_boxes||[]));
+  $('info').textContent=`${frame.file}\n相对官方起点 ${escapeOffset(frame.offset_seconds)}${row?'｜'+(row.reviewed?'已人工确认：':'预标：')+labelName(row.reviewed?row.reviewed_label:row.suggestion.label):'｜帧状态：'+(annotation.status||'未标注')}`;
+  const file=frame.file;image.onload=()=>{if(activeFrame?.file!==file)return;canvas.width=image.naturalWidth;canvas.height=image.naturalHeight;draw()};image.src='/image?file='+encodeURIComponent(file)}
+function draw(){if(!image.complete||!image.naturalWidth)return;ctx.drawImage(image,0,0);ctx.lineWidth=Math.max(3,canvas.width/500);ctx.strokeStyle='#22c55e';for(const b of boxes)ctx.strokeRect(b[0]*canvas.width,b[1]*canvas.height,(b[2]-b[0])*canvas.width,(b[3]-b[1])*canvas.height);if(activeRow){const b=activeRow.crop_box;ctx.strokeStyle='#ff5a3c';ctx.strokeRect(b[0]*canvas.width,b[1]*canvas.height,(b[2]-b[0])*canvas.width,(b[3]-b[1])*canvas.height)}}
+function move(n){if(busy)return;index=Math.max(0,Math.min(items.length-1,index+n));showSingle()}
+function countLabels(rows,proposed=false){const counts={smoke:0,background:0,unknown:0};for(const r of rows){const v=proposed?r.suggestion.label:r.reviewed_label;counts[v===1?'smoke':v===0?'background':'unknown']++}return `烟 ${counts.smoke}，背景 ${counts.background}，不确定 ${counts.unknown}`}
+async function batch(label){const g=groups[groupIndex];if(!g||busy)return;const overwrite=$('overwrite').checked;if(overwrite&&!confirm('将修改本组已有人工标签，是否确认？'))return;await update({action:'batch',overwrite,items:g.ids.map(id=>({id,label,matches_target:label===1&&$('target').checked}))})}
+async function accept(all=false){const selected=all?current.groups.filter(g=>g.pending>0):[groups[groupIndex]];if(!selected.length||selected.some(g=>!g))return;const ids=new Set(selected.flatMap(g=>g.ids));const rows=current.candidates.filter(r=>ids.has(r.id)&&!r.reviewed);if(!confirm(`已查看这些候选，并同意预标注？\n${countLabels(rows,true)}\n原有人工标签保持不变。不确定候选仍作为不确定保存。`))return;await update({action:'accept_suggestions',groups:selected.map(g=>g.id),matches_target:$('target').checked,complete:all})}
+async function saveSingle(label){if(!activeRow)return;await update({action:'candidate',id:activeRow.id,label,matches_target:label===1&&$('singleTarget').checked})}
+async function saveFrame(state){if(!activeFrame||$('mode').value!=='frames')return;await update({action:'frame',frame_file:activeFrame.file,status:state,smoke_boxes:boxes})}
+function point(e){const r=canvas.getBoundingClientRect();return [(e.clientX-r.left)/r.width,(e.clientY-r.top)/r.height]}
+canvas.onpointerdown=e=>{if($('mode').value==='frames'&&!busy){drag=point(e);canvas.setPointerCapture(e.pointerId)}};
+canvas.onpointerup=e=>{if(!drag)return;const p=point(e);const b=[Math.min(p[0],drag[0]),Math.min(p[1],drag[1]),Math.max(p[0],drag[0]),Math.max(p[1],drag[1])].map(v=>Math.max(0,Math.min(1,v)));drag=null;if(b[2]-b[0]>.002&&b[3]-b[1]>.002)boxes.push(b);draw();status('框尚未保存：请点击“可见 V”或相应帧状态后再离开。',true)};
+$('seq').onchange=()=>selectSequence().catch(e=>status(e.message,true));$('mode').onchange=()=>{index=0;render();remember()};$('pendingOnly').onchange=()=>{groupIndex=0;renderGroup()};
+$('nextseq').onclick=()=>{if(busy)return;const n=sequences.findIndex(s=>s.id===current.id);if(n<sequences.length-1){$('seq').value=sequences[n+1].id;selectSequence().catch(e=>status(e.message,true))}};
+$('prevgroup').onclick=()=>moveGroup(-1);$('nextgroup').onclick=()=>moveGroup(1);$('previous').onclick=()=>move(-1);$('next').onclick=()=>move(1);$('slider').oninput=()=>{index=Number($('slider').value);showSingle()};
+$('restartReview').onclick=()=>{stopPlay();seen.clear();groupIndex=0;remember();render();$('groupPanel').scrollIntoView({behavior:'smooth',block:'start'});status('已从头浏览；正式标签没有改变。')};
+$('groupsmoke').onclick=()=>batch(1);$('groupbackground').onclick=()=>batch(0);$('groupunknown').onclick=()=>batch(null);$('acceptgroup').onclick=()=>accept(false);$('acceptsequence').onclick=()=>accept(true);
+$('smoke').onclick=()=>saveSingle(1);$('background').onclick=()=>saveSingle(0);$('unknown').onclick=()=>saveSingle(null);
+$('framevisible').onclick=()=>saveFrame('visible');$('frameabsent').onclick=()=>saveFrame('absent');$('frameunknown').onclick=()=>saveFrame('uncertain');$('clearboxes').onclick=()=>{boxes=[];draw();status('清空尚未保存，请再点击相应帧状态。',true)};
+$('backgroup').onclick=()=>{$('mode').value='groups';render()};
+$('normal').onclick=()=>{if(confirm('已浏览整段，并确认没有可辨烟雾？云、雾等正常干扰应保留。'))update({action:'normal'})};
+$('reject').onclick=()=>{const reason=prompt('填写排除原因；无法判断烟还是雾也可说明。不因模型误报而排除确定正常的云雾。');if(reason)update({action:'reject_normal',reason})};
+$('complete').onclick=()=>{if(confirm('已完成本序列候选身份复核？不确定的候选应标为不确定。'))update({action:'complete'})};
+$('visible').onclick=()=>{if(activeFrame)update({action:'visible_time',timestamp:activeFrame.timestamp})};
+$('refresh').onclick=async()=>{if(busy)return;setBusy(true);status('正在生成辅助预标注；正式人工标签不会改变…');try{const result=await api('/api/prelabel',{});await reloadCurrent();status(`预标注已更新：烟 ${result.counts.smoke}，背景 ${result.counts.background}，不确定 ${result.counts.uncertain}。请核对后确认。`)}catch(e){status(e.message,true);alert(e.message)}finally{setBusy(false)}};
+$('returnPlayback').onclick=()=>{stopPlay();$('viewer').hidden=true;$('groupPanel').scrollIntoView({behavior:'smooth',block:'start'})};
+$('play').onclick=()=>{if(timer){stopPlay();return}const g=groups[groupIndex];if(!g)return;let n=0;$('viewer').hidden=false;$('playbackControls').hidden=false;$('frameNavigation').hidden=true;$('frameActions').hidden=true;$('candidateActions').hidden=true;$('play').textContent='停止播放';const step=()=>{const row=rowById.get(g.ids[n]);showImage(current.frames.find(f=>f.file===row.frame_file),row);n++;$('playposition').textContent=`本组 ${n}/${g.ids.length}｜看完后返回分组统一确认`;if(n===g.ids.length){stopPlay();seen.add(g.id);remember();updateSeen();status('本组播放完成，请核对后返回分组确认。')}};step();$('viewer').scrollIntoView({behavior:'smooth',block:'start'});if(n<g.ids.length)timer=setInterval(step,800)};
+document.onkeydown=e=>{if(busy||['INPUT','SELECT','TEXTAREA'].includes(document.activeElement.tagName))return;const grouped=$('mode').value==='groups';if(e.key==='ArrowRight'){e.preventDefault();grouped?moveGroup(1):move(1)}if(e.key==='ArrowLeft'){e.preventDefault();grouped?moveGroup(-1):move(-1)}const k=e.key.toLowerCase();if(grouped){if(k==='s')batch(1);if(k==='b')batch(0);if(k==='u')batch(null)}else if($('mode').value==='candidates'){if(k==='s')saveSingle(1);if(k==='b')saveSingle(0);if(k==='u')saveSingle(null)}else{if(k==='v')saveFrame('visible');if(k==='a')saveFrame('absent');if(k==='u')saveFrame('uncertain')}};
+window.addEventListener('beforeunload',remember);
+(async()=>{await refreshSequences();try{const last=localStorage.getItem('exp006.lastSequence');if(sequences.some(s=>s.id===last))$('seq').value=last}catch(e){}await selectSequence()})().catch(e=>status(e.message,true));
+</script>
+</html>

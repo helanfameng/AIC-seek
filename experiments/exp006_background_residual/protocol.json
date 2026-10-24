@@ -1,0 +1,31 @@
+{
+  "experiment": "exp006_background_residual",
+  "status": "preparation",
+  "seed": 42,
+  "model_sha256": "6a328bbc933b4d92855cbcbde06a6aac165a386d08b09e9de59f7448046d455e",
+  "fire_target": {"train": 20, "val": 10, "test": 10},
+  "normal_hours_target": {"train": 20, "val": 10, "test": 10},
+  "excluded_development_sites": ["sp", "lp", "hp", "syp"],
+  "excluded_development_events": ["Alison", "Cranston", "West", "Whittier"],
+  "sampling_seconds": 60,
+  "normal_clip_hours": 2,
+  "history_frames": 5,
+  "maximum_history_gap_seconds": 120,
+  "residual_steps": 3,
+  "grid_size": 4,
+  "hidden_dim": 128,
+  "predictor_epochs": 30,
+  "fusion_epochs": 30,
+  "batch_size": 64,
+  "learning_rate": 0.001,
+  "weight_decay": 0.0001,
+  "early_stopping_patience": 5,
+  "normal_training_grid": 3,
+  "false_alarms_per_camera_hour": 0.1,
+  "maximum_positive_time_fraction": 0.01,
+  "alarm_release_minutes": 5,
+  "settings": {
+    "baseline": {"confidence_threshold": 0.1, "image_size": 1024},
+    "high_resolution": {"confidence_threshold": 0.1, "image_size": 1536}
+  }
+}
